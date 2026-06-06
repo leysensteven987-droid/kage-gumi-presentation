@@ -1017,6 +1017,16 @@
       <span class="op-tag" style="color: var(--crimson); border-color: rgba(232,54,93,0.3); background: var(--crimson-dim);">Pet Operative</span>
     </div>
 
+    <div class="op-card reveal" data-kanji="聴">
+      <div class="op-id">KG-08</div>
+      <div class="op-kanji">聴</div>
+      <div class="op-name">Chō</div>
+      <div class="op-meaning">"To listen": attentive, fully present</div>
+      <div class="op-role">Meeting Listener</div>
+      <div class="op-desc">Sits in the shadows of a call and listens. Captures the audio, transcribes it on-device with faster-whisper — nothing ever leaves the machine — and hands back a clean summary: decisions, action items, open questions. A meeting stops being something you re-type from memory and becomes reusable text that feeds straight back into project work and the crew's knowledge.</div>
+      <span class="op-tag" style="color: #7ee0d0; border-color: rgba(0,255,224,0.3); background: rgba(0,255,224,0.07);">Local capture</span>
+    </div>
+
   </div>
 </section>
 
@@ -1153,7 +1163,7 @@
   <div class="section-tag">What's next</div>
   <h2>The release plan <span class="jp">ロードマップ</span></h2>
   <p>Kage-gumi isn't finished. It's a living system. Each version adds depth to an existing operative or introduces a new one. The crew grows deliberately, not all at once.</p>
-  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-06-05</div>
+  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-06-06</div>
 
   <div style="display: flex; flex-direction: column; gap: 2px; margin-top: 40px; max-width: 760px;">
 
@@ -1253,6 +1263,17 @@
       <div style="background: var(--bg-card); padding: 20px 24px;">
         <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Git Integration (Ren auto-push)</div>
         <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Ren commits and pushes generated scripts to the repository automatically after every task. Codebase and Claude Code stay in sync — no manual push step required.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">v0.6.4</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Chō: Meeting Listener — a new operative (KG-08)</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Chō captures a meeting's audio, transcribes it locally with faster-whisper — nothing leaves the machine — and returns a structured summary (decisions, action items, open questions) via the claude CLI. Live capture panel in the dashboard. Meeting knowledge becomes reusable project text the rest of the crew can use.</div>
       </div>
     </div>
 
