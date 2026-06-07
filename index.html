@@ -1023,8 +1023,18 @@
       <span class="op-tag" style="color: #7ee0d0; border-color: rgba(0,255,224,0.3); background: rgba(0,255,224,0.07);">Local capture</span>
     </div>
 
+    <div class="op-card reveal" data-kanji="墨">
+      <div class="op-id">KG-06</div>
+      <div class="op-kanji">墨</div>
+      <div class="op-name">Sumi</div>
+      <div class="op-meaning">"Ink": permanent, deliberate</div>
+      <div class="op-role">Record-Keeper</div>
+      <div class="op-desc">The ear hears; the ink keeps. After Chō summarises a meeting, Sumi files it into a durable, per-customer record — a clean dossier that outlives the call. Tag a meeting to a customer and it's archived for good. Faithful, factual, never invents an attendee or a date.</div>
+      <span class="op-tag" style="color: #c3cdd6; border-color: rgba(154,168,181,0.35); background: rgba(154,168,181,0.08);">Records</span>
+    </div>
+
     <div class="op-card reveal" data-kanji="鉄">
-      <div class="op-id">KG-07</div>
+      <div class="op-id">PERSONAL</div>
       <div class="op-kanji">鉄</div>
       <div class="op-name">Tetsu</div>
       <div class="op-meaning">"Iron": the metal, the discipline</div>
@@ -1170,7 +1180,7 @@
   <div class="section-tag">What's next</div>
   <h2>The release plan <span class="jp">ロードマップ</span></h2>
   <p>Kage-gumi isn't finished. It's a living system. Each version adds depth to an existing operative or introduces a new one. The crew grows deliberately, not all at once.</p>
-  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-06-06</div>
+  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-06-07</div>
 
   <div style="display: flex; flex-direction: column; gap: 2px; margin-top: 40px; max-width: 760px;">
 
@@ -1281,6 +1291,17 @@
       <div style="background: var(--bg-card); padding: 20px 24px;">
         <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Chō: Meeting Listener — a new operative (KG-05)</div>
         <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Chō captures a meeting's audio, transcribes it locally with faster-whisper — nothing leaves the machine — and returns a structured summary (decisions, action items, open questions) via the claude CLI. Live capture panel in the dashboard. Meeting knowledge becomes reusable project text the rest of the crew can use.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">v0.6.5</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Sumi: Record-Keeper (KG-06) + operative-nested views</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Sumi joins as a full operative — the ink to Chō's ear, filing finished meetings into durable per-customer records. The dashboard reorganised around the operative: Proposals, Chō and Sumi now live as sub-tabs inside AGENTS, surfaced when you select the operative who owns them. The two personal operatives (Ichikawa, Tetsu) became numberless.</div>
       </div>
     </div>
 
@@ -1459,6 +1480,7 @@
     <span class="status-chip chip-complete">Haku · Deploy &amp; Doc</span>
     <span class="status-chip chip-queued">Ryū · Overnight</span>
     <span class="status-chip chip-active">Chō · Listener</span>
+    <span class="status-chip" style="color: #c3cdd6; border-color: rgba(154,168,181,0.35); background: rgba(154,168,181,0.08);">Sumi · Records</span>
     <span class="status-chip" style="color: #f78fb3; border-color: rgba(247,143,179,0.3); background: rgba(247,143,179,0.07);">Tetsu · Wrench</span>
   </div>
 
