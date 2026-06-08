@@ -878,6 +878,7 @@
       <div class="ba-item">Writing up documentation after every build</div>
       <div class="ba-item">Digging through logs to understand what went wrong</div>
       <div class="ba-item">Context-switching between tasks constantly</div>
+      <div class="ba-item">Half-present in meetings — taking notes instead of actually being in the room</div>
     </div>
     <div class="ba-panel ba-after">
       <div class="ba-label">With Kage-gumi</div>
@@ -887,6 +888,7 @@
       <div class="ba-item">Haku writes documentation automatically as builds happen</div>
       <div class="ba-item">Logs are surfaced and summarised, not buried</div>
       <div class="ba-item">Ryū handles overnight batch work autonomously</div>
+      <div class="ba-item">Chō captures &amp; summarises the meeting and Sumi files it — be present, not the note-taker</div>
     </div>
   </div>
 
@@ -907,7 +909,7 @@
         <div class="wc-scenario-label">Scenario 02</div>
         <div class="wc-scenario-op">KG-02 Ren · 錬</div>
         <div class="wc-scenario-title">"Build a display script that shows me status progression of a project"</div>
-        <p class="wc-scenario-desc">Ren builds Dashboard scripts, Rule Engine scripts, Workflow JavaScript node scripts. Each context has different APIs and constraints — and Ren knows them all. Scripts come back ready to paste in, versioned, and diffable.</p>
+        <p class="wc-scenario-desc">Ren builds Dashboard scripts, Rule Engine scripts, Workflow JavaScript node scripts. Built around WebCenter — each context has different APIs and constraints, and Ren knows them all. Scripts come back versioned and diffable, and Ren pushes them straight into WebCenter himself — no copy-paste step.</p>
       </div>
 
       <div class="wc-scenario reveal">
@@ -922,6 +924,20 @@
         <div class="wc-scenario-op">KG-04 Ryū · 龍</div>
         <div class="wc-scenario-title">Run overnight batch tasks</div>
         <p class="wc-scenario-desc">Ryū runs scheduled tasks while I sleep, processing queued scripts and delivering a morning digest of everything that happened.</p>
+      </div>
+
+      <div class="wc-scenario reveal">
+        <div class="wc-scenario-label">Scenario 05</div>
+        <div class="wc-scenario-op">KG-05 Chō · 聴</div>
+        <div class="wc-scenario-title">"Capture this customer call and turn it into something I can use"</div>
+        <p class="wc-scenario-desc">Chō listens to the meeting and transcribes it locally with faster-whisper — nothing leaves the machine — then returns a structured summary: decisions, action items, open questions. Meeting knowledge becomes reusable project text the rest of the crew can act on.</p>
+      </div>
+
+      <div class="wc-scenario reveal">
+        <div class="wc-scenario-label">Scenario 06</div>
+        <div class="wc-scenario-op">KG-06 Sumi · 墨</div>
+        <div class="wc-scenario-title">"File that meeting under the customer, for good"</div>
+        <p class="wc-scenario-desc">Once Chō has summarised, Sumi files it into a durable per-customer record. Tag the meeting to a customer and it's archived into a clean dossier that outlives the call — faithful and factual, never inventing an attendee or a date.</p>
       </div>
     </div>
 
@@ -956,11 +972,18 @@
             <span class="status-chip chip-complete">Scheduled</span>
           </div>
         </div>
-        <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; display: flex; align-items: center; gap: 14px;">
+        <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; margin-bottom: -1px; display: flex; align-items: center; gap: 14px;">
           <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--teal);">聴</span>
           <div>
             <div style="font-family: monospace; font-size: 10px; color: var(--text-dim);">KG-05 · CHŌ</div>
             <span class="status-chip chip-active">Listening</span>
+          </div>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; display: flex; align-items: center; gap: 14px;">
+          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--teal);">墨</span>
+          <div>
+            <div style="font-family: monospace; font-size: 10px; color: var(--text-dim);">KG-06 · SUMI</div>
+            <span class="status-chip chip-queued">Filing</span>
           </div>
         </div>
       </div>
@@ -991,7 +1014,7 @@
       <div class="op-name">Ren</div>
       <div class="op-meaning">"Water field": fluid, finds a way</div>
       <div class="op-role">Builder</div>
-      <div class="op-desc">Builds across the stack and beyond it — Workflow, Rule Engine and Dashboard scripts, plus integration and migration specs and Workato recipes &amp; diagrams. Each context has its own rules and Ren knows them all. Everything is saved, versioned, and diffable. Water finds a way around every obstacle.</div>
+      <div class="op-desc">Built around WebCenter — Workflow, Rule Engine and Dashboard scripts, plus integration and migration specs and Workato recipes &amp; diagrams. Each context has its own rules and Ren knows them all. And Ren doesn't stop at writing the code: he uploads scripts straight into WebCenter himself, no copy-paste step. Everything is saved, versioned, and diffable. Water finds a way around every obstacle.</div>
       <span class="op-tag wc">WebCenter</span>
       <span class="op-tag" style="color: #a78bfa; border-color: rgba(167,139,250,0.3); background: rgba(167,139,250,0.07);">Integration</span>
     </div>
@@ -1012,7 +1035,7 @@
       <div class="op-name">Ryū</div>
       <div class="op-meaning">"Dragon": powerful, tireless</div>
       <div class="op-role">Overnight Runner</div>
-      <div class="op-desc">Runs scheduled tasks while I sleep. Queues scripts for review, delivers a morning digest. Dragons don't rest. Neither does Ryū.</div>
+      <div class="op-desc">Runs scheduled tasks while I sleep. Surfaces his own proposals for the next run, queues scripts for review, and delivers a morning digest. Launch a proposal and it becomes a real, tracked dashboard task. Dragons don't rest. Neither does Ryū.</div>
       <span class="op-tag auto">Autonomous</span>
     </div>
 
@@ -1183,7 +1206,7 @@
   <div class="section-tag">What's next</div>
   <h2>The release plan <span class="jp">ロードマップ</span></h2>
   <p>Kage-gumi isn't finished. It's a living system. Each version adds depth to an existing operative or introduces a new one. The crew grows deliberately, not all at once.</p>
-  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-06-07</div>
+  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-06-08</div>
 
   <div style="display: flex; flex-direction: column; gap: 2px; margin-top: 40px; max-width: 760px;">
 
@@ -1305,6 +1328,28 @@
       <div style="background: var(--bg-card); padding: 20px 24px;">
         <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Sumi: Record-Keeper (KG-06) + operative-nested views</div>
         <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Sumi joins as a full operative — the ink to Chō's ear, filing finished meetings into durable per-customer records. The dashboard reorganised around the operative: Docs (Haku), Proposals (Ryū), Chō and Sumi now live as sub-tabs inside AGENTS, surfaced when you select the operative who owns them. The two personal operatives (Ichikawa, Tetsu) became numberless.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">v0.6.6</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Ryū: Proposals — the night-runner sets his own agenda</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Ryū no longer just runs the queue — he proposes the work. The PROPOSALS panel lists overnight improvements he's surfaced (target, type, status). Click Launch and the proposal becomes a real, tracked dashboard task (T-PROP-…), mirrored in lockstep — launch → queued, applied → complete, skip → dismissed, un-launch → removed. No duplicates, fully reversible.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">v0.6.7</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Chō → Sumi: the meeting pipeline, closed end to end</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">The ear-to-ink loop now runs all the way through. A meeting's final summary links straight into Sumi's ledger, files to a per-customer dossier (private, never committed), and exports as a branded PDF you can hand over. Summaries are hardened for long calls, and meetings or customers can be managed and removed right from the panel.</div>
       </div>
     </div>
 
