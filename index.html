@@ -73,6 +73,13 @@
     --crimson-glow: 0 0 18px rgba(232,54,93,0.4);
     --amber:        #f0a500;
     --green:        #4cff91;
+    /* per-operative accents — mirror agentColor in CLAUDE.md */
+    --op-mei:       #00ffe0;
+    --op-ren:       #a78bfa;
+    --op-haku:      #34d399;
+    --op-ryu:       #f0a500;
+    --op-cho:       #38bdf8;
+    --op-sumi:      #9aa8b5;
     --text:         #d8f0ea;
     --text-sec:     #c8e8e0;
     --text-muted:   #5a8a7a;
@@ -480,6 +487,23 @@
   .op-tag.docs { color: var(--green); border-color: rgba(76,255,145,0.3); background: rgba(76,255,145,0.07); }
   .op-tag.auto { color: var(--amber); border-color: rgba(240,165,0,0.3); background: rgba(240,165,0,0.07); }
   .op-tag.kitchen { color: #f78fb3; border-color: rgba(247,143,179,0.3); background: rgba(247,143,179,0.07); }
+
+  /* Per-operative identity accent — kanji glyph + hover border carry each
+     operative's canonical colour (agentColor map). Tetsu intentionally
+     keeps the default teal. */
+  .op-card.op-mei  .op-kanji { color: var(--op-mei); }
+  .op-card.op-ren  .op-kanji { color: var(--op-ren); }
+  .op-card.op-haku .op-kanji { color: var(--op-haku); }
+  .op-card.op-ryu  .op-kanji { color: var(--op-ryu); }
+  .op-card.op-cho  .op-kanji { color: var(--op-cho); }
+  .op-card.op-sumi .op-kanji { color: var(--op-sumi); }
+
+  .op-card.op-mei:hover  { border-color: var(--op-mei); }
+  .op-card.op-ren:hover  { border-color: var(--op-ren); }
+  .op-card.op-haku:hover { border-color: var(--op-haku); }
+  .op-card.op-ryu:hover  { border-color: var(--op-ryu); }
+  .op-card.op-cho:hover  { border-color: var(--op-cho); }
+  .op-card.op-sumi:hover { border-color: var(--op-sumi); }
 
   /* ── WEBCENTER SECTION ── */
   .wc-visual {
@@ -906,42 +930,42 @@
 
       <div class="wc-scenario reveal">
         <div class="wc-scenario-label">Scenario 01</div>
-        <div class="wc-scenario-op">KG-01 Mei · 明</div>
+        <div class="wc-scenario-op" style="color: var(--op-mei);">KG-01 Mei · 明</div>
         <div class="wc-scenario-title">"How do I set a WebCenter attribute via SDK?"</div>
         <p class="wc-scenario-desc">Instead of hunting through docs, I ask Mei. It knows the full JSP call library: SetAttribute.jsp, GetAttributes.jsp, the right parameters, the XML response structure, and gives me working code immediately.</p>
       </div>
 
       <div class="wc-scenario reveal">
         <div class="wc-scenario-label">Scenario 02</div>
-        <div class="wc-scenario-op">KG-02 Ren · 錬</div>
+        <div class="wc-scenario-op" style="color: var(--op-ren);">KG-02 Ren · 錬</div>
         <div class="wc-scenario-title">"Build a display script that shows me status progression of a project"</div>
         <p class="wc-scenario-desc">Ren builds Dashboard scripts, Rule Engine scripts, Workflow JavaScript node scripts. Built around WebCenter — each context has different APIs and constraints, and Ren knows them all. Scripts come back versioned and diffable, and Ren pushes them straight into WebCenter himself — no copy-paste step.</p>
       </div>
 
       <div class="wc-scenario reveal">
         <div class="wc-scenario-label">Scenario 03</div>
-        <div class="wc-scenario-op">KG-03 Haku · 博</div>
+        <div class="wc-scenario-op" style="color: var(--op-haku);">KG-03 Haku · 博</div>
         <div class="wc-scenario-title">"Document this workflow — and find what we already have on it"</div>
         <p class="wc-scenario-desc">Haku documents what was just built, but also surfaces what already exists: existing scripts, prior configurations, related workflows. She can read a live WebCenter artifact via Playwright and write a functional spec from what she actually sees. Output is clean, shareable, Azure DevOps–ready.</p>
       </div>
 
       <div class="wc-scenario reveal">
         <div class="wc-scenario-label">Scenario 04</div>
-        <div class="wc-scenario-op">KG-04 Ryū · 龍</div>
+        <div class="wc-scenario-op" style="color: var(--op-ryu);">KG-04 Ryū · 龍</div>
         <div class="wc-scenario-title">Run overnight batch tasks</div>
         <p class="wc-scenario-desc">Ryū runs scheduled tasks while I sleep, processing queued scripts and delivering a morning digest of everything that happened.</p>
       </div>
 
       <div class="wc-scenario reveal">
         <div class="wc-scenario-label">Scenario 05</div>
-        <div class="wc-scenario-op">KG-05 Chō · 聴</div>
+        <div class="wc-scenario-op" style="color: var(--op-cho);">KG-05 Chō · 聴</div>
         <div class="wc-scenario-title">"Capture this customer call and turn it into something I can use"</div>
         <p class="wc-scenario-desc">Chō listens to the meeting and transcribes it locally with faster-whisper — nothing leaves the machine — then returns a structured summary: decisions, action items, open questions. Meeting knowledge becomes reusable project text the rest of the crew can act on.</p>
       </div>
 
       <div class="wc-scenario reveal">
         <div class="wc-scenario-label">Scenario 06</div>
-        <div class="wc-scenario-op">KG-06 Sumi · 墨</div>
+        <div class="wc-scenario-op" style="color: var(--op-sumi);">KG-06 Sumi · 墨</div>
         <div class="wc-scenario-title">"File that meeting under the customer, for good"</div>
         <p class="wc-scenario-desc">Once Chō has summarised, Sumi files it into a durable per-customer record. Tag the meeting to a customer and it's archived into a clean dossier that outlives the call — faithful and factual, never inventing an attendee or a date.</p>
       </div>
@@ -951,42 +975,42 @@
       <p style="margin-top: 32px; margin-bottom: 24px;">Current operative statuses:</p>
       <div style="display: flex; flex-wrap: wrap; gap: 0; flex-direction: column; max-width: 300px;">
         <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; margin-bottom: -1px; display: flex; align-items: center; gap: 14px;">
-          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--teal);">明</span>
+          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--op-mei);">明</span>
           <div>
             <div style="font-family: monospace; font-size: 10px; color: var(--text-dim);">KG-01 · MEI</div>
             <span class="status-chip chip-active">Active</span>
           </div>
         </div>
         <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; margin-bottom: -1px; display: flex; align-items: center; gap: 14px;">
-          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--teal);">錬</span>
+          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--op-ren);">錬</span>
           <div>
             <div style="font-family: monospace; font-size: 10px; color: var(--text-dim);">KG-02 · REN</div>
             <span class="status-chip chip-queued">Building</span>
           </div>
         </div>
         <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; margin-bottom: -1px; display: flex; align-items: center; gap: 14px;">
-          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--teal);">博</span>
+          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--op-haku);">博</span>
           <div>
             <div style="font-family: monospace; font-size: 10px; color: var(--text-dim);">KG-03 · HAKU</div>
             <span class="status-chip chip-idle">Idle</span>
           </div>
         </div>
         <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; margin-bottom: -1px; display: flex; align-items: center; gap: 14px;">
-          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--teal);">龍</span>
+          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--op-ryu);">龍</span>
           <div>
             <div style="font-family: monospace; font-size: 10px; color: var(--text-dim);">KG-04 · RYŪ</div>
             <span class="status-chip chip-complete">Scheduled</span>
           </div>
         </div>
         <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; margin-bottom: -1px; display: flex; align-items: center; gap: 14px;">
-          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--teal);">聴</span>
+          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--op-cho);">聴</span>
           <div>
             <div style="font-family: monospace; font-size: 10px; color: var(--text-dim);">KG-05 · CHŌ</div>
             <span class="status-chip chip-active">Listening</span>
           </div>
         </div>
         <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; display: flex; align-items: center; gap: 14px;">
-          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--teal);">墨</span>
+          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--op-sumi);">墨</span>
           <div>
             <div style="font-family: monospace; font-size: 10px; color: var(--text-dim);">KG-06 · SUMI</div>
             <span class="status-chip chip-queued">Filing</span>
@@ -1004,7 +1028,7 @@
   <p>Each operative has a Japanese name chosen for what it means, not just as decoration. The character shapes how that operative behaves.</p>
 
   <div class="op-grid">
-    <div class="op-card reveal" data-kanji="黒">
+    <div class="op-card op-mei reveal" data-kanji="黒">
       <div class="op-id">KG-01</div>
       <div class="op-kanji">明</div>
       <div class="op-name">Mei</div>
@@ -1014,7 +1038,7 @@
       <span class="op-tag wc">WebCenter</span>
     </div>
 
-    <div class="op-card reveal" data-kanji="水">
+    <div class="op-card op-ren reveal" data-kanji="水">
       <div class="op-id">KG-02</div>
       <div class="op-kanji">錬</div>
       <div class="op-name">Ren</div>
@@ -1025,7 +1049,7 @@
       <span class="op-tag" style="color: #a78bfa; border-color: rgba(167,139,250,0.3); background: rgba(167,139,250,0.07);">Integration</span>
     </div>
 
-    <div class="op-card reveal" data-kanji="博">
+    <div class="op-card op-haku reveal" data-kanji="博">
       <div class="op-id">KG-03</div>
       <div class="op-kanji">博</div>
       <div class="op-name">Haku</div>
@@ -1035,7 +1059,7 @@
       <span class="op-tag docs">Docs</span>
     </div>
 
-    <div class="op-card reveal" data-kanji="龍">
+    <div class="op-card op-ryu reveal" data-kanji="龍">
       <div class="op-id">KG-04</div>
       <div class="op-kanji">龍</div>
       <div class="op-name">Ryū</div>
@@ -1045,17 +1069,17 @@
       <span class="op-tag auto">Autonomous</span>
     </div>
 
-<div class="op-card reveal" data-kanji="聴">
+<div class="op-card op-cho reveal" data-kanji="聴">
       <div class="op-id">KG-05</div>
       <div class="op-kanji">聴</div>
       <div class="op-name">Chō</div>
       <div class="op-meaning">"To listen": attentive, fully present</div>
       <div class="op-role">Meeting Listener</div>
       <div class="op-desc">Sits in the shadows of a call and listens. Captures the audio, transcribes it on-device with faster-whisper — nothing ever leaves the machine — and hands back a clean summary: decisions, action items, open questions. A meeting stops being something you re-type from memory and becomes reusable text that feeds straight back into project work and the crew's knowledge.</div>
-      <span class="op-tag" style="color: #7ee0d0; border-color: rgba(0,255,224,0.3); background: rgba(0,255,224,0.07);">Local capture</span>
+      <span class="op-tag" style="color: #38bdf8; border-color: rgba(56,189,248,0.3); background: rgba(56,189,248,0.08);">Local capture</span>
     </div>
 
-    <div class="op-card reveal" data-kanji="墨">
+    <div class="op-card op-sumi reveal" data-kanji="墨">
       <div class="op-id">KG-06</div>
       <div class="op-kanji">墨</div>
       <div class="op-name">Sumi</div>
@@ -1218,7 +1242,7 @@
   <div class="section-tag">What's next</div>
   <h2>The release plan <span class="jp">ロードマップ</span></h2>
   <p>Kage-gumi isn't finished. It's a living system. Each version adds depth to an existing operative or introduces a new one. The crew grows deliberately, not all at once.</p>
-  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-06-08</div>
+  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-06-09</div>
 
   <div style="display: flex; flex-direction: column; gap: 2px; margin-top: 40px; max-width: 760px;">
 
@@ -1367,12 +1391,23 @@
 
     <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
       <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">v0.6.8</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Ren: Playwright Deploy — scripts</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">The immediate necessity, live today: Ren pushes the two script types he writes most — Dashboard scripts and JavaScript Rule Actions — straight into WebCenter via the canonical Playwright sync, automatically after every edit. Generate → save → live, no copy-paste. Creates a new script if it doesn't exist yet, edits it in place if it does.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
         <span style="font-family: monospace; font-size: 13px; color: var(--teal); text-shadow: var(--teal-glow);">v0.7</span>
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">planned</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Ren: Playwright Deploy</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Ren generates a script and pushes it directly into WebCenter in a single operation. Generate → review → confirm → deploy. The codebase and WebCenter update together. Rollback by copy before any destructive edit.</div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Ren: Playwright Deploy — full coverage</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Extend the deploy beyond scripts to the rest of the surface — workflows &amp; task types, users &amp; groups — and wrap it in a one-click in-dashboard loop: generate → review → confirm → deploy, all from KG web. The codebase and WebCenter update together, with rollback-by-copy before any destructive edit.</div>
       </div>
     </div>
 
