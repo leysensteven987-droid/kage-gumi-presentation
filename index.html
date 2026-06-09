@@ -383,127 +383,143 @@
   /* ── OPERATIVES ── */
   .op-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
     margin-top: 40px;
+    max-width: 820px;
   }
 
   .op-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    padding: 28px;
+    --op-accent: var(--op-mei);
+    --op-accent-soft: rgba(0,255,224,0.15);
     position: relative;
+    background:
+      radial-gradient(130% 70% at 50% -10%, var(--op-accent-soft) 0%, transparent 55%),
+      linear-gradient(180deg, #15231f 0%, #0d1815 100%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px 26px 24px;
     overflow: hidden;
+    isolation: isolate;
     cursor: default;
-    transition: background 0.25s, border-color 0.25s;
+    transition: border-color 0.25s, box-shadow 0.25s;
+  }
+
+  /* glowing accent strip along the top edge */
+  .op-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 16px; right: 16px;
+    height: 2px;
+    background: var(--op-accent);
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 0 16px 1px var(--op-accent);
+  }
+
+  /* faint oversized kanji echo behind the bright glyph */
+  .op-card::before {
+    content: attr(data-glyph);
+    position: absolute;
+    top: 26px; left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 210px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--op-accent);
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: -1;
   }
 
   .op-card:hover {
-    background: var(--bg-card-h);
-    border-color: var(--teal);
+    border-color: var(--op-accent);
+    box-shadow: 0 0 0 1px var(--op-accent), 0 14px 34px rgba(0,0,0,0.45);
   }
 
-  .op-card::before {
-    content: attr(data-kanji);
-    position: absolute;
-    right: -8px; bottom: -16px;
-    font-family: 'Noto Serif JP', serif;
-    font-size: 88px;
-    font-weight: 700;
-    color: rgba(232,54,93,0.04);
-    line-height: 1;
-    pointer-events: none;
-    transition: color 0.25s;
-  }
-
-  .op-card:hover::before {
-    color: rgba(232,54,93,0.07);
+  .op-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .op-id {
     font-family: monospace;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    color: var(--text-dim);
-    margin-bottom: 12px;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--op-accent);
   }
 
-  .op-kanji {
+  .op-dot {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--op-accent);
+    box-shadow: 0 0 10px 1px var(--op-accent);
+  }
+
+  .op-glyph {
+    text-align: center;
     font-family: 'Noto Serif JP', serif;
-    font-size: 42px;
-    font-weight: 300;
-    color: var(--teal);
+    font-size: 88px;
+    font-weight: 700;
     line-height: 1;
+    color: var(--op-accent);
+    text-shadow: 0 0 26px var(--op-accent);
+    margin: 22px 0 20px;
   }
 
   .op-name {
-    font-family: monospace;
-    font-size: 12px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-top: 6px;
-  }
-
-  .op-meaning {
-    font-size: 12px;
-    color: var(--text-dim);
-    font-style: italic;
-    margin-top: 2px;
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #eef7f4;
+    line-height: 1;
   }
 
   .op-role {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--text);
-    margin-top: 16px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--op-accent);
+    margin-top: 12px;
+  }
+
+  .op-sub {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  .op-meaning {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-dim);
+    font-style: italic;
+    margin-top: 14px;
   }
 
   .op-desc {
     font-size: 13px;
     font-weight: 300;
     color: var(--text-muted);
-    margin-top: 6px;
-    line-height: 1.55;
+    line-height: 1.6;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-sub);
   }
 
-  .op-tag {
-    display: inline-block;
-    margin-top: 14px;
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    padding: 3px 8px;
-    border: 1px solid;
-    border-radius: 2px;
-  }
-
-  .op-tag.wc {
-    color: var(--teal);
-    border-color: rgba(0,255,224,0.3);
-    background: var(--teal-dim);
-  }
-
-  .op-tag.docs { color: var(--green); border-color: rgba(76,255,145,0.3); background: rgba(76,255,145,0.07); }
-  .op-tag.auto { color: var(--amber); border-color: rgba(240,165,0,0.3); background: rgba(240,165,0,0.07); }
-  .op-tag.kitchen { color: #f78fb3; border-color: rgba(247,143,179,0.3); background: rgba(247,143,179,0.07); }
-
-  /* Per-operative identity accent — kanji glyph + hover border carry each
-     operative's canonical colour (agentColor map). Tetsu intentionally
-     keeps the default teal. */
-  .op-card.op-mei  .op-kanji { color: var(--op-mei); }
-  .op-card.op-ren  .op-kanji { color: var(--op-ren); }
-  .op-card.op-haku .op-kanji { color: var(--op-haku); }
-  .op-card.op-ryu  .op-kanji { color: var(--op-ryu); }
-  .op-card.op-cho  .op-kanji { color: var(--op-cho); }
-  .op-card.op-sumi .op-kanji { color: var(--op-sumi); }
-
-  .op-card.op-mei:hover  { border-color: var(--op-mei); }
-  .op-card.op-ren:hover  { border-color: var(--op-ren); }
-  .op-card.op-haku:hover { border-color: var(--op-haku); }
-  .op-card.op-ryu:hover  { border-color: var(--op-ryu); }
-  .op-card.op-cho:hover  { border-color: var(--op-cho); }
-  .op-card.op-sumi:hover { border-color: var(--op-sumi); }
+  /* per-operative accent — drives glyph, border, dot, glow and echo (agentColor map) */
+  .op-card.op-mei  { --op-accent: var(--op-mei);  --op-accent-soft: rgba(0,255,224,0.15); }
+  .op-card.op-ren  { --op-accent: var(--op-ren);  --op-accent-soft: rgba(167,139,250,0.18); }
+  .op-card.op-haku { --op-accent: var(--op-haku); --op-accent-soft: rgba(52,211,153,0.16); }
+  .op-card.op-ryu  { --op-accent: var(--op-ryu);  --op-accent-soft: rgba(240,165,0,0.16); }
+  .op-card.op-cho  { --op-accent: var(--op-cho);  --op-accent-soft: rgba(56,189,248,0.16); }
+  .op-card.op-sumi { --op-accent: var(--op-sumi); --op-accent-soft: rgba(154,168,181,0.14); }
 
   /* ── WEBCENTER SECTION ── */
   .wc-visual {
@@ -1028,76 +1044,64 @@
   <p>Each operative has a Japanese name chosen for what it means, not just as decoration. The character shapes how that operative behaves.</p>
 
   <div class="op-grid">
-    <div class="op-card op-mei reveal" data-kanji="黒">
-      <div class="op-id">KG-01</div>
-      <div class="op-kanji">明</div>
+    <div class="op-card op-mei reveal" data-glyph="明">
+      <div class="op-head"><span class="op-id">KG-01</span><span class="op-dot"></span></div>
+      <div class="op-glyph">明</div>
       <div class="op-name">Mei</div>
-      <div class="op-meaning">"Black field": dark, fertile ground</div>
-      <div class="op-role">WebCenter Support</div>
+      <div class="op-role">Support Agent</div>
+      <div class="op-sub">Esko / WebCenter</div>
+      <div class="op-meaning">"Bright": clarity, illumination</div>
       <div class="op-desc">Knows the full WebCenter SDK: every JSP endpoint, every attribute, every error pattern. Ask in plain language, get working answers. Mei prepares the ground before anything else happens.</div>
-      <span class="op-tag wc">WebCenter</span>
     </div>
 
-    <div class="op-card op-ren reveal" data-kanji="水">
-      <div class="op-id">KG-02</div>
-      <div class="op-kanji">錬</div>
+    <div class="op-card op-ren reveal" data-glyph="錬">
+      <div class="op-head"><span class="op-id">KG-02</span><span class="op-dot"></span></div>
+      <div class="op-glyph">錬</div>
       <div class="op-name">Ren</div>
-      <div class="op-meaning">"Water field": fluid, finds a way</div>
       <div class="op-role">Builder</div>
-      <div class="op-desc">Built around WebCenter — Workflow, Rule Engine and Dashboard scripts, plus integration and migration specs and Workato recipes &amp; diagrams. Each context has its own rules and Ren knows them all. And Ren doesn't stop at writing the code: he uploads scripts straight into WebCenter himself, no copy-paste step. Everything is saved, versioned, and diffable. Water finds a way around every obstacle.</div>
-      <span class="op-tag wc">WebCenter</span>
-      <span class="op-tag" style="color: #a78bfa; border-color: rgba(167,139,250,0.3); background: rgba(167,139,250,0.07);">Integration</span>
+      <div class="op-sub">Scripts &amp; Frontend</div>
+      <div class="op-meaning">"Tempered": forged, refined</div>
+      <div class="op-desc">Built around WebCenter — Workflow, Rule Engine and Dashboard scripts, plus integration and migration specs and Workato recipes &amp; diagrams. Each context has its own rules and Ren knows them all. And Ren doesn't stop at writing the code: he uploads scripts straight into WebCenter himself, no copy-paste step. Everything is saved, versioned, and diffable. Tempered by the work — refined until it holds.</div>
     </div>
 
-    <div class="op-card op-haku reveal" data-kanji="博">
-      <div class="op-id">KG-03</div>
-      <div class="op-kanji">博</div>
+    <div class="op-card op-haku reveal" data-glyph="博">
+      <div class="op-head"><span class="op-id">KG-03</span><span class="op-dot"></span></div>
+      <div class="op-glyph">博</div>
       <div class="op-name">Haku</div>
-      <div class="op-meaning">"Sound of jewels": clarity, precision</div>
       <div class="op-role">Deploy &amp; Doc</div>
+      <div class="op-sub">Sync &amp; Docs</div>
+      <div class="op-meaning">"Sound of jewels": clarity, precision</div>
       <div class="op-desc">Turns messy work into clean documentation, then pushes the work itself live. After Ren builds something, Haku writes it up (what it does, what it touches, how to use it) and deploys scripts straight into WebCenter via Playwright. Searchable, shareable, stored.</div>
-      <span class="op-tag docs">Docs</span>
     </div>
 
-    <div class="op-card op-ryu reveal" data-kanji="龍">
-      <div class="op-id">KG-04</div>
-      <div class="op-kanji">龍</div>
+    <div class="op-card op-ryu reveal" data-glyph="龍">
+      <div class="op-head"><span class="op-id">KG-04</span><span class="op-dot"></span></div>
+      <div class="op-glyph">龍</div>
       <div class="op-name">Ryū</div>
+      <div class="op-role">Night Runner</div>
+      <div class="op-sub">Overnight Automation</div>
       <div class="op-meaning">"Dragon": powerful, tireless</div>
-      <div class="op-role">Overnight Runner</div>
       <div class="op-desc">Runs scheduled tasks while I sleep. Surfaces his own proposals for the next run, queues scripts for review, and delivers a morning digest. Launch a proposal and it becomes a real, tracked dashboard task. Dragons don't rest. Neither does Ryū.</div>
-      <span class="op-tag auto">Autonomous</span>
     </div>
 
-<div class="op-card op-cho reveal" data-kanji="聴">
-      <div class="op-id">KG-05</div>
-      <div class="op-kanji">聴</div>
+    <div class="op-card op-cho reveal" data-glyph="聴">
+      <div class="op-head"><span class="op-id">KG-05</span><span class="op-dot"></span></div>
+      <div class="op-glyph">聴</div>
       <div class="op-name">Chō</div>
-      <div class="op-meaning">"To listen": attentive, fully present</div>
       <div class="op-role">Meeting Listener</div>
+      <div class="op-sub">Capture &amp; Summarize</div>
+      <div class="op-meaning">"To listen": attentive, fully present</div>
       <div class="op-desc">Sits in the shadows of a call and listens. Captures the audio, transcribes it on-device with faster-whisper — nothing ever leaves the machine — and hands back a clean summary: decisions, action items, open questions. A meeting stops being something you re-type from memory and becomes reusable text that feeds straight back into project work and the crew's knowledge.</div>
-      <span class="op-tag" style="color: #38bdf8; border-color: rgba(56,189,248,0.3); background: rgba(56,189,248,0.08);">Local capture</span>
     </div>
 
-    <div class="op-card op-sumi reveal" data-kanji="墨">
-      <div class="op-id">KG-06</div>
-      <div class="op-kanji">墨</div>
+    <div class="op-card op-sumi reveal" data-glyph="墨">
+      <div class="op-head"><span class="op-id">KG-06</span><span class="op-dot"></span></div>
+      <div class="op-glyph">墨</div>
       <div class="op-name">Sumi</div>
-      <div class="op-meaning">"Ink": permanent, deliberate</div>
       <div class="op-role">Record-Keeper</div>
+      <div class="op-sub">Customer Ledger</div>
+      <div class="op-meaning">"Ink": permanent, deliberate</div>
       <div class="op-desc">The ear hears; the ink keeps. After Chō summarises a meeting, Sumi files it into a durable, per-customer record — a clean dossier that outlives the call. Tag a meeting to a customer and it's archived for good. Faithful, factual, never invents an attendee or a date.</div>
-      <span class="op-tag" style="color: #c3cdd6; border-color: rgba(154,168,181,0.35); background: rgba(154,168,181,0.08);">Records</span>
-    </div>
-
-    <div class="op-card reveal" data-kanji="鉄">
-      <div class="op-id">PERSONAL</div>
-      <div class="op-kanji">鉄</div>
-      <div class="op-name">Tetsu</div>
-      <div class="op-meaning">"Iron": the metal, the discipline</div>
-      <div class="op-role">Motorcycle Maintenance · Personal Pet Operative</div>
-      <div class="op-desc">Nothing to do with WebCenter either. Tetsu handles the other obsession — two wheels. Service intervals, diagnostics, DIY repairs, parts sourcing. Any make, any model. The kind of operative you build because you got tired of hunting through forums for a torque spec at 10pm. Practical, direct, never vague.</div>
-      <span class="op-tag" style="color: #f78fb3; border-color: rgba(247,143,179,0.3); background: rgba(247,143,179,0.07);">Personal</span>
-      <span class="op-tag" style="color: var(--crimson); border-color: rgba(232,54,93,0.3); background: var(--crimson-dim);">Pet Operative</span>
     </div>
 
   </div>
