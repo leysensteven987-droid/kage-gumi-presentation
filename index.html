@@ -927,6 +927,7 @@
       <div class="ba-item">Digging through logs to understand what went wrong</div>
       <div class="ba-item">Context-switching between tasks constantly</div>
       <div class="ba-item">Half-present in meetings — taking notes instead of actually being in the room</div>
+      <div class="ba-item">Constantly searching the WebCenter system to work out which dashboards, searches and forms are nested on a page</div>
     </div>
     <div class="ba-panel ba-after">
       <div class="ba-label">With Kage-gumi</div>
@@ -937,6 +938,7 @@
       <div class="ba-item">Logs are surfaced and summarised, not buried</div>
       <div class="ba-item">Ryū handles overnight batch work autonomously</div>
       <div class="ba-item">Chō captures &amp; summarises the meeting and Sumi files it — be present, not the note-taker</div>
+      <div class="ba-item">Tōshi X-rays any page — every nested dashboard, search and form, in one click</div>
     </div>
   </div>
 
@@ -987,6 +989,13 @@
         <div class="wc-scenario-title">"File that meeting under the customer, for good"</div>
         <p class="wc-scenario-desc">Once Chō has summarised, Sumi files it into a durable per-customer record. Tag the meeting to a customer and it's archived into a clean dossier that outlives the call — faithful and factual, never inventing an attendee or a date.</p>
       </div>
+
+      <div class="wc-scenario reveal">
+        <div class="wc-scenario-label">Scenario 07</div>
+        <div class="wc-scenario-op" style="color: var(--op-toshi);">Tōshi · 透</div>
+        <div class="wc-scenario-title">"What's actually on this page — and where do I go to edit it?"</div>
+        <p class="wc-scenario-desc">The pain everyone who touches WebCenter knows — customers and developers alike: you're on a page with no idea which dashboards, saved searches and forms are nested inside it, so you go digging through the system to find out. Tōshi X-rays the page in one click — the whole nested structure laid out, every item a direct link to its editor. The searching just stops.</p>
+      </div>
     </div>
 
     <div>
@@ -1027,11 +1036,18 @@
             <span class="status-chip chip-active">Listening</span>
           </div>
         </div>
-        <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; display: flex; align-items: center; gap: 14px;">
+        <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; margin-bottom: -1px; display: flex; align-items: center; gap: 14px;">
           <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--op-sumi);">墨</span>
           <div>
             <div style="font-family: monospace; font-size: 10px; color: var(--text-dim);">KG-06 · SUMI</div>
             <span class="status-chip chip-queued">Filing</span>
+          </div>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; display: flex; align-items: center; gap: 14px;">
+          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--op-toshi);">透</span>
+          <div>
+            <div style="font-family: monospace; font-size: 10px; color: var(--text-dim);">THE EYE · TŌSHI</div>
+            <span class="status-chip chip-active">Watching</span>
           </div>
         </div>
       </div>
@@ -1073,7 +1089,7 @@
       <div class="op-role">Deploy &amp; Doc</div>
       <div class="op-sub">Sync &amp; Docs</div>
       <div class="op-meaning">"Sound of jewels": clarity, precision</div>
-      <div class="op-desc">Turns messy work into clean documentation, then pushes the work itself live. After Ren builds something, Haku writes it up (what it does, what it touches, how to use it) and deploys scripts straight into WebCenter via Playwright. Searchable, shareable, stored. The inspector's eye she first opened — <span class="jp">透視</span> Tōshi — has since grown into an operative of her own (see her card).</div>
+      <div class="op-desc">Turns messy work into clean documentation, then pushes the work itself live. After Ren builds something, Haku writes it up (what it does, what it touches, how to use it) and deploys scripts straight into WebCenter via Playwright. Searchable, shareable, stored. The inspector's eye she first opened — <span class="jp">透</span> Tōshi — has since grown into an operative of her own (see her card).</div>
     </div>
 
     <div class="op-card op-ryu reveal" data-glyph="龍">
@@ -1112,7 +1128,7 @@
       <div class="op-name">Tōshi</div>
       <div class="op-role">The Seer</div>
       <div class="op-sub">Inspector · Recon</div>
-      <div class="op-meaning"><span class="jp">透視</span> "clairvoyance": to see straight through</div>
+      <div class="op-meaning">"Clairvoyance": to see straight through</div>
       <div class="op-desc">Where the others build and deploy, Tōshi <em>reveals</em>. She X-rays any WebCenter — dashboard topology, page inventory, the wiring and hidden structure nobody wrote down — and hands back a map of what's really there. She began as Haku's inspector eye and grew into an operative of her own; every build starts by seeing the ground first, so Tōshi is never idle. The shadow that reads the blueprint behind the glass.</div>
     </div>
 
@@ -1399,8 +1415,8 @@
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;"><span class="jp" style="color: #8fd9ff;">透視</span> Tōshi: Dashboard Inspector — Haku lifts the veil</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">A new eye for Haku. Tōshi (<span class="jp">透視</span> — "seeing through") reads what any WebCenter page is actually built from. <strong style="color: var(--text);">Scan</strong> inventories every dashboard, saved search, task page and attribute category on a page; <strong style="color: var(--text);">Graph</strong> walks a dashboard's full reference tree — sub-dashboards, buttons, embedded searches — and flags anything that's been deleted. Point it at a page and the whole hidden structure shows. <em>Lift the veil.</em></div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;"><span class="jp" style="color: #8fd9ff;">透</span> Tōshi: Dashboard Inspector — Haku lifts the veil</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">A new eye for Haku. Tōshi (<span class="jp">透</span> — "seeing through") reads what any WebCenter page is actually built from. <strong style="color: var(--text);">Scan</strong> inventories every dashboard, saved search, task page and attribute category on a page; <strong style="color: var(--text);">Graph</strong> walks a dashboard's full reference tree — sub-dashboards, buttons, embedded searches — and flags anything that's been deleted. Point it at a page and the whole hidden structure shows. <em>Lift the veil.</em></div>
       </div>
     </div>
 
