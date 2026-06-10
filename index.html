@@ -80,6 +80,7 @@
     --op-ryu:       #f0a500;
     --op-cho:       #38bdf8;
     --op-sumi:      #9aa8b5;
+    --op-toshi:     #8fd9ff;
     --text:         #d8f0ea;
     --text-sec:     #c8e8e0;
     --text-muted:   #5a8a7a;
@@ -520,6 +521,7 @@
   .op-card.op-ryu  { --op-accent: var(--op-ryu);  --op-accent-soft: rgba(240,165,0,0.16); }
   .op-card.op-cho  { --op-accent: var(--op-cho);  --op-accent-soft: rgba(56,189,248,0.16); }
   .op-card.op-sumi { --op-accent: var(--op-sumi); --op-accent-soft: rgba(154,168,181,0.14); }
+  .op-card.op-toshi{ --op-accent: var(--op-toshi);--op-accent-soft: rgba(143,217,255,0.16); }
 
   /* ── WEBCENTER SECTION ── */
   .wc-visual {
@@ -1071,7 +1073,7 @@
       <div class="op-role">Deploy &amp; Doc</div>
       <div class="op-sub">Sync &amp; Docs</div>
       <div class="op-meaning">"Sound of jewels": clarity, precision</div>
-      <div class="op-desc">Turns messy work into clean documentation, then pushes the work itself live. After Ren builds something, Haku writes it up (what it does, what it touches, how to use it) and deploys scripts straight into WebCenter via Playwright. Searchable, shareable, stored. Her newest eye — <span class="jp">透視</span> Tōshi — sees <em>through</em> any WebCenter page to the structure beneath it.</div>
+      <div class="op-desc">Turns messy work into clean documentation, then pushes the work itself live. After Ren builds something, Haku writes it up (what it does, what it touches, how to use it) and deploys scripts straight into WebCenter via Playwright. Searchable, shareable, stored. The inspector's eye she first opened — <span class="jp">透視</span> Tōshi — has since grown into an operative of her own (see her card).</div>
     </div>
 
     <div class="op-card op-ryu reveal" data-glyph="龍">
@@ -1102,6 +1104,16 @@
       <div class="op-sub">Customer Ledger</div>
       <div class="op-meaning">"Ink": permanent, deliberate</div>
       <div class="op-desc">The ear hears; the ink keeps. After Chō summarises a meeting, Sumi files it into a durable, per-customer record — a clean dossier that outlives the call. Tag a meeting to a customer and it's archived for good. Faithful, factual, never invents an attendee or a date.</div>
+    </div>
+
+    <div class="op-card op-toshi reveal" data-glyph="透">
+      <div class="op-head"><span class="op-id">THE EYE</span><span class="op-dot"></span></div>
+      <div class="op-glyph">透</div>
+      <div class="op-name">Tōshi</div>
+      <div class="op-role">The Seer</div>
+      <div class="op-sub">Inspector · Recon</div>
+      <div class="op-meaning"><span class="jp">透視</span> "clairvoyance": to see straight through</div>
+      <div class="op-desc">Where the others build and deploy, Tōshi <em>reveals</em>. She X-rays any WebCenter — dashboard topology, page inventory, the wiring and hidden structure nobody wrote down — and hands back a map of what's really there. She began as Haku's inspector eye and grew into an operative of her own; every build starts by seeing the ground first, so Tōshi is never idle. The shadow that reads the blueprint behind the glass.</div>
     </div>
 
   </div>
@@ -1596,6 +1608,29 @@
 
 </section>
 
+<!-- DENSHO -->
+<section id="densho">
+  <div class="section-tag">On the horizon</div>
+  <h2>Densho <span class="jp">伝書</span></h2>
+  <p>A <em>densho</em> is the scroll a school keeps to record its techniques and pass them to the next generation. <strong style="color: var(--text);">Densho is the crew's own version</strong> — a living library of every reusable WebCenter solution we've forged: the design notes, the working script, how to test it, where it fits. Browse it, pull a solution straight into a build, or file a new one.</p>
+  <p style="margin-top: -4px;">Our private answer to the big internal solution catalogs — but owned outright, written in our own voice, and growing every time an operative builds something worth keeping.</p>
+
+  <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; max-width: 760px;">
+    <div class="reveal" style="background: var(--bg-card); border: 1px solid var(--border); padding: 20px 22px;">
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 8px;">Browse &amp; pull</div>
+      <div style="font-size: 13px; color: var(--text-muted); line-height: 1.55;">Search by category, use level or version. Open an entry to its design notes, code and acceptance criteria — and lift it straight into the next build.</div>
+    </div>
+    <div class="reveal" style="background: var(--bg-card); border: 1px solid var(--border); padding: 20px 22px;">
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 8px;">Author &amp; contribute</div>
+      <div style="font-size: 13px; color: var(--text-muted); line-height: 1.55;">Add a new solution through a simple form. Operatives file what they build, so the library grows itself — no separate catalog to maintain.</div>
+    </div>
+    <div class="reveal" style="background: var(--bg-card); border: 1px solid var(--border); padding: 20px 22px;">
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 8px;">Ours, end to end</div>
+      <div style="font-size: 13px; color: var(--text-muted); line-height: 1.55;">Lives inside Kage-gumi — not a customer system. Seeded by what we've genuinely built. A later step can publish an entry out into a WebCenter on demand.</div>
+    </div>
+  </div>
+</section>
+
 <!-- CLOSING -->
 <div class="closing">
   <div class="section-tag" style="margin-bottom: 32px;">影組</div>
@@ -1615,6 +1650,7 @@
     <span class="status-chip" style="color: var(--op-ryu); border-color: rgba(240,165,0,0.35); background: rgba(240,165,0,0.08);">Ryū · Overnight</span>
     <span class="status-chip" style="color: var(--op-cho); border-color: rgba(56,189,248,0.35); background: rgba(56,189,248,0.08);">Chō · Listener</span>
     <span class="status-chip" style="color: #c3cdd6; border-color: rgba(154,168,181,0.35); background: rgba(154,168,181,0.08);">Sumi · Records</span>
+    <span class="status-chip" style="color: var(--op-toshi); border-color: rgba(143,217,255,0.35); background: rgba(143,217,255,0.08);">Tōshi · Inspector</span>
     <span class="status-chip" style="color: #f78fb3; border-color: rgba(247,143,179,0.3); background: rgba(247,143,179,0.07);">Tetsu · Wrench</span>
   </div>
 
