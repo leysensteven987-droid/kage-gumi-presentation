@@ -819,6 +819,34 @@
     [style*="grid-template-columns: 1fr 32px 1fr 32px 1fr"] > :nth-child(4) { display: none; }
   }
 
+  /* ── desktop: one centered reading lane (mobile is already single-column) ── */
+  @media (min-width: 769px) {
+    /* each section becomes a centred flex column, content held to one lane */
+    section { display: flex; flex-direction: column; align-items: center; padding: 80px 32px; }
+    section > * { width: 100%; max-width: 720px !important; }
+    section > h2, section > p { text-align: center; }
+    .section-tag { justify-content: center; }
+
+    /* hero → centred single column, drop the side kanji wash */
+    .hero { grid-template-columns: 1fr; max-width: 720px; margin: 0 auto;
+            text-align: center; padding: 96px 32px 76px; }
+    .hero-right { display: none; }
+    .hero-desc { max-width: 600px; margin-left: auto; margin-right: auto; }
+
+    /* crew: one card per row, narratives stay visible inline */
+    .op-grid { grid-template-columns: 1fr; }
+
+    /* class-based side-by-side blocks → stack into the lane */
+    .wc-visual, .wc-before-after, .kanji-breakdown { grid-template-columns: 1fr; }
+
+    /* collapse the side-by-side / multi-step content blocks into the lane */
+    [style*="grid-template-columns: 1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
+    [style*="grid-template-columns: 1fr 32px 1fr 32px 1fr"] { grid-template-columns: 1fr !important; gap: 14px !important; }
+    [style*="grid-template-columns: 1fr 1fr;"] { grid-template-columns: 1fr !important; }
+    [style*="grid-template-columns: 1fr 32px 1fr 32px 1fr"] > :nth-child(2),
+    [style*="grid-template-columns: 1fr 32px 1fr 32px 1fr"] > :nth-child(4) { display: none; }
+  }
+
   /* "tap to read" affordance — injected per card, shown only on mobile */
   .op-tap-hint { display: none; font-family: monospace; font-size: 11px; letter-spacing: 0.12em;
                  text-transform: uppercase; color: var(--op-accent); margin-top: 16px; opacity: 0.85; }
