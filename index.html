@@ -806,6 +806,10 @@
     .wc-before-after { grid-template-columns: 1fr; }
     .kanji-breakdown { grid-template-columns: 1fr; }
     .op-grid { grid-template-columns: 1fr; max-width: 460px; }
+    /* crew cards: compact on mobile — tap opens the full narrative centred (.op-modal) */
+    .op-card { cursor: pointer; }
+    .op-card .op-desc { display: none; }
+    .op-card .op-tap-hint { display: block; }
     /* inline-styled content grids → single column (inline styles need !important) */
     [style*="grid-template-columns: 1fr 32px 1fr 32px 1fr"] { grid-template-columns: 1fr !important; gap: 14px !important; }
     [style*="grid-template-columns: 1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
@@ -814,6 +818,28 @@
     [style*="grid-template-columns: 1fr 32px 1fr 32px 1fr"] > :nth-child(2),
     [style*="grid-template-columns: 1fr 32px 1fr 32px 1fr"] > :nth-child(4) { display: none; }
   }
+
+  /* "tap to read" affordance — injected per card, shown only on mobile */
+  .op-tap-hint { display: none; font-family: monospace; font-size: 11px; letter-spacing: 0.12em;
+                 text-transform: uppercase; color: var(--op-accent); margin-top: 16px; opacity: 0.85; }
+
+  /* mobile crew narrative → body-level modal (a direct <body> child sits outside
+     every scroll/transform container, so iOS can't trap it behind the dim) */
+  .op-modal { position: fixed; inset: 0; z-index: 4000; display: none;
+              align-items: center; justify-content: center; padding: 24px;
+              background: rgba(6,12,11,0.80); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .op-modal.show { display: flex; }
+  .op-modal-card {
+    --op-accent: var(--teal); --op-accent-soft: rgba(0,255,224,0.15);
+    width: min(390px, 92vw); max-height: 84vh; overflow-y: auto; cursor: auto; text-align: center;
+    border: 1px solid var(--op-accent); border-radius: 18px;
+    background: radial-gradient(130% 60% at 50% -10%, var(--op-accent-soft) 0%, transparent 55%),
+                linear-gradient(180deg, #15231f 0%, #0b1613 100%);
+    box-shadow: 0 0 0 1px var(--op-accent), 0 26px 60px rgba(0,0,0,0.7);
+    padding: 26px 26px 28px; animation: fadeUp 0.3s ease;
+  }
+  .op-modal-card .op-tap-hint { display: none; }       /* no hint inside the modal */
+  .op-modal-card .op-desc { display: block; text-align: left; }
 </style>
 <!-- GoatCounter analytics — privacy-friendly, no cookies. View count + referrers + country.
      Site code is "kage-gumi" → register it (free) at https://www.goatcounter.com/signup.
@@ -1706,6 +1732,46 @@
   setTimeout(() => {
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
   }, 1200);
+
+  // ── crew cards: tap-to-read on mobile (centred body-level modal, like the keynote) ──
+  (function () {
+    var cards = document.querySelectorAll('.op-card');
+    if (!cards.length) return;
+
+    // inject a "tap to read" hint into each card (CSS shows it only on mobile)
+    cards.forEach(function (card) {
+      var hint = document.createElement('div');
+      hint.className = 'op-tap-hint';
+      hint.textContent = 'Tap to read →';
+      card.appendChild(hint);
+    });
+
+    var modal = document.createElement('div');
+    modal.className = 'op-modal';
+    document.body.appendChild(modal);
+    var mq = window.matchMedia('(max-width: 768px)');
+
+    function closeModal() { modal.classList.remove('show'); modal.innerHTML = ''; }
+
+    function openModal(card) {
+      var inner = document.createElement('div');
+      inner.className = 'op-modal-card';
+      inner.style.setProperty('--op-accent', getComputedStyle(card).getPropertyValue('--op-accent').trim());
+      inner.style.setProperty('--op-accent-soft', getComputedStyle(card).getPropertyValue('--op-accent-soft').trim());
+      inner.innerHTML = card.innerHTML;   // glyph, name, role, meaning, full desc
+      modal.innerHTML = '';
+      modal.appendChild(inner);
+      modal.classList.add('show');
+    }
+
+    // tap the dim to dismiss; Esc closes too (desktop)
+    modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+
+    cards.forEach(function (card) {
+      card.addEventListener('click', function () { if (mq.matches) openModal(card); });
+    });
+  })();
 </script>
 </body>
 </html>
