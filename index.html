@@ -576,6 +576,23 @@
     margin: 0;
   }
 
+  /* operative made present in each scenario card + its status folded in */
+  .wc-scenario-head {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 16px; padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-sub);
+  }
+  .wc-op-glyph {
+    font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 40px; line-height: 1;
+    flex-shrink: 0; text-shadow: 0 0 18px currentColor;
+  }
+  .wc-op-meta { flex: 1 1 auto; min-width: 0; text-align: left; }
+  .wc-op-name { font-family: 'Noto Serif JP', serif; font-size: 21px; font-weight: 700; line-height: 1; }
+  .wc-op-id { font-family: monospace; font-size: 10px; letter-spacing: 0.12em;
+              text-transform: uppercase; color: var(--text-dim); margin-top: 5px; }
+  .wc-scenario-head .status-chip { margin: 0; flex-shrink: 0; }
+  .wc-scenarios { margin-top: 24px; }
+
   .wc-before-after {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1013,107 +1030,101 @@
       <p style="margin-bottom: 24px; margin-top: 32px;">Real scenarios the crew handles:</p>
 
       <div class="wc-scenario reveal">
+        <div class="wc-scenario-head">
+          <span class="wc-op-glyph" style="color: var(--op-mei);">明</span>
+          <div class="wc-op-meta">
+            <div class="wc-op-name" style="color: var(--op-mei);">Mei</div>
+            <div class="wc-op-id">KG-01 · Support Agent</div>
+          </div>
+          <span class="status-chip chip-active">Active</span>
+        </div>
         <div class="wc-scenario-label">Scenario 01</div>
-        <div class="wc-scenario-op" style="color: var(--op-mei);">KG-01 Mei · 明</div>
         <div class="wc-scenario-title">"How do I set a WebCenter attribute via SDK?"</div>
         <p class="wc-scenario-desc">Instead of hunting through docs, I ask Mei. It knows the full JSP call library: SetAttribute.jsp, GetAttributes.jsp, the right parameters, the XML response structure, and gives me working code immediately.</p>
       </div>
 
       <div class="wc-scenario reveal">
+        <div class="wc-scenario-head">
+          <span class="wc-op-glyph" style="color: var(--op-ren);">錬</span>
+          <div class="wc-op-meta">
+            <div class="wc-op-name" style="color: var(--op-ren);">Ren</div>
+            <div class="wc-op-id">KG-02 · Builder</div>
+          </div>
+          <span class="status-chip chip-queued">Building</span>
+        </div>
         <div class="wc-scenario-label">Scenario 02</div>
-        <div class="wc-scenario-op" style="color: var(--op-ren);">KG-02 Ren · 錬</div>
         <div class="wc-scenario-title">"Build a display script that shows me status progression of a project"</div>
         <p class="wc-scenario-desc">Ren builds Dashboard scripts, Rule Engine scripts, Workflow JavaScript node scripts. Built around WebCenter - each context has different APIs and constraints, and Ren knows them all. Scripts come back versioned and diffable, and Ren pushes them straight into WebCenter himself - no copy-paste step.</p>
       </div>
 
       <div class="wc-scenario reveal">
+        <div class="wc-scenario-head">
+          <span class="wc-op-glyph" style="color: var(--op-haku);">博</span>
+          <div class="wc-op-meta">
+            <div class="wc-op-name" style="color: var(--op-haku);">Haku</div>
+            <div class="wc-op-id">KG-03 · Deploy & Doc</div>
+          </div>
+          <span class="status-chip chip-idle">Idle</span>
+        </div>
         <div class="wc-scenario-label">Scenario 03</div>
-        <div class="wc-scenario-op" style="color: var(--op-haku);">KG-03 Haku · 博</div>
         <div class="wc-scenario-title">"Document this workflow - and find what we already have on it"</div>
         <p class="wc-scenario-desc">Haku documents what was just built, but also surfaces what already exists: existing scripts, prior configurations, related workflows. She can read a live WebCenter artifact via Playwright and write a functional spec from what she actually sees. Output is clean, shareable, Azure DevOps-ready.</p>
       </div>
 
       <div class="wc-scenario reveal">
+        <div class="wc-scenario-head">
+          <span class="wc-op-glyph" style="color: var(--op-ryu);">龍</span>
+          <div class="wc-op-meta">
+            <div class="wc-op-name" style="color: var(--op-ryu);">Ryū</div>
+            <div class="wc-op-id">KG-04 · Night Runner</div>
+          </div>
+          <span class="status-chip chip-complete">Scheduled</span>
+        </div>
         <div class="wc-scenario-label">Scenario 04</div>
-        <div class="wc-scenario-op" style="color: var(--op-ryu);">KG-04 Ryū · 龍</div>
         <div class="wc-scenario-title">Run overnight batch tasks</div>
         <p class="wc-scenario-desc">Ryū runs scheduled tasks while I sleep, processing queued scripts and delivering a morning digest of everything that happened.</p>
       </div>
 
       <div class="wc-scenario reveal">
+        <div class="wc-scenario-head">
+          <span class="wc-op-glyph" style="color: var(--op-cho);">聴</span>
+          <div class="wc-op-meta">
+            <div class="wc-op-name" style="color: var(--op-cho);">Chō</div>
+            <div class="wc-op-id">KG-05 · Meeting Listener</div>
+          </div>
+          <span class="status-chip chip-active">Listening</span>
+        </div>
         <div class="wc-scenario-label">Scenario 05</div>
-        <div class="wc-scenario-op" style="color: var(--op-cho);">KG-05 Chō · 聴</div>
         <div class="wc-scenario-title">"Capture this customer call and turn it into something I can use"</div>
         <p class="wc-scenario-desc">Chō listens to the meeting and transcribes it locally with faster-whisper - nothing leaves the machine - then returns a structured summary: decisions, action items, open questions. Meeting knowledge becomes reusable project text the rest of the crew can act on.</p>
       </div>
 
       <div class="wc-scenario reveal">
+        <div class="wc-scenario-head">
+          <span class="wc-op-glyph" style="color: var(--op-sumi);">墨</span>
+          <div class="wc-op-meta">
+            <div class="wc-op-name" style="color: var(--op-sumi);">Sumi</div>
+            <div class="wc-op-id">KG-06 · Record-Keeper</div>
+          </div>
+          <span class="status-chip chip-queued">Filing</span>
+        </div>
         <div class="wc-scenario-label">Scenario 06</div>
-        <div class="wc-scenario-op" style="color: var(--op-sumi);">KG-06 Sumi · 墨</div>
         <div class="wc-scenario-title">"File that meeting under the customer, for good"</div>
         <p class="wc-scenario-desc">Once Chō has summarised, Sumi files it into a durable per-customer record. Tag the meeting to a customer and it's archived into a clean dossier that outlives the call - faithful and factual, never inventing an attendee or a date.</p>
       </div>
 
       <div class="wc-scenario reveal">
+        <div class="wc-scenario-head">
+          <span class="wc-op-glyph" style="color: var(--op-toshi);">透</span>
+          <div class="wc-op-meta">
+            <div class="wc-op-name" style="color: var(--op-toshi);">Tōshi</div>
+            <div class="wc-op-id">THE EYE · The Seer</div>
+          </div>
+          <span class="status-chip chip-active">Watching</span>
+        </div>
         <div class="wc-scenario-label">Scenario 07</div>
-        <div class="wc-scenario-op" style="color: var(--op-toshi);">Tōshi · 透</div>
         <div class="wc-scenario-title">"What's actually on this page - and where do I go to edit it?"</div>
         <p class="wc-scenario-desc">The pain everyone who touches WebCenter knows - customers and developers alike: you're on a page with no idea which dashboards, saved searches and forms are nested inside it, so you go digging through the system to find out. Tōshi X-rays the page in one click - the whole nested structure laid out, every item a direct link to its editor. The searching just stops.</p>
-      </div>
-    </div>
-
-    <div>
-      <p style="margin-top: 32px; margin-bottom: 24px;">Current operative statuses:</p>
-      <div style="display: flex; flex-wrap: wrap; gap: 0; flex-direction: column; max-width: 300px;">
-        <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; margin-bottom: -1px; display: flex; align-items: center; gap: 14px;">
-          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--op-mei);">明</span>
-          <div>
-            <div style="font-family: monospace; font-size: 10px; color: var(--text-dim);">KG-01 · MEI</div>
-            <span class="status-chip chip-active">Active</span>
-          </div>
-        </div>
-        <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; margin-bottom: -1px; display: flex; align-items: center; gap: 14px;">
-          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--op-ren);">錬</span>
-          <div>
-            <div style="font-family: monospace; font-size: 10px; color: var(--text-dim);">KG-02 · REN</div>
-            <span class="status-chip chip-queued">Building</span>
-          </div>
-        </div>
-        <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; margin-bottom: -1px; display: flex; align-items: center; gap: 14px;">
-          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--op-haku);">博</span>
-          <div>
-            <div style="font-family: monospace; font-size: 10px; color: var(--text-dim);">KG-03 · HAKU</div>
-            <span class="status-chip chip-idle">Idle</span>
-          </div>
-        </div>
-        <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; margin-bottom: -1px; display: flex; align-items: center; gap: 14px;">
-          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--op-ryu);">龍</span>
-          <div>
-            <div style="font-family: monospace; font-size: 10px; color: var(--text-dim);">KG-04 · RYŪ</div>
-            <span class="status-chip chip-complete">Scheduled</span>
-          </div>
-        </div>
-        <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; margin-bottom: -1px; display: flex; align-items: center; gap: 14px;">
-          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--op-cho);">聴</span>
-          <div>
-            <div style="font-family: monospace; font-size: 10px; color: var(--text-dim);">KG-05 · CHŌ</div>
-            <span class="status-chip chip-active">Listening</span>
-          </div>
-        </div>
-        <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; margin-bottom: -1px; display: flex; align-items: center; gap: 14px;">
-          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--op-sumi);">墨</span>
-          <div>
-            <div style="font-family: monospace; font-size: 10px; color: var(--text-dim);">KG-06 · SUMI</div>
-            <span class="status-chip chip-queued">Filing</span>
-          </div>
-        </div>
-        <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 16px 20px; display: flex; align-items: center; gap: 14px;">
-          <span style="font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--op-toshi);">透</span>
-          <div>
-            <div style="font-family: monospace; font-size: 10px; color: var(--text-dim);">THE EYE · TŌSHI</div>
-            <span class="status-chip chip-active">Watching</span>
-          </div>
-        </div>
       </div>
     </div>
   </div>
