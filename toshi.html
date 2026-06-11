@@ -85,6 +85,8 @@
           background:rgba(143,217,255,0.05); border:1px solid #305a52; color:var(--toshi);
           font-family:var(--mono); font-size:15px; }
   .tool .tt{ font-weight:600; color:var(--text); font-size:15px; }
+  .tool .tt .bl{ font-family:var(--mono); font-weight:400; font-size:11px; color:var(--toshi);
+                 border:1px solid #305a52; background:rgba(143,217,255,0.06); border-radius:5px; padding:1px 6px; margin-left:7px; white-space:nowrap; }
   .tool .td{ color:var(--muted); font-size:13.5px; margin-top:2px; }
   .tool .td b{ color:var(--body); font-weight:600; }
 
@@ -221,15 +223,15 @@
     <h2><span class="sec-k">参</span>The toolbar — every control</h2>
     <p class="sec-intro">The panel header. Each button is a single, focused action. Active toggles glow blue.</p>
     <div class="tools">
-      <div class="tool"><div class="glyph">⤷&nbsp;refs</div><div><div class="tt">Reference graph</div><div class="td">Switch from the <b>on-page</b> view to the deep <b>LOADDASHBOARD</b> graph — every dashboard each one links to (sub / button / task / approval + embedded searches), with <b>DELETED</b> flags.</div></div></div>
+      <div class="tool"><div class="glyph">⤷</div><div><div class="tt">Reference graph <span class="bl">⤷&nbsp;refs</span></div><div class="td">Switch from the <b>on-page</b> view to the deep <b>LOADDASHBOARD</b> graph — every dashboard each one links to (sub / button / task / approval + embedded searches), with <b>DELETED</b> flags.</div></div></div>
       <div class="tool"><div class="glyph">◎</div><div><div class="tt">Pick &amp; locate</div><div class="td">Click any element on the page → Tōshi finds it, <b>scrolls to its row</b>, and marks it. Both the row and the element keep a persistent blue glow until you pick another.</div></div></div>
-      <div class="tool"><div class="glyph">▦&nbsp;all</div><div><div class="tt">Reveal all</div><div class="td">Outline <b>every</b> element on the page at once (each name a clickable link) and stash the panel — the whole page, X-rayed. Labels nudge apart so nested ones never hide each other.</div></div></div>
+      <div class="tool"><div class="glyph">▦</div><div><div class="tt">Reveal all <span class="bl">▦&nbsp;all</span></div><div class="td">Outline <b>every</b> element on the page at once (each name a clickable link) and stash the panel — the whole page, X-rayed. Labels nudge apart so nested ones never hide each other.</div></div></div>
       <div class="tool"><div class="glyph">⤓</div><div><div class="tt">Export</div><div class="td">Copy the whole structure to your clipboard as a <b>Markdown</b> outline — ticket / handover ready. <span class="kbd">Shift</span>-click for <b>JSON</b>.</div></div></div>
       <div class="tool"><div class="glyph">#</div><div><div class="tt">Toggle IDs</div><div class="td">Show / hide the <code>[bracketed]</code> ids. Off by default — you rarely need them while scanning. Filtering still matches ids even when hidden.</div></div></div>
       <div class="tool"><div class="glyph">⇄</div><div><div class="tt">Dock side</div><div class="td">Flip the panel to the other edge when it's covering something you need to see.</div></div></div>
       <div class="tool"><div class="glyph">–</div><div><div class="tt">Collapse</div><div class="td">Slide Tōshi off to a thin <span class="kbd">透</span> grip tab so the whole page is clear. Click the tab to bring her back.</div></div></div>
       <div class="tool"><div class="glyph">↻</div><div><div class="tt">Re-scan</div><div class="td">Re-read the page (after it changes, or you navigate within it).</div></div></div>
-      <div class="tool"><div class="glyph">filter</div><div><div class="tt">Type-to-filter</div><div class="td">Narrow a busy tree by name or id. The <b>matched text is highlighted</b> on the hits; ancestor rows stay for context.</div></div></div>
+      <div class="tool"><div class="glyph">⌕</div><div><div class="tt">Type-to-filter <span class="bl">filter…</span></div><div class="td">Narrow a busy tree by name or id. The <b>matched text is highlighted</b> on the hits; ancestor rows stay for context.</div></div></div>
       <div class="tool"><div class="glyph">⧉</div><div><div class="tt">Copy row</div><div class="td">Hover a row → <b>⧉</b> copies its <code>name [id]</code>.</div></div></div>
     </div>
   </section>
