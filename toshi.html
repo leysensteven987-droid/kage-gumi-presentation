@@ -296,6 +296,14 @@
       </div>
 
       <div class="fcard">
+        <h3><span class="fg">透</span> Which instance, always</h3>
+        <p>A slim bar under the header reads the <b>live WebCenter version</b> and host of the instance you're on - so you always know <b>which environment</b> you're inspecting. Read once, from your own session.</p>
+        <div class="demo">
+          <div class="row"><span style="width:8px;height:8px;border-radius:50%;background:#8fd9ff;box-shadow:0 0 8px #8fd9ff;display:inline-block;"></span>&nbsp;<span class="nm-d">WebCenter&nbsp;<b style="color:#8fd9ff">26.03</b></span>&nbsp;<span style="color:#6f8580">· onelindt-dev.esko-saas.com</span></div>
+        </div>
+      </div>
+
+      <div class="fcard">
         <h3><span class="fg">⌕</span> Filter that shows its work</h3>
         <p>Type and the <b>matched text lights up</b> on the actual hits - ancestors stay dim for context, so you see exactly what matched.</p>
         <div class="demo">
@@ -357,6 +365,7 @@
       <li><b>The page stays usable.</b> Only the labels are clickable - the outline boxes are click-through, so you can still work the page underneath.</li>
       <li><b>Filter by id even with ids hidden.</b> The match looks at the underlying text, not just what's on screen.</li>
       <li><b>It reads your live session.</b> The reference graph fetches same-origin, carrying your WebCenter cookie - nothing extra to log into.</li>
+      <li><b>It names the instance you're on.</b> A bar under the header reads the live <b>WebCenter version</b> + host (from <code>productinfo</code>), so you never mistake which environment you're inspecting. Hidden on a non-WebCenter page.</li>
       <li><b>Self-contained &amp; safe.</b> Renders in a shadow DOM (WebCenter's CSS can't leak in, and Tōshi never touches the page's own styles).</li>
     </ul>
   </section>
@@ -364,7 +373,7 @@
   <footer>
     <div class="big">透</div>
     <div class="q">“See what the page is built from - then go straight to it.”</div>
-    <div class="meta">透 TŌSHI · THE SEER · Kage-gumi (影組) · Chrome extension v0.4.9</div>
+    <div class="meta">透 TŌSHI · THE SEER · Kage-gumi (影組) · Chrome extension v0.4.18</div>
   </footer>
 
 </div>
