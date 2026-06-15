@@ -134,6 +134,24 @@
   ul.tips li::before{ content:"透"; position:absolute; left:13px; top:11px; font-family:'Noto Serif JP',serif; color:var(--toshi); opacity:0.65; }
   ul.tips b{ color:var(--text); }
 
+  /* ── roadmap ── */
+  .rm{ display:grid; gap:10px; }
+  .phase{ display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:14px;
+          background:var(--card); border:1px solid var(--line2); border-radius:10px; padding:14px 16px; }
+  .phase.done{ border-color:rgba(76,255,145,0.30); }
+  .phase.now{ border-color:rgba(143,217,255,0.45); background:rgba(143,217,255,0.05); box-shadow:0 0 22px rgba(143,217,255,0.10); }
+  .phase .pk{ font-family:'Noto Serif JP',serif; color:var(--toshi); font-size:24px; line-height:1; opacity:0.85; width:30px; text-align:center; align-self:start; }
+  .phase .pt{ font-weight:700; color:var(--text); font-size:15.5px; }
+  .phase .pt .pn{ color:var(--dim); font-family:var(--mono); font-size:12px; font-weight:400; margin-left:8px; }
+  .phase .pd{ color:var(--muted); font-size:13.5px; margin-top:3px; }
+  .phase .pd b{ color:var(--body); font-weight:600; }
+  .st{ flex:none; font-family:var(--mono); font-size:11px; letter-spacing:0.5px; text-transform:uppercase;
+       border-radius:20px; padding:3px 11px; white-space:nowrap; }
+  .st.shipped{ color:var(--green); border:1px solid rgba(76,255,145,0.4); background:rgba(76,255,145,0.07); }
+  .st.building{ color:var(--toshi); border:1px solid rgba(143,217,255,0.4); background:rgba(143,217,255,0.07); }
+  .st.planned{ color:var(--dim); border:1px solid var(--line2); }
+  @media (max-width:720px){ .phase{ grid-template-columns:auto 1fr; } .phase .st{ grid-column:2; justify-self:start; margin-top:5px; } }
+
   footer{ margin-top:60px; padding-top:28px; border-top:1px solid var(--line); text-align:center; color:var(--dim); }
   footer .big{ font-family:'Noto Serif JP',serif; font-size:30px; color:var(--toshi); opacity:0.9; }
   footer .q{ font-style:italic; color:var(--muted); margin-top:8px; }
@@ -167,6 +185,7 @@
     <a href="#features">Features</a>
     <a href="#views">Two views</a>
     <a href="#tips">Tips</a>
+    <a href="#roadmap">Roadmap</a>
   </nav>
 </header>
 
@@ -368,6 +387,71 @@
       <li><b>It names the instance you're on.</b> A bar under the header reads the live <b>WebCenter version</b> + host (from <code>productinfo</code>), so you never mistake which environment you're inspecting. Hidden on a non-WebCenter page.</li>
       <li><b>Self-contained &amp; safe.</b> Renders in a shadow DOM (WebCenter's CSS can't leak in, and Tōshi never touches the page's own styles).</li>
     </ul>
+  </section>
+
+  <!-- ROADMAP -->
+  <section id="roadmap">
+    <h2><span class="sec-k">漆</span>Roadmap - where the eye is going</h2>
+    <p class="sec-intro">Tōshi grows on her own track (透 I-VIII), from "sees this page" to "reads any WebCenter and hands you the map nobody wrote down." What's live today, and what's next.</p>
+    <div class="rm">
+
+      <div class="phase done">
+        <div class="pk">壱</div>
+        <div><div class="pt">Page Inspector<span class="pn">透 I</span></div>
+          <div class="pd">The base: the on-page tree, the <b>⤷ refs</b> reference graph, every name a link to its editor. The CLI, the KG-web 透 panel, and this extension.</div></div>
+        <span class="st shipped">✓ shipped</span>
+      </div>
+
+      <div class="phase done">
+        <div class="pk">弐</div>
+        <div><div class="pt">Highlight &amp; Locate<span class="pn">透 II</span></div>
+          <div class="pd">Devtools-grade: <b>hover to highlight</b> the real block on the page, <b>◎ pick</b> to locate any element in the tree, type-to-filter, copy, export. The overlay layer.</div></div>
+        <span class="st shipped">✓ shipped</span>
+      </div>
+
+      <div class="phase now">
+        <div class="pk">参</div>
+        <div><div class="pt">Full Surface<span class="pn">透 III</span></div>
+          <div class="pd"><b>Live WebCenter version</b> in the header (shipped). Next: a MAIN-world probe so <b>attribute categories</b> and <b>task-execution pages</b> are inspectable too, each one click from its editor.</div></div>
+        <span class="st building">in progress</span>
+      </div>
+
+      <div class="phase">
+        <div class="pk">肆</div>
+        <div><div class="pt">See → Act<span class="pn">透 IV</span></div>
+          <div class="pd">Hand any node to the crew: <b>"document this"</b> (Haku writes the spec) or <b>"ask about this"</b> (Mei for a support answer). Recon becomes the first step of a build.</div></div>
+        <span class="st planned">planned</span>
+      </div>
+
+      <div class="phase">
+        <div class="pk">伍</div>
+        <div><div class="pt">Dashboard Atlas<span class="pn">透 V</span></div>
+          <div class="pd">The <b>whole instance</b>, not one page: the entire dashboard forest, with <b>orphans</b>, <b>dead references</b> and <b>circular refs</b> flagged. An architecture-review artifact for inheriting or migrating a solution.</div></div>
+        <span class="st planned">planned</span>
+      </div>
+
+      <div class="phase">
+        <div class="pk">陸</div>
+        <div><div class="pt">Time Machine<span class="pn">透 VI</span></div>
+          <div class="pd">Snapshot a reference graph, re-run later, <b>diff it</b> - added / removed / newly-deleted. "What changed since the handover or the migration?"</div></div>
+        <span class="st planned">planned</span>
+      </div>
+
+      <div class="phase">
+        <div class="pk">漆</div>
+        <div><div class="pt">The Map<span class="pn">透 VII</span></div>
+          <div class="pd">Render the topology as a <b>node-link graph</b> (shared hubs stand out) and <b>export to Miro</b> - a customer-facing diagram of how their WebCenter is actually wired. A deliverable, not a debug view.</div></div>
+        <span class="st planned">planned</span>
+      </div>
+
+      <div class="phase">
+        <div class="pk">捌</div>
+        <div><div class="pt">Support Bundle<span class="pn">透 VIII</span></div>
+          <div class="pd">The logs support always asks for, one click away: <b>server.log</b>, <b>SEVERE.log</b> and <b>catalina.log</b>, downloadable as a version-stamped bundle straight from the panel. Pairs with Mei for first-pass triage.</div></div>
+        <span class="st planned">planned</span>
+      </div>
+
+    </div>
   </section>
 
   <footer>
