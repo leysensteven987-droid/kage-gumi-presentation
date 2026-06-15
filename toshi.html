@@ -150,6 +150,8 @@
   .st.shipped{ color:var(--green); border:1px solid rgba(76,255,145,0.4); background:rgba(76,255,145,0.07); }
   .st.building{ color:var(--toshi); border:1px solid rgba(143,217,255,0.4); background:rgba(143,217,255,0.07); }
   .st.planned{ color:var(--dim); border:1px solid var(--line2); }
+  .st.next{ color:#f0a500; border:1px solid rgba(240,165,0,0.5); background:rgba(240,165,0,0.10); font-weight:600; }
+  .phase.next{ border-color:rgba(240,165,0,0.5); background:rgba(240,165,0,0.05); box-shadow:0 0 22px rgba(240,165,0,0.10); }
   @media (max-width:720px){ .phase{ grid-template-columns:auto 1fr; } .phase .st{ grid-column:2; justify-self:start; margin-top:5px; } }
 
   footer{ margin-top:60px; padding-top:28px; border-top:1px solid var(--line); text-align:center; color:var(--dim); }
@@ -416,38 +418,38 @@
         <span class="st building">in progress</span>
       </div>
 
-      <div class="phase">
+      <div class="phase next">
         <div class="pk">肆</div>
-        <div><div class="pt">See → Act<span class="pn">透 IV</span></div>
+        <div><div class="pt">Support Bundle<span class="pn">透 IV</span></div>
+          <div class="pd">The logs support always asks for, one click away: <b>server.log</b>, <b>SEVERE.log</b> and <b>catalina.log</b>, downloadable as a version-stamped bundle straight from the panel. Pairs with Mei for first-pass triage.</div></div>
+        <span class="st next">▲ next up</span>
+      </div>
+
+      <div class="phase">
+        <div class="pk">伍</div>
+        <div><div class="pt">See → Act<span class="pn">透 V</span></div>
           <div class="pd">Hand any node to the crew: <b>"document this"</b> (Haku writes the spec) or <b>"ask about this"</b> (Mei for a support answer). Recon becomes the first step of a build.</div></div>
         <span class="st planned">planned</span>
       </div>
 
       <div class="phase">
-        <div class="pk">伍</div>
-        <div><div class="pt">Dashboard Atlas<span class="pn">透 V</span></div>
+        <div class="pk">陸</div>
+        <div><div class="pt">Dashboard Atlas<span class="pn">透 VI</span></div>
           <div class="pd">The <b>whole instance</b>, not one page: the entire dashboard forest, with <b>orphans</b>, <b>dead references</b> and <b>circular refs</b> flagged. An architecture-review artifact for inheriting or migrating a solution.</div></div>
         <span class="st planned">planned</span>
       </div>
 
       <div class="phase">
-        <div class="pk">陸</div>
-        <div><div class="pt">Time Machine<span class="pn">透 VI</span></div>
+        <div class="pk">漆</div>
+        <div><div class="pt">Time Machine<span class="pn">透 VII</span></div>
           <div class="pd">Snapshot a reference graph, re-run later, <b>diff it</b> - added / removed / newly-deleted. "What changed since the handover or the migration?"</div></div>
         <span class="st planned">planned</span>
       </div>
 
       <div class="phase">
-        <div class="pk">漆</div>
-        <div><div class="pt">The Map<span class="pn">透 VII</span></div>
-          <div class="pd">Render the topology as a <b>node-link graph</b> (shared hubs stand out) and <b>export to Miro</b> - a customer-facing diagram of how their WebCenter is actually wired. A deliverable, not a debug view.</div></div>
-        <span class="st planned">planned</span>
-      </div>
-
-      <div class="phase">
         <div class="pk">捌</div>
-        <div><div class="pt">Support Bundle<span class="pn">透 VIII</span></div>
-          <div class="pd">The logs support always asks for, one click away: <b>server.log</b>, <b>SEVERE.log</b> and <b>catalina.log</b>, downloadable as a version-stamped bundle straight from the panel. Pairs with Mei for first-pass triage.</div></div>
+        <div><div class="pt">The Map<span class="pn">透 VIII</span></div>
+          <div class="pd">Render the topology as a <b>node-link graph</b> (shared hubs stand out) and <b>export to Miro</b> - a customer-facing diagram of how their WebCenter is actually wired. A deliverable, not a debug view.</div></div>
         <span class="st planned">planned</span>
       </div>
 
