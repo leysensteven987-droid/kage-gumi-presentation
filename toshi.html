@@ -490,6 +490,7 @@ html.kg-locked, body.kg-locked { overflow: hidden !important; }
       <li><b>Filter by id even with ids hidden.</b> The match looks at the underlying text, not just what's on screen.</li>
       <li><b>It reads your live session.</b> The reference graph fetches same-origin, carrying your WebCenter cookie - nothing extra to log into.</li>
       <li><b>It names the instance you're on.</b> A bar under the header reads the live <b>WebCenter version</b> + host (from <code>productinfo</code>), so you never mistake which environment you're inspecting. Hidden on a non-WebCenter page.</li>
+      <li><b>It tells you its own build.</b> A small <b>version stamp</b> sits beside the title in the header (read straight from the extension manifest), so you always know which Tōshi build you're running.</li>
       <li><b>Self-contained &amp; safe.</b> Renders in a shadow DOM (WebCenter's CSS can't leak in, and Tōshi never touches the page's own styles).</li>
     </ul>
   </section>
@@ -569,7 +570,7 @@ html.kg-locked, body.kg-locked { overflow: hidden !important; }
   <footer>
     <div class="big">透</div>
     <div class="q">“See what the page is built from - then go straight to it.”</div>
-    <div class="meta">透 TŌSHI · THE SEER · Kage-gumi (影組) · Chrome extension v0.4.25</div>
+    <div class="meta">透 TŌSHI · THE SEER · Kage-gumi (影組) · Chrome extension v0.4.26</div>
   </footer>
 
 </div>
