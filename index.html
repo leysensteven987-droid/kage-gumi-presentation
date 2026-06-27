@@ -1422,7 +1422,7 @@ html.kg-locked, body.kg-locked { overflow: hidden !important; }
   <div class="section-tag">What's next</div>
   <h2>The release plan <span class="jp">ロードマップ</span></h2>
   <p>Kage-gumi isn't finished. It's a living system. Each version adds depth to an existing operative or introduces a new one. The crew grows deliberately, not all at once.</p>
-  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-06-18</div>
+  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-06-27</div>
 
   <div style="display: flex; flex-direction: column; gap: 2px; margin-top: 40px; max-width: 760px;">
 
@@ -1649,6 +1649,17 @@ html.kg-locked, body.kg-locked { overflow: hidden !important; }
       </div>
     </div>
 
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(0,255,224,0.2); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(0,255,224,0.2); gap: 4px;">
+        <span style="font-family: 'Noto Serif JP', serif; font-size: 18px; color: var(--teal); text-shadow: 0 0 12px rgba(0,255,224,0.4); line-height: 1;">冴</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">horizon</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">冴 Sae: the crew's own Esko model</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">An LLM that speaks WebCenter natively - grounded in our own Esko corpus today, distilled into weights we own and run on the box tomorrow. The written scroll (Densho) becomes a mind. <a href="#sae" style="color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(0,255,224,0.35);">See the Sae section below →</a></div>
+      </div>
+    </div>
+
   </div>
 
   <!-- STUDIO TRACK CALLOUT -->
@@ -1824,6 +1835,50 @@ html.kg-locked, body.kg-locked { overflow: hidden !important; }
     <div class="reveal" style="background: var(--bg-card); border: 1px solid var(--border); padding: 20px 22px;">
       <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 8px;">Ours, end to end</div>
       <div style="font-size: 13px; color: var(--text-muted); line-height: 1.55;">Lives inside Kage-gumi - not a customer system. Seeded by what we've genuinely built. A later step can publish an entry out into a WebCenter on demand.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SAE -->
+<section id="sae">
+  <div class="section-tag">On the horizon</div>
+  <h2>Sae <span class="jp">冴</span></h2>
+  <p><em>Sae</em> is the clarity of a mind that sees straight through - sharp, lucid, unclouded. <strong style="color: var(--text);">Sae is the crew's own model</strong> - a language model that speaks WebCenter natively, trained on the craft Kage-gumi has been forging all along. Densho <span class="jp" style="font-size: 0.85em;">伝書</span> is the written scroll; <strong style="color: var(--text);">Sae is the mind trained on it.</strong></p>
+  <p style="margin-top: -4px;">Not a model built from scratch - that's a fantasy for a crew of one, and we're honest about it. Sae is the practical kind of "our own LLM": grounded in our own Esko knowledge today, distilled into weights we own and run on the box tomorrow. The craft, made into a mind.</p>
+
+  <!-- THE PATH -->
+  <div class="reveal" style="margin-top: 48px; display: grid; grid-template-columns: 1fr 32px 1fr 32px 1fr; align-items: center; gap: 0; max-width: 760px;">
+    <div style="background: var(--bg-card); border: 1px solid rgba(232,54,93,0.35); padding: 24px 20px; text-align: center;">
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 10px;">01 · Gather</div>
+      <div style="font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 8px;">The corpus we already make</div>
+      <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;">Every script, its doc and its test; Densho, the skills, the WebCenter knowledge. KG has been manufacturing a clean Esko dataset all along.</div>
+    </div>
+    <div style="text-align: center; color: var(--crimson); font-size: 18px; opacity: 0.6;">→</div>
+    <div style="background: var(--bg-card); border: 1px solid rgba(232,54,93,0.35); padding: 24px 20px; text-align: center;">
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 10px;">02 · Distil</div>
+      <div style="font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 8px;">Ground it, then teach it</div>
+      <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;">First an Esko brain that answers grounded in that corpus. Then a curated training set - requirement → script, script → doc, error → fix.</div>
+    </div>
+    <div style="text-align: center; color: var(--crimson); font-size: 18px; opacity: 0.6;">→</div>
+    <div style="background: var(--bg-card); border: 1px solid rgba(232,54,93,0.35); padding: 24px 20px; text-align: center;">
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 10px;">03 · Own</div>
+      <div style="font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 8px;">A model that's ours</div>
+      <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;">A fine-tuned open model that speaks WebCenter - runs on the box, offline, no per-token cost. Every new build feeds the next round.</div>
+    </div>
+  </div>
+
+  <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; max-width: 760px;">
+    <div class="reveal" style="background: var(--bg-card); border: 1px solid var(--border); padding: 20px 22px;">
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 8px;">Grounded now</div>
+      <div style="font-size: 13px; color: var(--text-muted); line-height: 1.55;">The first step ships fast: answers drawn from our own WebCenter corpus, not a generic model guessing. Useful long before any training run.</div>
+    </div>
+    <div class="reveal" style="background: var(--bg-card); border: 1px solid var(--border); padding: 20px 22px;">
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 8px;">Ours, offline</div>
+      <div style="font-size: 13px; color: var(--text-muted); line-height: 1.55;">Weights we own, running on the home box - no per-token bill, no dependency, works air-gapped. The craft kept in the house.</div>
+    </div>
+    <div class="reveal" style="background: var(--bg-card); border: 1px solid var(--border); padding: 20px 22px;">
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 8px;">A second, not a replacement</div>
+      <div style="font-size: 13px; color: var(--text-muted); line-height: 1.55;">Sae is narrow and sharp where Claude is broad and deep. A router sends the routine to Sae, the hard reasoning to Claude. Two minds, one crew.</div>
     </div>
   </div>
 </section>
