@@ -169,104 +169,32 @@
   .liveshot figcaption b{ color:var(--toshi); font-weight:600; }
   .synthbadge{ display:inline-block; font-family:var(--mono); font-size:11px; color:var(--green); border:1px solid rgba(76,255,145,0.4); background:rgba(76,255,145,0.07); border-radius:20px; padding:3px 11px; margin-left:8px; vertical-align:middle; }
 </style>
-</head>
-<body>
-
-<!-- KG EMAIL GATE (begin) -->
-<div id="kg-gate" role="dialog" aria-modal="true" aria-label="Access gate" hidden>
-  <div class="kg-gate-card">
-    <div class="kg-gate-mark">透</div>
-    <div class="kg-gate-eyebrow">THE SEER &middot; LIFT THE VEIL</div>
-    <h2 class="kg-gate-title">Enter to view</h2>
-    <p class="kg-gate-sub">A name and email unlock the page. That's it.</p>
-    <form id="kg-gate-form" novalidate autocomplete="on">
-      <label class="kg-gate-field">
-        <span>Name</span>
-        <input type="text" name="name" autocomplete="name" required maxlength="200" />
-      </label>
-      <label class="kg-gate-field">
-        <span>Email</span>
-        <input type="email" name="email" autocomplete="email" inputmode="email" required maxlength="320" />
-      </label>
-      <label class="kg-gate-field">
-        <span>Company <em>(optional)</em></span>
-        <input type="text" name="company" autocomplete="organization" maxlength="200" />
-      </label>
-      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="kg-gate-hp" />
-      <div class="kg-gate-err" id="kg-gate-err" role="alert"></div>
-      <button type="submit" class="kg-gate-btn">Unlock <span aria-hidden="true">&rarr;</span></button>
-      <div class="kg-gate-fine">No spam. One email, just so I know who's looking.</div>
-    </form>
-  </div>
-</div>
-<style>
-#kg-gate { --kg-accent: #8fd9ff; position: fixed; inset: 0; z-index: 2147483647; display: flex; align-items: center; justify-content: center; padding: 24px; background: radial-gradient(1200px 600px at 50% -10%, rgba(143,217,255,0.10), transparent 60%), #0e1a18; font-family: 'DM Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-#kg-gate[hidden] { display: none; }
-html.kg-locked, body.kg-locked { overflow: hidden !important; }
-#kg-gate .kg-gate-card { width: 100%; max-width: 420px; background: #111f1c; border: 1px solid #1e3530; border-radius: 12px; padding: 36px 32px 28px; box-shadow: 0 24px 80px rgba(0,0,0,0.55); animation: kgGateIn 0.4s ease; }
-@keyframes kgGateIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
-#kg-gate .kg-gate-mark { font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 44px; line-height: 1; color: var(--kg-accent); text-shadow: 0 0 18px rgba(143,217,255,0.45); margin-bottom: 14px; }
-#kg-gate .kg-gate-eyebrow { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 10px; letter-spacing: 0.22em; color: #6a9a8a; margin-bottom: 10px; }
-#kg-gate .kg-gate-title { font-size: 26px; font-weight: 600; color: #e8f5f2; margin: 0 0 6px; }
-#kg-gate .kg-gate-sub { font-size: 14px; color: #8abfb0; margin: 0 0 22px; }
-#kg-gate .kg-gate-field { display: block; margin-bottom: 14px; }
-#kg-gate .kg-gate-field > span { display: block; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #6a9a8a; margin-bottom: 6px; }
-#kg-gate .kg-gate-field > span em { font-style: normal; color: #3a6058; text-transform: none; letter-spacing: 0; }
-#kg-gate input[type="text"], #kg-gate input[type="email"] { width: 100%; box-sizing: border-box; background: #0a1210; border: 1px solid #1e3530; border-radius: 7px; color: #d8f0ea; font-size: 15px; font-family: inherit; padding: 11px 12px; outline: none; transition: border-color 0.15s ease, box-shadow 0.15s ease; }
-#kg-gate input:focus { border-color: var(--kg-accent); box-shadow: 0 0 0 3px rgba(143,217,255,0.18); }
-#kg-gate .kg-gate-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
-#kg-gate .kg-gate-err { min-height: 16px; font-size: 12.5px; color: #ff6b8a; margin: 2px 0 10px; }
-#kg-gate .kg-gate-btn { width: 100%; cursor: pointer; background: var(--kg-accent); color: #0e1a18; font-family: inherit; font-size: 15px; font-weight: 600; border: 0; border-radius: 7px; padding: 12px 16px; transition: filter 0.15s ease, opacity 0.15s ease; }
-#kg-gate .kg-gate-btn:hover { filter: brightness(1.08); }
-#kg-gate .kg-gate-btn:disabled { opacity: 0.55; cursor: default; }
-#kg-gate .kg-gate-fine { margin-top: 14px; font-size: 11px; color: #3a6058; text-align: center; }
-</style>
+<!-- KG analytics beacon - silent, no cookies, no gate. One hit per load to the KG
+     Cloudflare Worker; the KG box polls /export and renders the ANALYTICS view.
+     Attribution: ?v=<name> named links + referrer + Cloudflare edge geo. -->
 <script>
 (function () {
-  var KG_GATE = { endpoint: "https://kage-gate.kage-gumi.workers.dev/gate", deck: "toshi", storeKey: "kage_gumi_access" };
-  function alreadyIn() { try { var raw = localStorage.getItem(KG_GATE.storeKey); if (!raw) return false; var v = JSON.parse(raw); return !!(v && v.email); } catch (e) { return false; } }
-  var gate = document.getElementById("kg-gate");
-  if (!gate) return;
-  if (alreadyIn()) { gate.parentNode.removeChild(gate); return; }
-  document.documentElement.classList.add("kg-locked");
-  document.body.classList.add("kg-locked");
-  gate.hidden = false;
-  function swallow(e) { if (!document.getElementById("kg-gate")) return; if (gate.contains(e.target)) return; e.stopPropagation(); }
-  document.addEventListener("keydown", swallow, true);
-  var form = document.getElementById("kg-gate-form");
-  var errEl = document.getElementById("kg-gate-err");
-  var btn = form.querySelector(".kg-gate-btn");
-  var emailRe = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-  var firstField = form.querySelector('input[name="name"]');
-  if (firstField) { try { firstField.focus(); } catch (e) {} }
-  function unlock(email, name) {
-    try { localStorage.setItem(KG_GATE.storeKey, JSON.stringify({ email: email, name: name, ts: new Date().toISOString() })); } catch (e) {}
-    document.documentElement.classList.remove("kg-locked");
-    document.body.classList.remove("kg-locked");
-    document.removeEventListener("keydown", swallow, true);
-    gate.style.transition = "opacity 0.3s ease"; gate.style.opacity = "0";
-    setTimeout(function () { if (gate.parentNode) gate.parentNode.removeChild(gate); }, 320);
-  }
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); errEl.textContent = "";
-    var el = form.elements;
-    var name = (el.name.value || "").trim();
-    var email = (el.email.value || "").trim();
-    var company = (el.company.value || "").trim();
-    var honey = (el.website.value || "").trim();
-    if (!name) { errEl.textContent = "Please enter your name."; el.name.focus(); return; }
-    if (!emailRe.test(email)) { errEl.textContent = "Please enter a valid email address."; el.email.focus(); return; }
-    if (honey) { unlock(email, name); return; }
-    btn.disabled = true; btn.textContent = "Unlocking…";
-    fetch(KG_GATE.endpoint, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: email, name: name, company: company, deck: KG_GATE.deck }) })
-      .then(function (res) {
-        if (res.status === 400) { errEl.textContent = "That email didn't look valid. Mind checking it?"; btn.disabled = false; btn.innerHTML = 'Unlock <span aria-hidden="true">&rarr;</span>'; return; }
-        unlock(email, name);
-      }).catch(function () { unlock(email, name); });
-  });
+  var KG_BEACON = { endpoint: "https://kage-gate.kage-gumi.workers.dev/hit", deck: "toshi" };
+  try {
+    var payload = JSON.stringify({
+      deck: KG_BEACON.deck,
+      v: (new URLSearchParams(location.search).get("v") || ""),
+      referrer: document.referrer || "",
+      path: location.pathname
+    });
+    // text/plain Blob via sendBeacon avoids a CORS preflight; fetch keepalive is the fallback.
+    var sent = false;
+    if (navigator.sendBeacon) {
+      try { sent = navigator.sendBeacon(KG_BEACON.endpoint, new Blob([payload], { type: "text/plain" })); } catch (e) {}
+    }
+    if (!sent) {
+      fetch(KG_BEACON.endpoint, { method: "POST", keepalive: true, body: payload }).catch(function () {});
+    }
+  } catch (e) {}
 })();
 </script>
-<!-- KG EMAIL GATE (end) -->
+</head>
+<body>
 
 <header>
   <div class="bar">
