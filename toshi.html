@@ -258,7 +258,7 @@
       <div class="nm">TŌSHI</div>
       <div class="sub">THE SEER · lift the veil</div>
     </div>
-    <span class="ver">Chrome extension · v0.4.32</span>
+    <span class="ver">Chrome extension · v0.4.33</span>
   </div>
   <nav class="toc">
     <a href="#live">Live</a>
@@ -441,6 +441,15 @@
         </div>
       </div>
 
+      <div class="fcard">
+        <h3><span class="fg">▣</span> Task pages, named by type</h3>
+        <p>On a task page Tōshi resolves the task type via <code>GetProjectTasks</code> (the same call the WCR Inspector used) and shows the internal type name - linking both the task-type general-info page and its execution (specifications) page. The redundant attribute-category row is dropped; the Task Execution view is chosen from that page's own Current View dropdown.</p>
+        <div class="demo">
+          <div class="row"><span class="chip" style="background:#11342f;color:#8fd9ff;border:1px solid #2a6a60">task</span><span class="nm-d">BSW-2.11 Create Supplier Brief ↗</span></div>
+          <div class="row ind1"><span class="chip" style="background:#0d2e2e;color:#8fd9ff;border:1px solid #1e5050">exec</span><span style="color:#8fd9ff;border-bottom:1px dotted rgba(143,217,255,0.4)">task execution page ↗</span></div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -478,6 +487,7 @@
       <li><b>It names the instance you're on.</b> A bar under the header reads the live <b>WebCenter version</b> + host (from <code>productinfo</code>), so you never mistake which environment you're inspecting. Hidden on a non-WebCenter page.</li>
       <li><b>It tells you its own build.</b> A small <b>version stamp</b> sits beside the title in the header (read straight from the extension manifest), so you always know which Tōshi build you're running.</li>
       <li><b>Self-contained &amp; safe.</b> Renders in a shadow DOM (WebCenter's CSS can't leak in, and Tōshi never touches the page's own styles).</li>
+      <li><b>Task type, in two clicks.</b> On a task page Tōshi reads the task type (via <code>GetProjectTasks</code>) and links both its general-info page and its specifications/execution page. The Default vs Task Execution view is chosen from that page's own Current View dropdown - it switches in place, so there is no separate URL.</li>
     </ul>
   </section>
 
@@ -504,7 +514,7 @@
       <div class="phase done">
         <div class="pk">参</div>
         <div><div class="pt">Full Surface<span class="pn">透 III</span></div>
-          <div class="pd"><b>Live WebCenter version</b> in the header, plus a <b>MAIN-world probe</b> that surfaces <b>attribute categories</b> and <b>task-execution</b> specs the DOM markers can't see - each one click from its editor.</div></div>
+          <div class="pd"><b>Live WebCenter version</b> in the header, plus a <b>MAIN-world probe</b> that surfaces <b>attribute categories</b> and names the <b>task type</b> + links its execution page (via <code>GetProjectTasks</code>) - each one click from its editor.</div></div>
         <span class="st shipped">✓ shipped</span>
       </div>
 
@@ -563,7 +573,7 @@
   <footer>
     <div class="big">透</div>
     <div class="q">“See what the page is built from - then go straight to it.”</div>
-    <div class="meta">透 TŌSHI · THE SEER · Kage-gumi (影組) · Chrome extension v0.4.32</div>
+    <div class="meta">透 TŌSHI · THE SEER · Kage-gumi (影組) · Chrome extension v0.4.33</div>
   </footer>
 
 </div>
