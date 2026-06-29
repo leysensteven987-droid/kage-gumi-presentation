@@ -1592,14 +1592,23 @@
       </div>
     </div>
 
-    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
-      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
-        <span style="font-family: monospace; font-size: 13px; color: var(--teal); text-shadow: var(--teal-glow);">v0.7</span>
-        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">planned</span>
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(240,165,0,0.3); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(240,165,0,0.3); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--amber); text-shadow: 0 0 12px rgba(240,165,0,0.4);">v0.7</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">in progress</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
         <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Ren: Playwright Deploy - full coverage</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Extend the deploy beyond scripts to the rest of the surface - workflows &amp; task types, users &amp; groups - and wrap it in a one-click in-dashboard loop: generate → review → confirm → deploy, all from KG web. The codebase and WebCenter update together, with rollback-by-copy before any destructive edit.</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Most of the surface already deploys. Ren now writes 8 of 9 artifact families straight into WebCenter - dashboard &amp; rule scripts, attributes &amp; categories, lists, reports, workflows &amp; task types, dashboards, and users &amp; groups. What's left is the last family (action buttons) and wrapping it all in a one-click in-dashboard loop: generate → review → confirm → deploy from KG web, with rollback-by-copy before any destructive edit.</div>
+        <div style="margin-top: 16px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+            <span style="font-family: monospace; font-size: 9px; letter-spacing: 0.2em; color: var(--text-dim); text-transform: uppercase;">Artifact deploy coverage</span>
+            <span style="font-family: monospace; font-size: 11px; color: var(--green); text-shadow: 0 0 10px rgba(76,255,145,0.35);">8 / 9</span>
+          </div>
+          <div style="height: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); overflow: hidden;">
+            <div style="height: 100%; width: 89%; background: linear-gradient(90deg, rgba(76,255,145,0.45), var(--green)); box-shadow: 0 0 12px rgba(76,255,145,0.45);"></div>
+          </div>
+        </div>
       </div>
     </div>
 
