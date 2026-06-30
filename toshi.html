@@ -258,7 +258,7 @@
       <div class="nm">TŌSHI</div>
       <div class="sub">THE SEER · lift the veil</div>
     </div>
-    <span class="ver">Chrome extension · v0.4.35</span>
+    <span class="ver">Chrome extension · v0.4.36</span>
   </div>
   <nav class="toc">
     <a href="#live">Live</a>
@@ -338,7 +338,9 @@
         <p>One toggle and every <b>dashboard script</b> on the page shows up nested under its dashboard -
           display and run scripts, each with its <b>Dashboard Context</b> (Project / Document / Task / My
           Work) and type (visibility, on change, validation, …). The logic behind the glass, not just the
-          layout.</p>
+          layout. Hover a script row and it lights up its <b>exact target</b>: a bound <b>field</b>, or its
+          <b>layout block</b> - so a <b>tab-visibility script</b> highlights just <b>that tab</b>, not the
+          whole page.</p>
       </div>
       <div class="fcard hl">
         <h3><span class="fg">⧉</span> Every window, at once</h3>
@@ -563,8 +565,8 @@
       <div class="phase">
         <div class="pk">拾</div>
         <div><div class="pt">Pinpoint<span class="pn">透 X</span></div>
-          <div class="pd">Field-level highlight precision: a script bound to one attribute lands the highlight on <b>that exact field</b>, not the whole dashboard - by reading the attribute the script's config names and finding it in the rendered DOM, mirroring the builder's Behavior panel. Next: the same for the <b>tab / block / column</b> a section script controls. The eye, surgical.</div></div>
-        <span class="st shipped">✓ field-level shipped</span>
+          <div class="pd">Highlight precision: a script bound to one attribute lands on <b>that exact field</b>, and a script attached to a <b>layout block</b> lands on <b>that block</b> - so a <b>tab-visibility script</b> highlights just the <b>tab</b> it hides, not the whole dashboard. Found by reading what the script's config names (the attribute, or the block id) and matching it in the rendered DOM, mirroring the builder's Behavior panel. The eye, surgical.</div></div>
+        <span class="st shipped">✓ field + block/tab shipped</span>
       </div>
 
     </div>
@@ -573,7 +575,7 @@
   <footer>
     <div class="big">透</div>
     <div class="q">“See what the page is built from - then go straight to it.”</div>
-    <div class="meta">透 TŌSHI · THE SEER · Kage-gumi (影組) · Chrome extension v0.4.35</div>
+    <div class="meta">透 TŌSHI · THE SEER · Kage-gumi (影組) · Chrome extension v0.4.36</div>
   </footer>
 
 </div>
