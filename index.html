@@ -1659,12 +1659,42 @@
 
   <!-- DOCUMENTATION HONESTY -->
   <div style="margin-top: 48px; border: 1px solid rgba(240,165,0,0.25); background: rgba(240,165,0,0.04); padding: 32px 36px; max-width: 760px;" class="reveal">
-    <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.3em; color: var(--amber); text-transform: uppercase; margin-bottom: 16px;">// Important: what Haku doesn't do automatically</div>
-    <div style="font-size: 16px; font-weight: 500; color: var(--text); margin-bottom: 12px;">The underlying knowledge still needs a human every release.</div>
-    <p style="max-width: none; margin-bottom: 10px;">Haku can write documentation beautifully, but only from what she's given. The deeper layer (the skill files, the WebCenter SDK patterns, the prompt context that makes Mei and Ren actually good at their jobs) has to be maintained by hand.</p>
-    <p style="max-width: none; margin-bottom: 10px;">Every time WebCenter ships a new release, every time a new script pattern is discovered, every time an edge case is solved, that knowledge needs to be written into the system deliberately. It doesn't flow in automatically.</p>
-    <p style="max-width: none; color: var(--text-muted); font-style: italic;">The crew is only as good as what they've been taught. Keeping that current is an ongoing commitment, part of the job, not a one-time setup.</p>
+    <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.3em; color: var(--amber); text-transform: uppercase; margin-bottom: 16px;">// Important: the human in the loop</div>
+    <div style="font-size: 16px; font-weight: 500; color: var(--text); margin-bottom: 12px;">The public docs flow in automatically. The depth is added by hand.</div>
+    <p style="max-width: none; margin-bottom: 10px;">The crew already harvests public documentation on its own: Esko's knowledge base, the product manuals, the release notes, all pulled in and folded into the skill files automatically. What a human adds on top is the fine-tuning, correcting what's wrong and feeding in the deeper, hard-won detail that isn't written on any public page.</p>
+    <p style="max-width: none; margin-bottom: 10px;">So every WebCenter release brings the published docs in automatically. But the in-house knowledge (the script patterns that actually work, the edge cases solved in the field, the prompt context that makes Mei and Ren good at their jobs) still has to be written in deliberately.</p>
+    <p style="max-width: none; color: var(--text-muted); font-style: italic;">The crew is only as good as what they've been taught. The public half keeps itself current; the expert half is an ongoing commitment, part of the job, not a one-time setup.</p>
   </div>
+</section>
+
+<!-- HORIZON INTRO -->
+<section id="horizon">
+  <div class="section-tag">The horizon</div>
+  <h2>Where this is going <span class="jp">その先へ</span></h2>
+  <p>Kage-gumi today is a working crew. The vision past it is a single trajectory in three steps - the crew stops being a tool and becomes <strong style="color: var(--text);">a platform, a body of owned craft, and finally a mind of its own</strong>. The three sections that follow are that arc.</p>
+
+  <!-- THE ARC -->
+  <div class="reveal" style="margin-top: 48px; display: grid; grid-template-columns: 1fr 32px 1fr 32px 1fr; align-items: center; gap: 0; max-width: 760px;">
+    <div style="background: var(--bg-card); border: 1px solid rgba(232,54,93,0.35); padding: 24px 20px; text-align: center;">
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 10px;">01 · Platform</div>
+      <div style="font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 8px;">工房 Studio</div>
+      <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;">KG becomes a WebCenter build platform - projects designed as work items, built by operatives, deployed in one motion.</div>
+    </div>
+    <div style="text-align: center; color: var(--crimson); font-size: 18px; opacity: 0.6;">→</div>
+    <div style="background: var(--bg-card); border: 1px solid rgba(232,54,93,0.35); padding: 24px 20px; text-align: center;">
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 10px;">02 · Corpus</div>
+      <div style="font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 8px;">伝書 Densho</div>
+      <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;">Every build worth keeping is filed into the crew's own scroll - a growing, owned library of reusable Esko craft.</div>
+    </div>
+    <div style="text-align: center; color: var(--crimson); font-size: 18px; opacity: 0.6;">→</div>
+    <div style="background: var(--bg-card); border: 1px solid rgba(0,255,224,0.5); padding: 24px 20px; text-align: center; box-shadow: 0 0 22px rgba(0,255,224,0.12);">
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--teal); text-transform: uppercase; margin-bottom: 10px;">03 · Mind</div>
+      <div style="font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 8px;">冴 Sae</div>
+      <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;">The scroll becomes a mind - the crew's own model, trained on that craft, that speaks WebCenter natively.</div>
+    </div>
+  </div>
+
+  <p style="margin-top: 32px; max-width: 760px; color: var(--text-muted);">Densho <span class="jp" style="font-size: 0.85em;">伝書</span> is the written scroll; <strong style="color: var(--text);">Sae <span class="jp" style="font-size: 0.85em;">冴</span> is the mind trained on it.</strong> Studio is already in motion; Sae is the far end of the road - the crew's own Esko LLM, and the ambition this whole system is pointed at.</p>
 </section>
 
 <!-- STUDIO -->
@@ -1826,9 +1856,9 @@
 
 <!-- SAE -->
 <section id="sae">
-  <div class="section-tag">On the horizon</div>
+  <div class="section-tag">The ultimate goal</div>
   <h2>Sae <span class="jp">冴</span></h2>
-  <p><em>Sae</em> is the clarity of a mind that sees straight through - sharp, lucid, unclouded. <strong style="color: var(--text);">Sae is the crew's own model</strong> - a language model that speaks WebCenter natively, trained on the craft Kage-gumi has been forging all along. Densho <span class="jp" style="font-size: 0.85em;">伝書</span> is the written scroll; <strong style="color: var(--text);">Sae is the mind trained on it.</strong></p>
+  <p><strong style="color: var(--text);">This is the ambition the whole system is pointed at.</strong> <em>Sae</em> is the clarity of a mind that sees straight through - sharp, lucid, unclouded. <strong style="color: var(--text);">Sae is the crew's own model</strong> - a language model that speaks WebCenter natively, trained on the craft Kage-gumi has been forging all along. Densho <span class="jp" style="font-size: 0.85em;">伝書</span> is the written scroll; <strong style="color: var(--text);">Sae is the mind trained on it.</strong></p>
   <p style="margin-top: -4px;">The grounded path doesn't build from scratch - it stands on an open model and teaches it WebCenter. Sae is the practical kind of "our own LLM": grounded in our own Esko knowledge today, distilled into weights we own and run on the box tomorrow. The craft, made into a mind. <span style="color: var(--text-dim);">And past that practical horizon sits a wilder dream - below.</span></p>
 
   <!-- THE PATH -->
