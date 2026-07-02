@@ -176,6 +176,26 @@
   .liveshot figcaption{ color:var(--muted); font-size:14px; margin-top:11px; }
   .liveshot figcaption b{ color:var(--toshi); font-weight:600; }
   .synthbadge{ display:inline-block; font-family:var(--mono); font-size:11px; color:var(--green); border:1px solid rgba(76,255,145,0.4); background:rgba(76,255,145,0.07); border-radius:20px; padding:3px 11px; margin-left:8px; vertical-align:middle; }
+
+  /* COMPATIBILITY MATRIX */
+  .compat{ width:100%; border-collapse:collapse; margin-top:4px; background:var(--card);
+           border:1px solid var(--line2); border-radius:11px; overflow:hidden; }
+  .compat th, .compat td{ text-align:left; padding:12px 16px; border-bottom:1px solid var(--line2);
+                          font-size:14px; vertical-align:top; }
+  .compat thead th{ font-family:var(--mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase;
+                    color:var(--muted); background:rgba(143,217,255,0.04); border-bottom:1px solid var(--div); }
+  .compat tbody tr:last-child td{ border-bottom:none; }
+  .compat tbody tr:hover{ background:var(--hover); }
+  .compat .br{ color:var(--text); font-weight:600; }
+  .compat .eng{ font-family:var(--mono); font-size:12.5px; color:var(--dim); white-space:nowrap; }
+  .compat .nt{ color:var(--muted); font-size:13.5px; }
+  .compat .nt code{ color:var(--toshi); }
+  .cstat{ display:inline-block; font-family:var(--mono); font-size:11px; letter-spacing:0.5px; text-transform:uppercase;
+          border-radius:20px; padding:3px 11px; white-space:nowrap; }
+  .cstat.full{ color:var(--green); border:1px solid rgba(76,255,145,0.4); background:rgba(76,255,145,0.07); }
+  .cstat.works{ color:var(--amber); border:1px solid rgba(240,165,0,0.4); background:rgba(240,165,0,0.08); }
+  .cstat.no{ color:var(--crimson); border:1px solid rgba(232,54,93,0.4); background:rgba(232,54,93,0.08); }
+  @media (max-width:720px){ .compat th:nth-child(2), .compat td:nth-child(2){ display:none; } }
 </style>
 <!-- KG analytics beacon - silent, no cookies, no gate. One hit per load to the KG
      Cloudflare Worker, plus an engagement beacon (dwell + scroll depth) on
@@ -275,6 +295,7 @@
     <a href="#live">Live</a>
     <a href="#what">What it is</a>
     <a href="#install">Install</a>
+    <a href="#compat">Compatibility</a>
     <a href="#toolbar">The toolbar</a>
     <a href="#features">Features</a>
     <a href="#views">Two views</a>
@@ -391,9 +412,64 @@
       If you don't have that link, ask me for it - there's no public download.</p>
   </section>
 
+  <!-- COMPATIBILITY -->
+  <section id="compat">
+    <h2><span class="sec-k">参</span>Browser compatibility</h2>
+    <p class="sec-intro">Tōshi is a <b>Manifest V3</b> extension built on Chromium APIs -
+      <code>chrome.scripting</code> with a <b>MAIN-world</b> probe and a shadow-DOM panel. The line is
+      simple: any <b>Chromium</b> browser that loads an unpacked MV3 extension runs her; Gecko and WebKit
+      would need a port.</p>
+    <table class="compat">
+      <thead>
+        <tr><th>Browser</th><th>Engine</th><th>Status</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="br">Google Chrome</td>
+          <td class="eng">Chromium · Blink</td>
+          <td><span class="cstat full">✓ full</span></td>
+          <td class="nt">Primary target - every build is tested here. Load unpacked from <code>chrome://extensions</code>.</td>
+        </tr>
+        <tr>
+          <td class="br">Microsoft Edge</td>
+          <td class="eng">Chromium · Blink</td>
+          <td><span class="cstat full">✓ full</span></td>
+          <td class="nt">Same MV3 + <code>chrome.scripting</code> + MAIN-world probe. Load unpacked from <code>edge://extensions</code>. Often the sanctioned Chromium browser on a locked-down corporate laptop.</td>
+        </tr>
+        <tr>
+          <td class="br">Brave</td>
+          <td class="eng">Chromium · Blink</td>
+          <td><span class="cstat full">✓ full</span></td>
+          <td class="nt">Identical engine and APIs. Load unpacked from <code>brave://extensions</code>.</td>
+        </tr>
+        <tr>
+          <td class="br">Opera · Vivaldi · Arc</td>
+          <td class="eng">Chromium · Blink</td>
+          <td><span class="cstat works">◐ works</span></td>
+          <td class="nt">Chromium siblings - load-unpacked behaves the same. Not part of the tested set, but no reason she wouldn't run.</td>
+        </tr>
+        <tr>
+          <td class="br">Firefox</td>
+          <td class="eng">Gecko</td>
+          <td><span class="cstat no">✕ not as-is</span></td>
+          <td class="nt">MV3 differs - the <code>browser.*</code> namespace, a non-<code>service_worker</code> background, and newer/limited MAIN-world injection. Would need a port.</td>
+        </tr>
+        <tr>
+          <td class="br">Safari</td>
+          <td class="eng">WebKit</td>
+          <td><span class="cstat no">✕ no</span></td>
+          <td class="nt">Requires converting to a Safari Web Extension via Xcode - no load-unpacked. Not on the roadmap.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note"><b>Rule of thumb.</b> If the browser has an <code>…://extensions</code> page with a
+      <b>Developer mode</b> toggle and <b>Load unpacked</b>, Tōshi runs - that's every Chromium browser.
+      Where Chrome is locked down on a corporate machine, that usually means <b>Edge</b>.</p>
+  </section>
+
   <!-- TOOLBAR / MANUAL -->
   <section id="toolbar">
-    <h2><span class="sec-k">参</span>The toolbar - every control</h2>
+    <h2><span class="sec-k">肆</span>The toolbar - every control</h2>
     <p class="sec-intro">The panel header. Each button is a single, focused action. Active toggles glow blue.</p>
     <div class="tools">
       <div class="tool"><div class="glyph">⤷</div><div><div class="tt">Reference graph <span class="bl">⤷&nbsp;refs</span></div><div class="td">Switch from the <b>on-page</b> view to the deep <b>LOADDASHBOARD</b> graph - every dashboard each one links to (sub / button / task / approval + embedded searches), with <b>DELETED</b> flags.</div></div></div>
@@ -412,7 +488,7 @@
 
   <!-- FEATURES -->
   <section id="features">
-    <h2><span class="sec-k">肆</span>Features, shown</h2>
+    <h2><span class="sec-k">伍</span>Features, shown</h2>
     <p class="sec-intro">The same visual language you'll see in the panel.</p>
     <div class="feat">
 
@@ -477,7 +553,7 @@
 
   <!-- TWO VIEWS -->
   <section id="views">
-    <h2><span class="sec-k">伍</span>Two views - don't confuse them</h2>
+    <h2><span class="sec-k">陸</span>Two views - don't confuse them</h2>
     <p class="sec-intro">Tōshi shows structure two different ways. Default is what's in front of you; the graph is the deep dependency map.</p>
     <div class="views">
       <div class="view">
@@ -499,7 +575,7 @@
 
   <!-- TIPS -->
   <section id="tips">
-    <h2><span class="sec-k">陸</span>Good to know</h2>
+    <h2><span class="sec-k">漆</span>Good to know</h2>
     <ul class="tips">
       <li><b>It tracks the page.</b> Highlights and the reveal-all outlines re-position as you scroll or resize.</li>
       <li><b>Nested labels never hide each other.</b> Reveal-all nudges colliding labels down so all stay readable.</li>
@@ -515,7 +591,7 @@
 
   <!-- ROADMAP -->
   <section id="roadmap">
-    <h2><span class="sec-k">漆</span>Roadmap - where the eye is going</h2>
+    <h2><span class="sec-k">捌</span>Roadmap - where the eye is going</h2>
     <p class="sec-intro">Tōshi grows on her own track (透 I-XI), from "sees this page" to "reads any WebCenter and hands you the map nobody wrote down." What's live today, and what's next.</p>
     <p style="margin: 8px 0 22px; font-family: var(--mono); font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--toshi);"><span style="font-family: 'Noto Serif JP', serif; font-size: 15px; margin-right: 9px;">零</span>Born · 27 Feb 2026 — where the eye first opened</p>
     <div class="rm">
