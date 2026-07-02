@@ -173,6 +173,73 @@
     font-family: monospace;
   }
 
+  /* ── SUB-NAV (quick-jump strip under the header) ── */
+  html { scroll-behavior: smooth; }
+
+  .subnav {
+    position: sticky;
+    top: 60px;                          /* sits directly under the 60px topbar */
+    z-index: 890;
+    background: rgba(17,31,28,0.94);     /* --bg-header, slightly see-through */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 40px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    overflow-x: auto;
+    scrollbar-width: none;               /* Firefox */
+    white-space: nowrap;
+  }
+  .subnav::-webkit-scrollbar { display: none; }   /* Chrome / Safari */
+
+  .subnav a {
+    flex: 0 0 auto;
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+  }
+  .subnav a:hover  { color: var(--text); background: rgba(0,255,224,0.07); }
+  .subnav a.active { color: var(--teal); background: rgba(0,255,224,0.09); }
+
+  /* the vision group - marked off and lit differently so it reads as the payoff */
+  .subnav .subnav-sep {
+    flex: 0 0 auto;
+    width: 1px; height: 18px;
+    background: var(--border);
+    margin: 0 10px;
+  }
+  .subnav .subnav-label {
+    flex: 0 0 auto;
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding: 0 8px 0 2px;
+  }
+  .subnav a.vision { color: var(--crimson); opacity: 0.85; }
+  .subnav a.vision .jp {
+    color: inherit;
+    opacity: 0.7;
+    margin-right: 4px;
+    font-size: 0.95em;
+  }
+  .subnav a.vision:hover        { color: #ff6f90; background: var(--crimson-dim); opacity: 1; }
+  .subnav a.vision.active       { color: var(--crimson); background: var(--crimson-dim); opacity: 1; text-shadow: var(--crimson-glow); }
+  /* Sae is the endpoint - the teal goal, not another crimson step */
+  .subnav a.vision.goal         { color: var(--teal); opacity: 0.9; }
+  .subnav a.vision.goal:hover,
+  .subnav a.vision.goal.active  { color: var(--teal); background: rgba(0,255,224,0.10); text-shadow: var(--teal-glow); opacity: 1; }
+
   /* ── HERO ── */
   .hero {
     min-height: 92vh;
@@ -265,6 +332,7 @@
   section {
     padding: 80px 60px;
     border-bottom: 1px solid var(--border);
+    scroll-margin-top: 118px;   /* clear the sticky topbar (60) + sub-nav (46) on anchor jump */
   }
 
   .section-tag {
@@ -979,6 +1047,23 @@
   <div class="topbar-right">Steven Leysen · Personal Presentation · 2026</div>
 </div>
 
+<!-- SUB-NAV (quick jump to every section; vision trio set apart) -->
+<nav class="subnav" aria-label="Section quick-jump">
+  <a href="#name">Name</a>
+  <a href="#origin">Origin</a>
+  <a href="#webcenter">WebCenter</a>
+  <a href="#crew">The Crew</a>
+  <a href="#architecture">Architecture</a>
+  <a href="#dashboard">Dashboard</a>
+  <a href="#roadmap">Roadmap</a>
+  <span class="subnav-sep"></span>
+  <span class="subnav-label">The Vision</span>
+  <a href="#horizon" class="vision">Horizon</a>
+  <a href="#studio"  class="vision"><span class="jp">工房</span>Studio</a>
+  <a href="#densho"  class="vision"><span class="jp">伝書</span>Densho</a>
+  <a href="#sae"     class="vision goal"><span class="jp">冴</span>Sae</a>
+</nav>
+
 <!-- HERO -->
 <div class="hero">
   <div class="hero-left">
@@ -1398,7 +1483,7 @@
   <div class="section-tag">What's next</div>
   <h2>The release plan <span class="jp">ロードマップ</span></h2>
   <p>Kage-gumi isn't finished. It's a living system. Each version adds depth to an existing operative or introduces a new one. The crew grows deliberately, not all at once.</p>
-  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-07-01</div>
+  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-07-02</div>
 
   <div style="display: flex; flex-direction: column; gap: 2px; margin-top: 40px; max-width: 760px;">
 
@@ -1930,7 +2015,6 @@
     <span class="status-chip" style="color: var(--op-cho); border-color: rgba(56,189,248,0.35); background: rgba(56,189,248,0.08);">Chō · Listener</span>
     <span class="status-chip" style="color: #c3cdd6; border-color: rgba(154,168,181,0.35); background: rgba(154,168,181,0.08);">Sumi · Records</span>
     <span class="status-chip" style="color: var(--op-toshi); border-color: rgba(143,217,255,0.35); background: rgba(143,217,255,0.08);">Tōshi · Inspector</span>
-    <span class="status-chip" style="color: #f78fb3; border-color: rgba(247,143,179,0.3); background: rgba(247,143,179,0.07);">Tetsu · Wrench</span>
   </div>
 
   <div style="margin-top: 80px; padding-top: 32px; border-top: 1px solid var(--border-sub); display: flex; align-items: center; gap: 20px;">
