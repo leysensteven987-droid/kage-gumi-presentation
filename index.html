@@ -1078,7 +1078,7 @@
 </div>
 
 <!-- THE NAME -->
-<section>
+<section id="name">
   <div class="section-tag">The name</div>
   <h2>What does 影組 mean?</h2>
   <p>Japanese names are chosen for what they carry, not just how they sound. This one is two characters, and both of them matter.</p>
@@ -1102,7 +1102,7 @@
 </section>
 
 <!-- ORIGIN -->
-<section>
+<section id="origin">
   <div class="section-tag">The origin</div>
   <h2>This didn't come from nowhere <span class="jp">16年</span></h2>
   <p>Kage-gumi looks like an AI project. It's actually the output of 16 years at Esko: code I wrote, problems I solved, and WebCenter patterns I collected along the way, with AI finally powerful enough to put all of it to work.</p>
@@ -1142,6 +1142,17 @@
       </div>
     </div>
 
+    <div style="background: var(--bg-card); border: 1px solid rgba(232,54,93,0.30); padding: 24px 28px; display: grid; grid-template-columns: 80px 1fr; gap: 24px; align-items: start;">
+      <div>
+        <div style="font-family: 'Noto Serif JP', serif; font-size: 36px; font-weight: 300; color: var(--crimson); text-shadow: var(--crimson-glow); line-height: 1;">2025</div>
+        <div style="font-size: 9px; font-family: monospace; color: var(--crimson); letter-spacing: 0.15em; margin-top: 4px; text-transform: uppercase;">08 Dec · Born</div>
+      </div>
+      <div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Kage-gumi is born <span style="font-family:'Noto Serif JP',serif; color:var(--crimson); font-weight:300;">影組</span></div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">The crew assembles. Sixteen years of WebCenter work - the code, the patterns, the hard-won fixes - finally given hands. What began as a search for better tools becomes a team of operatives that runs in the background.</div>
+      </div>
+    </div>
+
   </div>
 
   <blockquote>The AI didn't replace the experience. It finally made 16 years of it instantly usable.</blockquote>
@@ -1150,7 +1161,7 @@
 </section>
 
 <!-- WEBCENTER FOCUS -->
-<section>
+<section id="webcenter">
   <div class="section-tag">The problem it solves</div>
   <h2>Built around WebCenter <span class="jp">日常業務</span></h2>
   <p>WebCenter is powerful, but a lot of the daily work around it is repetitive, time-consuming, or requires knowing exactly the right script syntax. That's where the crew comes in.</p>
@@ -1288,7 +1299,7 @@
 </section>
 
 <!-- THE CREW -->
-<section>
+<section id="crew">
   <div class="section-tag">The operatives</div>
   <h2>Meet the crew <span class="jp">影組メンバー</span></h2>
   <p>Each operative has a Japanese name chosen for what it means, not just as decoration. The character shapes how that operative behaves.</p>
@@ -1369,7 +1380,7 @@
 </section>
 
 <!-- HOW IT WORKS -->
-<section>
+<section id="architecture">
   <div class="section-tag">Under the hood</div>
   <h2>Three layers, one system</h2>
   <p>There are three technologies that make this work. Each one has a distinct job and they stack cleanly.</p>
@@ -1445,7 +1456,7 @@
 </section>
 
 <!-- SCREENSHOTS -->
-<section>
+<section id="dashboard">
   <div class="section-tag">In practice</div>
   <h2>What it looks like</h2>
   <p>Real screenshots of the running system - not mockups, not demos.</p>
@@ -1479,7 +1490,7 @@
 </section>
 
 <!-- ROADMAP -->
-<section>
+<section id="roadmap">
   <div class="section-tag">What's next</div>
   <h2>The release plan <span class="jp">ロードマップ</span></h2>
   <p>Kage-gumi isn't finished. It's a living system. Each version adds depth to an existing operative or introduces a new one. The crew grows deliberately, not all at once.</p>
@@ -2084,6 +2095,26 @@
     cards.forEach(function (card) {
       card.addEventListener('click', function () { if (mq.matches) openModal(card); });
     });
+  })();
+
+  // ── sub-nav scroll-spy: light up the section currently in view ──
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.subnav a[href^="#"]'));
+    if (!links.length) return;
+    var map = {};
+    links.forEach(function (a) {
+      var sec = document.getElementById(a.getAttribute('href').slice(1));
+      if (sec) map[sec.id] = a;
+    });
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (a) { a.classList.remove('active'); });
+        var hit = map[e.target.id];
+        if (hit) hit.classList.add('active');
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    Object.keys(map).forEach(function (id) { spy.observe(document.getElementById(id)); });
   })();
 </script>
 </body>
