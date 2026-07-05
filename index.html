@@ -82,6 +82,8 @@
     --op-sumi:      #8fa8cc;
     --op-ei:        #f4d47a;
     --op-toshi:     #8fd9ff;
+    --densho:       #b06ce0;              /* 紫 murasaki — Densho's own identity, distinct from Ei's gold */
+    --densho-dim:   rgba(176,108,224,0.35);
     --text:         #d8f0ea;
     --text-sec:     #c8e8e0;
     --text-muted:   #5a8a7a;
@@ -1531,7 +1533,7 @@
   <div class="section-tag">What's next</div>
   <h2>The release plan <span class="jp">ロードマップ</span></h2>
   <p>Kage-gumi isn't finished. It's a living system. Each version adds depth to an existing operative or introduces a new one. The crew grows deliberately, not all at once.</p>
-  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-07-04</div>
+  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-07-05</div>
 
   <div style="display: flex; flex-direction: column; gap: 2px; margin-top: 40px; max-width: 760px;">
 
@@ -1944,28 +1946,33 @@
 </section>
 
 <!-- DENSHO -->
+<style>
+  /* Densho carries its own 紫 murasaki accent (not the house crimson/teal) so the
+     section reads as a branded surface of its own. */
+  #densho .section-tag { color: var(--densho); }
+</style>
 <section id="densho">
   <div class="section-tag">On the horizon</div>
-  <h2>Densho <span class="jp">伝書</span></h2>
+  <h2>Densho <span class="jp" style="color: var(--densho);">伝書</span></h2>
   <p>A <em>densho</em> is the scroll a school keeps to record its techniques and pass them to the next generation. <strong style="color: var(--text);">Densho is the crew's own version</strong> - a living library of every reusable WebCenter solution we've forged: the design notes, the working script, how to test it, where it fits. Browse it, pull a solution straight into a build, or file a new one.</p>
   <p style="margin-top: -4px;">The crew's accumulated craft, owned outright and written in our own voice - growing every time an operative builds something worth keeping.</p>
 
   <!-- THE SCROLL LOOP -->
   <div class="reveal" style="margin-top: 48px; display: grid; grid-template-columns: 1fr 32px 1fr 32px 1fr; align-items: center; gap: 0; max-width: 760px;">
-    <div style="background: var(--bg-card); border: 1px solid rgba(232,54,93,0.35); padding: 24px 20px; text-align: center;">
-      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 10px;">01 · Forge</div>
+    <div style="background: var(--bg-card); border: 1px solid var(--densho-dim); padding: 24px 20px; text-align: center;">
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--densho); text-transform: uppercase; margin-bottom: 10px;">01 · Forge</div>
       <div style="font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 8px;">Build it</div>
       <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;">An operative builds a reusable solution - a script, a workflow, a config - as part of real work.</div>
     </div>
-    <div style="text-align: center; color: var(--crimson); font-size: 18px; opacity: 0.6;">→</div>
-    <div style="background: var(--bg-card); border: 1px solid rgba(232,54,93,0.35); padding: 24px 20px; text-align: center;">
-      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 10px;">02 · File</div>
+    <div style="text-align: center; color: var(--densho); font-size: 18px; opacity: 0.6;">→</div>
+    <div style="background: var(--bg-card); border: 1px solid var(--densho-dim); padding: 24px 20px; text-align: center;">
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--densho); text-transform: uppercase; margin-bottom: 10px;">02 · File</div>
       <div style="font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 8px;">Into the scroll</div>
       <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;">It's documented and filed into Densho - design notes, the working code, how to test it, where it fits.</div>
     </div>
-    <div style="text-align: center; color: var(--crimson); font-size: 18px; opacity: 0.6;">→</div>
-    <div style="background: var(--bg-card); border: 1px solid rgba(232,54,93,0.35); padding: 24px 20px; text-align: center;">
-      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 10px;">03 · Reuse</div>
+    <div style="text-align: center; color: var(--densho); font-size: 18px; opacity: 0.6;">→</div>
+    <div style="background: var(--bg-card); border: 1px solid var(--densho-dim); padding: 24px 20px; text-align: center;">
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--densho); text-transform: uppercase; margin-bottom: 10px;">03 · Reuse</div>
       <div style="font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 8px;">Pull it back</div>
       <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;">Next time the need comes up, lift it straight from Densho into the next build.</div>
     </div>
@@ -1973,15 +1980,15 @@
 
   <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; max-width: 760px;">
     <div class="reveal" style="background: var(--bg-card); border: 1px solid var(--border); padding: 20px 22px;">
-      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 8px;">Browse &amp; pull</div>
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--densho); text-transform: uppercase; margin-bottom: 8px;">Browse &amp; pull</div>
       <div style="font-size: 13px; color: var(--text-muted); line-height: 1.55;">Search by category, use level or version. Open an entry to its design notes, code and acceptance criteria - and lift it straight into the next build.</div>
     </div>
     <div class="reveal" style="background: var(--bg-card); border: 1px solid var(--border); padding: 20px 22px;">
-      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 8px;">Author &amp; contribute</div>
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--densho); text-transform: uppercase; margin-bottom: 8px;">Author &amp; contribute</div>
       <div style="font-size: 13px; color: var(--text-muted); line-height: 1.55;">Add a new solution through a simple form. Operatives file what they build, so the library grows itself - no separate catalog to maintain.</div>
     </div>
     <div class="reveal" style="background: var(--bg-card); border: 1px solid var(--border); padding: 20px 22px;">
-      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 8px;">Ours, end to end</div>
+      <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--densho); text-transform: uppercase; margin-bottom: 8px;">Ours, end to end</div>
       <div style="font-size: 13px; color: var(--text-muted); line-height: 1.55;">Lives inside Kage-gumi - not a customer system. Seeded by what we've genuinely built. A later step can publish an entry out into a WebCenter on demand.</div>
     </div>
   </div>
