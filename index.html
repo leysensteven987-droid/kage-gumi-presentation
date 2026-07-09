@@ -1537,6 +1537,7 @@
 
   <div style="display: flex; flex-direction: column; gap: 2px; margin-top: 40px; max-width: 760px;">
 
+    <!-- ============ FOUNDATION ============ -->
     <div class="reveal" style="margin: 4px 0 12px; display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px;">
       <span style="font-family: 'Noto Serif JP', serif; font-size: 24px; color: #00ffe0; text-shadow: 0 0 14px rgba(0,255,224,0.4); line-height: 1;">影組</span>
       <span style="font-size: 16px; font-weight: 600; color: var(--text); letter-spacing: 0.02em;">Foundation</span>
@@ -1550,8 +1551,8 @@
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Core Dashboard + KG-01 to KG-04</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Mei, Ren, Haku, Ryū, live in the dashboard. Real API calls, token budget enforcement, task chaining, memory panel, operative chat.</div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Core dashboard + the first four operatives</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Mei, Ren, Haku and Ryū live in the dashboard. Real API calls, token-budget enforcement, task chaining, a memory panel, and operative chat.</div>
       </div>
     </div>
 
@@ -1562,7 +1563,7 @@
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
         <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Real data wiring + UI polish</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Live task data, breathing room, typography, header, card refinements. The dashboard starts feeling like a real tool rather than a prototype.</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Live task data, breathing room, typography, header and card refinements. The dashboard starts feeling like a real tool rather than a prototype.</div>
       </div>
     </div>
 
@@ -1573,7 +1574,29 @@
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
         <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Crew Chat</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">claude CLI operative intelligence. Crew Chat routes your message to the right operative, spawns a real claude subprocess, and streams the response live into the dashboard.</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">One chat entry that reads your message, routes to the right operative, runs it as a claude CLI subprocess with its own skill, and streams the response live into the dashboard.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 12px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">CHAT+</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Crew Chat, evolved</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Replies render as formatted HTML behind a thinking stream that follows the real question and names the skill actually loaded. Attach files by paste or drag-and-drop, and every surface tints to the active operative's accent.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">UI</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Cosmetics + command palette</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">A deliberate polish track: skeletons and empty / error states, motion and micro-interactions, typography and density, a command palette, and a responsive log view.</div>
       </div>
     </div>
 
@@ -1588,6 +1611,7 @@
       </div>
     </div>
 
+    <!-- ============ RYŪ ============ -->
     <div class="reveal" style="margin: 38px 0 12px; display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px;">
       <span style="font-family: 'Noto Serif JP', serif; font-size: 24px; color: #f0a500; text-shadow: 0 0 14px rgba(240,165,0,0.45); line-height: 1;">龍</span>
       <span style="font-size: 16px; font-weight: 600; color: var(--text); letter-spacing: 0.02em;">Ryū</span>
@@ -1601,8 +1625,8 @@
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Ryū scheduler</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Morning digest, overnight task runner, multi-schedule support.</div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Night Operations</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">The Night Ops page: multi-schedule, a dry-run mode, abort a running task, a day / night token-reserve split, a morning digest, and a run-history calendar.</div>
       </div>
     </div>
 
@@ -1612,8 +1636,8 @@
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Ryū: Real Missions</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Ryū's overnight runs get actual work. Mission briefing system, real context injection from the last 24 hours of tasks and logs, structured morning digest with warnings and recommendations. Optional WebCenter health ping.</div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Real Missions</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Ryū reads real context - the last 24h of tasks and logs, plus a WebCenter health ping - before he runs, works a configurable mission list, and writes a structured morning digest: warnings, what happened, token burn, recommendations. What he sees is written to memory so it carries forward.</div>
       </div>
     </div>
 
@@ -1623,11 +1647,45 @@
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Ryū: Proposals - the night-runner sets his own agenda</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Ryū no longer just runs the queue - he proposes the work. The PROPOSALS panel lists overnight improvements he's surfaced (target, type, status). Click Launch and the proposal becomes a real, tracked dashboard task (T-PROP-…), mirrored in lockstep - launch → queued, applied → complete, skip → dismissed, un-launch → removed. No duplicates, fully reversible.</div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Proposals - the night-runner sets his own agenda</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Ryū surfaces his own recommendations into a 龍 PROPOSALS panel with staleness tracking. One click launches a proposal as a real dashboard task; an autonomous run can execute it on the spot behind a verify gate. No duplicates, fully reversible.</div>
       </div>
     </div>
 
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 12px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">MISSIONS</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">The nightly mission set</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Nine time-zone-pinned jobs run while you sleep: mirror the script arsenal, mirror the documentation ledger, scan memory for stale facts, harvest the public Esko knowledge base, prune old reports, triage the backlog, a cloud beacon health-check, a daily AI-topics feed, and the monthly performance-review draft.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 12px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">SCHEDULE</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Schedule control + catch-up</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">The mission list was consolidated from seventeen to nine, edits go live with no restart, and per-operative and cadence filters keep it readable. A catch-up pass re-runs anything a reboot missed, inside the token budget.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">TOKENS</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Token efficiency</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">The nightly script audit once re-sent every script's full source - roughly 127K tokens, about 93% of a whole day's spend. It now caches a content-hash verdict per script and only re-reads what changed, dropping steady-state cost toward zero.</div>
+      </div>
+    </div>
+
+    <!-- ============ HAKU ============ -->
     <div class="reveal" style="margin: 38px 0 12px; display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px;">
       <span style="font-family: 'Noto Serif JP', serif; font-size: 24px; color: #34d399; text-shadow: 0 0 14px rgba(52,211,153,0.45); line-height: 1;">博</span>
       <span style="font-size: 16px; font-weight: 600; color: var(--text); letter-spacing: 0.02em;">Haku</span>
@@ -1641,8 +1699,8 @@
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Haku: Playwright Documentation</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Haku navigates to a live WebCenter artifact via Playwright, extracts its real structure, and writes a functional spec from what she actually sees - not from memory. Output in Azure DevOps format, saved to a doc library.</div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Playwright documentation - the DOCS library</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Haku inspects live WebCenter through Playwright, feeds what she actually sees to her documentation skill, and writes Azure DevOps-style docs (Title / Purpose / Trigger / Logic / Notes) for eight artifact types - workflow, attribute category, task type, action button, dashboard, rule, workflow node, report - with optional screenshots and a re-document button.</div>
       </div>
     </div>
 
@@ -1652,8 +1710,8 @@
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Haku: Dashboard Script Sync</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Haku pushes edited dashboard scripts directly into WebCenter via Playwright - no manual copy-paste. Every edit in the repo lands live on the server in a single automated step.</div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Dashboard script sync</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">After any edit to a dashboard script, the canonical Playwright sync pushes it straight into WebCenter; pull-first tools start every edit from the live copy so the repo and WebCenter stay in step.</div>
       </div>
     </div>
 
@@ -1663,8 +1721,52 @@
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Haku: rule-action deploy + two-way sync</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Haku now takes both the script types Ren writes most - Dashboard scripts and JavaScript Rule Actions - live into WebCenter, create-or-update, straight after an edit. And she keeps the two in lockstep both ways: a nightly mirror pulls every live script back into the repo, and a pre-push drift guard captures a colleague's in-WebCenter edit before any deploy can overwrite it. The repo is a faithful backup, never a clobber.</div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Rule-action deploy + two-way sync</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">The same live push for JavaScript rule actions, plus the safety net: a nightly two-way mirror makes the repo a faithful backup, a pre-push drift guard aborts if a colleague changed the live copy, and it captures that live copy before any forced overwrite so nothing is ever lost.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">ADO</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Documentation sync to Azure DevOps</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Haku publishes a live WebCenter build into the customer's ADO wiki and board - one story per config item, managed-region doc blocks, attribute tables - and closes the gap both ways: what is live but undocumented, and what is documented but gone. A weekly ledger run keeps it in step, and it carries its own sprint tooling.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 12px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">INTAKE</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Colleague intake via Azure DevOps</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">A colleague files a "KG Case" as an ADO work item; Haku picks it up, does the build or answers the question, and writes the result back onto the card. Work reaches the crew without anyone touching the dashboard.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 12px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">ABSORB</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">The absorb engine</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Haku harvests public Esko documentation and our own delivery history into the crew's knowledge - product manuals, the Esko knowledge base, and per-customer research dossiers - folded into the skills so every operative gets sharper. The public half keeps itself current; the expert half is added by hand.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(240,165,0,0.3); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(240,165,0,0.3); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--amber); text-shadow: 0 0 12px rgba(240,165,0,0.4);">v0.6.13</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">built · parked</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Provisioning Grid - bulk-create a WebCenter arsenal</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">A five-sheet, spreadsheet-style surface (Groups / Roles / Companies / Users / Attributes) that bulk-creates a whole WebCenter setup through Haku's tools, with xlsx import and export, a dry-run preview, and a triple environment guardrail. Coded and committed; the first live run waits on a go-ahead.</div>
       </div>
     </div>
 
@@ -1674,8 +1776,8 @@
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">in progress</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Haku: full-surface deploy</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Deployment is spreading past scripts. Haku now takes 8 of 9 artifact families live into WebCenter - dashboard &amp; rule scripts, attributes &amp; categories, lists, reports, workflows &amp; task types, dashboards, and users &amp; groups. What's left is the last family (action buttons) and wrapping it all in a one-click in-dashboard loop: Ren generates → review → confirm → Haku deploys from KG web, with rollback-by-copy before any destructive edit.</div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Full-surface deploy</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Deployment now covers eight of nine WebCenter artifact families from a terminal. The remaining work is the action-button family and pulling the whole deploy into a one-click loop inside KG web, with rollback-by-copy before any destructive edit.</div>
         <div style="margin-top: 16px;">
           <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
             <span style="font-family: monospace; font-size: 9px; letter-spacing: 0.2em; color: var(--text-dim); text-transform: uppercase;">Artifact deploy coverage</span>
@@ -1688,6 +1790,7 @@
       </div>
     </div>
 
+    <!-- ============ TŌSHI ============ -->
     <div class="reveal" style="margin: 38px 0 12px; display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px;">
       <span style="font-family: 'Noto Serif JP', serif; font-size: 24px; color: #8fd9ff; text-shadow: 0 0 14px rgba(143,217,255,0.45); line-height: 1;">透</span>
       <span style="font-size: 16px; font-weight: 600; color: var(--text); letter-spacing: 0.02em;">Tōshi</span>
@@ -1697,17 +1800,95 @@
 
     <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(143,217,255,0.28); margin-bottom: -1px;">
       <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(143,217,255,0.28); gap: 4px;">
-        <span style="font-family: 'Noto Serif JP', serif; font-size: 22px; color: #8fd9ff; text-shadow: 0 0 12px rgba(143,217,255,0.45); line-height: 1;">透</span>
+        <span style="font-family: 'Noto Serif JP', serif; font-size: 20px; color: #8fd9ff; text-shadow: 0 0 12px rgba(143,217,255,0.45); line-height: 1;">透</span>
         <span style="font-family: monospace; font-size: 11px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">v0.6.9</span>
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;"><span class="jp" style="color: #8fd9ff;">透</span> Tōshi: Dashboard Inspector - Haku lifts the veil</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">A new eye for Haku. Tōshi (<span class="jp">透</span> - "seeing through") reads what any WebCenter page is actually built from. <strong style="color: var(--text);">Scan</strong> inventories every dashboard, saved search, task page and attribute category on a page; <strong style="color: var(--text);">Graph</strong> walks a dashboard's full reference tree - sub-dashboards, buttons, embedded searches - and flags anything that's been deleted. Point it at a page and the whole hidden structure shows - in the KG panel, or as a one-click <strong style="color: var(--text);">Chrome extension</strong> that highlights any node on the page and reverse-locates from a click (透 II). <em>Lift the veil.</em></div>
-        <a href="https://kage-gumi.com/kage-gumi-presentation/toshi.html" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:6px; margin-top:14px; font-family:monospace; font-size:11px; letter-spacing:0.4px; color:#8fd9ff; text-decoration:none; border:1px solid rgba(143,217,255,0.4); background:rgba(143,217,255,0.08); border-radius:6px; padding:6px 12px; transition:background .15s,border-color .15s;" onmouseover="this.style.background='rgba(143,217,255,0.16)';this.style.borderColor='rgba(143,217,255,0.8)';" onmouseout="this.style.background='rgba(143,217,255,0.08)';this.style.borderColor='rgba(143,217,255,0.4)';"><span class="jp" style="font-size:13px;">透</span> See the Tōshi presentation - manual &amp; feature guide ↗</a>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Origin - the Dashboard Inspector</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Born as Haku's eye. Tōshi reads the live WebCenter DOM and the dashboard config endpoint and emits the topology nobody wrote down: a per-page inventory plus the recursive block reference graph, with deleted references flagged.</div>
       </div>
     </div>
 
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(143,217,255,0.28); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(143,217,255,0.28); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: #8fd9ff; text-shadow: 0 0 12px rgba(143,217,255,0.45);">透 I</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Page Inspector</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">The base: a CLI, the 透 panel in KG web, and a Chrome extension. A scoped on-page view with a refs toggle for the full reference graph; every dashboard and search name is a clickable link straight to its editor.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(143,217,255,0.28); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(143,217,255,0.28); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: #8fd9ff; text-shadow: 0 0 12px rgba(143,217,255,0.45);">透 II</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Highlight &amp; Locate</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Hover a node and the real block highlights on the page; pick any element and Tōshi flashes and scrolls to its row. Type-to-filter the tree, copy a node's name and id, X-ray the whole page with reveal-all, and dock or collapse the panel so it never hides the page.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(143,217,255,0.28); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(143,217,255,0.28); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: #8fd9ff; text-shadow: 0 0 12px rgba(143,217,255,0.45);">透 III</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Full Surface</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Reads the instance's live WebCenter version and stamps it onto exports, and a deeper page probe extends inspection to attribute categories and task-execution pages - each with its own edit link.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(143,217,255,0.28); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(143,217,255,0.28); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: #8fd9ff; text-shadow: 0 0 12px rgba(143,217,255,0.45);">透 IV</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Linked Surface</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Drill from a project's attribute category into its document references, into each linked document, into that document's own categories - one click from the editor.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(143,217,255,0.28); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(143,217,255,0.28); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: #8fd9ff; text-shadow: 0 0 12px rgba(143,217,255,0.45);">透 V</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">WebCenter support package - one press</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">The logs support always asks for, in one click. Tōshi gathers the reachable diagnostics and the real server logs from WebCenter's Site Service, trims them client-side by a time window and level, and hands you a version- and instance-stamped zip. Read-only on WebCenter; the only thing written is the zip to your machine.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(143,217,255,0.28); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(143,217,255,0.28); gap: 4px;">
+        <span style="font-family: monospace; font-size: 12px; color: #8fd9ff; text-shadow: 0 0 12px rgba(143,217,255,0.45);">STORE</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Packaged &amp; published</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Keyboard shortcuts and a cheat sheet, a branded HTML report, field-precise highlighting, and context / type facet chips - and the extension is packaged for the Chrome Web Store with its own manual.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(0,255,224,0.2); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(0,255,224,0.2); gap: 4px;">
+        <span style="font-family: monospace; font-size: 12px; color: var(--teal); text-shadow: var(--teal-glow);">透 VI+</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">horizon</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Where the eye is going</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Hand a node to Haku or Mei (See → Act), export the map to Miro, build the whole-instance Dashboard Atlas, a Time Machine that diffs a reference graph over time, block-level Pinpoint highlighting, and Diagnose &amp; Propose.</div>
+        <a href="https://kage-gumi.com/kage-gumi-presentation/toshi.html" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; font-family: monospace; font-size: 11px; letter-spacing: 0.06em; color: #8fd9ff; text-decoration: none; border-bottom: 1px solid rgba(143,217,255,0.35);">See the Tōshi presentation - manual &amp; feature guide ↗</a>
+      </div>
+    </div>
+
+    <!-- ============ REN ============ -->
     <div class="reveal" style="margin: 38px 0 12px; display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px;">
       <span style="font-family: 'Noto Serif JP', serif; font-size: 24px; color: #a78bfa; text-shadow: 0 0 14px rgba(167,139,250,0.45); line-height: 1;">錬</span>
       <span style="font-size: 16px; font-weight: 600; color: var(--text); letter-spacing: 0.02em;">Ren</span>
@@ -1721,8 +1902,8 @@
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Ren: the full authoring surface</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Not just scripts. Ren writes every WebCenter scripting context - Dashboard, Rule Engine, Workflow Node, SDK/JSP, Scriptable-List SQL, Jasper, action buttons, custom form extensions - and the configuration around them: attribute categories, lists, task types, project statuses, templates, whole workflows. Past classic WebCenter too: Workato/iPaaS recipes with diagrams, Automation Engine tickets, bidirectional Miro workflow boards. Each context carries its own rules and Ren knows them all - every artifact versioned, diffable and KG-branded.</div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">The full authoring surface</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Not just scripts. Ren authors every WebCenter context - dashboard scripts, rule actions, workflow-node scripts, SDK / JSP calls, list SQL, Jasper reports and action buttons - every artifact versioned, diffable and KG-branded.</div>
       </div>
     </div>
 
@@ -1732,12 +1913,56 @@
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Git Integration (Ren auto-push)</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Ren commits and pushes his generated source to the repository automatically after every task - the write side, not the deploy. Codebase and Claude Code stay in sync; taking it live into WebCenter is Haku's step.</div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Git integration</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Ren commits and pushes every generated file to main after each task, so the codebase and the working session never drift apart. Taking it live into WebCenter is Haku's step.</div>
       </div>
     </div>
 
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">v0.6.8</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Playwright deploy - generate, save, live</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">After each edit Ren pushes the script straight into WebCenter, and the create-tools now cover eight of nine artifact families: attributes, categories, lists, reports, task types, workflows, users / groups / roles, and dashboards.</div>
+      </div>
+    </div>
 
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">BRAND</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">KG branding overhaul</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Every KG-authored script carries a covert signature - namespaced class names, data attribution, or a wrapper function - so colleagues can recognise and safely reuse the crew's work. The full estate overhaul is complete.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">訳</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Yaku (訳) - the translator</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">A one-command tool that turns an attribute-category export into a ready dashboard, surfaced as Ren's YAKU sub-tab. And most of what you see in KG itself - the operative panels, the cosmetics, the mobile shell - is Ren's own frontend work.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(240,165,0,0.3); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(240,165,0,0.3); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--amber); text-shadow: 0 0 12px rgba(240,165,0,0.4);">v0.7</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">in progress</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Full deploy coverage + one-click loop</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Close the last artifact gap (action buttons) and wrap the whole deploy in a single in-dashboard loop: generate → review → confirm → deploy, with rollback-by-copy before any destructive edit.</div>
+      </div>
+    </div>
+
+    <!-- ============ CHŌ ============ -->
     <div class="reveal" style="margin: 38px 0 12px; display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px;">
       <span style="font-family: 'Noto Serif JP', serif; font-size: 24px; color: #38bdf8; text-shadow: 0 0 14px rgba(56,189,248,0.45); line-height: 1;">聴</span>
       <span style="font-size: 16px; font-weight: 600; color: var(--text); letter-spacing: 0.02em;">Chō</span>
@@ -1751,28 +1976,50 @@
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Chō: Meeting Listener - a new operative (KG-05)</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Chō captures a meeting's audio, transcribes it locally with faster-whisper - nothing leaves the machine - and returns a structured summary (decisions, action items, open questions) via the claude CLI. Live capture panel in the dashboard. Meeting knowledge becomes reusable project text the rest of the crew can use.</div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Meeting Listener - a new operative (KG-05)</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Chō captures system audio and optional mic, transcribes locally with faster-whisper - no audio ever leaves the machine - and produces a structured summary (TL;DR, decisions, action items, open questions) through the claude CLI. A live panel streams status, transcript and interim notes.</div>
       </div>
     </div>
 
-    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(56,189,248,0.28); margin-bottom: -1px;">
-      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(56,189,248,0.28); gap: 4px;">
-        <span style="font-family: 'Noto Serif JP', serif; font-size: 22px; color: #38bdf8; text-shadow: 0 0 12px rgba(56,189,248,0.45); line-height: 1;">聴</span>
-        <span style="font-family: monospace; font-size: 11px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">v0.6.10</span>
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">v0.6.10</span>
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;"><span class="jp" style="color: #38bdf8;">聴</span> Chō: back-to-back meetings + the silence cutoff</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Two refinements for the ear. <strong style="color: var(--text);">Back-to-back capture</strong> - while a meeting's summary is still being written, Chō detaches it to finish in the background so you can start recording the next meeting straight away; a chip tracks the previous summary until it lands in Sumi. <strong style="color: var(--text);">The silence cutoff</strong> - leave her running and walk out: if no one speaks for a set stretch (default 30 minutes), she wraps up on her own - graceful stop, summary, saved. It's measured from the last spoken word, so ambient noise or hold music never keep her awake. <em>She knows when the room has gone quiet.</em></div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Back-to-back capture + silence cutoff</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">When one meeting is still summarizing, Chō detaches it and starts recording the next immediately; and she auto-stops after a configurable stretch of silence, measured from the last spoken line.</div>
       </div>
     </div>
 
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 12px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">CAPTURE</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Faithful capture</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">The hardening that makes it trustworthy: multilingual transcription, a server-side self-heal that never silently loses a summary, a device pin that fixes silent-loopback capture, speaker echo de-dup, a post-stop draining countdown, seam word-loss and overlap fixes, and summaries on the strongest model.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">ROSTER</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Name the room</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">A "who's on the call" roster seeds the transcriber so names are spelled right, and the summary attributes points and owners only to people who were actually there. A meeting type is chosen at capture. Both ride through to Sumi.</div>
+      </div>
+    </div>
+
+    <!-- ============ SUMI ============ -->
     <div class="reveal" style="margin: 38px 0 12px; display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px;">
       <span style="font-family: 'Noto Serif JP', serif; font-size: 24px; color: #8fa8cc; text-shadow: 0 0 14px rgba(143,168,204,0.45); line-height: 1;">墨</span>
       <span style="font-size: 16px; font-weight: 600; color: var(--text); letter-spacing: 0.02em;">Sumi</span>
       <span style="font-family: monospace; font-size: 10px; letter-spacing: 0.18em; color: var(--text-dim); text-transform: uppercase;">Record-Keeper</span>
-      <span style="margin-left: auto; font-family: monospace; font-size: 10px; letter-spacing: 0.12em; color: var(--text-muted); text-transform: uppercase;">focus · file · dossier · hand-over</span>
+      <span style="margin-left: auto; font-family: monospace; font-size: 10px; letter-spacing: 0.12em; color: var(--text-muted); text-transform: uppercase;">focus · file · refine · hand-over</span>
     </div>
 
     <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
@@ -1781,8 +2028,8 @@
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Sumi: Record-Keeper (KG-06) + operative-nested views</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Sumi joins as a full operative - the ink to Chō's ear, filing finished meetings into durable per-customer records. The dashboard reorganised around the operative: Docs (Haku), Proposals (Ryū), Chō and Sumi now live as sub-tabs inside AGENTS, surfaced when you select the operative who owns them. The two personal operatives (Ichikawa, Tetsu) became numberless.</div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Record-Keeper (KG-06) + nested operative views</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Sumi joins as a full operative with her own SUMI ledger and per-customer dossiers, and the operative views nest under AGENTS.</div>
       </div>
     </div>
 
@@ -1792,11 +2039,56 @@
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Chō → Sumi: the meeting pipeline, closed end to end</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">The ear-to-ink loop now runs all the way through. A meeting's final summary links straight into Sumi's ledger, files to a per-customer dossier (private, never committed), and exports as a branded PDF you can hand over. Summaries are hardened for long calls, and meetings or customers can be managed and removed right from the panel.</div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Chō → Sumi, closed end to end</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">The ear-to-ink loop: when a meeting wraps, its notes file themselves into the right customer's dossier, and customers can be managed and removed from the panel.</div>
       </div>
     </div>
 
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">v0.6.12</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Meeting → Azure DevOps</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">On your sign-off, Sumi publishes the notes as a page under the Meetings wiki tree (nested by meeting type) and turns every action item into a linked ADO Task that references the page both ways. Human-gated, idempotent, and logged - nothing lands in ADO without your OK.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">REFINE</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Refine - correct what was misheard, fold in what you know</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Fix names the transcriber mangled, weave in your own notes, and tag attendees as Esko or customer - attendee corrections merge rather than replace. Products and companies get the same treatment, and every correction is remembered per customer for next time.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">BRIEF</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Pre-meeting briefing - "Brief me"</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">A card that reads the customer's dossier - past meetings, decisions, open action items - and hands you a briefing before you walk into the next call.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">READER</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">The reader</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">One-click re-summarize, server-side export to PDF, drop-in import of past meetings (absorbed and categorized), a custom topic on "Other" that auto-creates its wiki sub-category, a branded searchable customer picker, and per-meeting or whole-customer purge.</div>
+      </div>
+    </div>
+
+    <!-- ============ MEI ============ -->
     <div class="reveal" style="margin: 38px 0 12px; display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px;">
       <span style="font-family: 'Noto Serif JP', serif; font-size: 24px; color: #00ffe0; text-shadow: 0 0 14px rgba(0,255,224,0.4); line-height: 1;">明</span>
       <span style="font-size: 16px; font-weight: 600; color: var(--text); letter-spacing: 0.02em;">Mei</span>
@@ -1804,7 +2096,29 @@
       <span style="margin-left: auto; font-family: monospace; font-size: 10px; letter-spacing: 0.12em; color: var(--text-muted); text-transform: uppercase;">focus · the big unbuilt arc</span>
     </div>
 
-    <div class="reveal" style="font-size: 12px; color: var(--text-muted); font-style: italic; margin: -2px 0 10px 40px; line-height: 1.5;">Shipped: nothing yet - Mei is the crew's biggest still-unbuilt arc. Planned: Support Intelligence → Support Escalation, then Mei-in-a-Box on the horizon.</div>
+    <div class="reveal" style="font-size: 12px; color: var(--text-muted); font-style: italic; margin: -2px 0 10px 40px; line-height: 1.5;">Mei is the crew's biggest still-unbuilt bet. She answers today from memory and skills; her platform arc - field intelligence, then support escalation, then Mei-in-a-Box - is ahead.</div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 12px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">GROUND</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Grounded, not guessing</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Mei already answers from more than training data: hundreds of real, closed WebCenter support cases distilled into her support skill, plus a map of the WebCenter menu and where every item leads. Her platform arc builds on that base.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(0,255,224,0.2); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(0,255,224,0.2); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--teal); text-shadow: var(--teal-glow);">v0.8</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">planned</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Support Intelligence → Escalation</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Mei crawls the Esko support platform into a living, WebCenter-first knowledge base and grounds her answers in it. When an issue is beyond self-service, she drafts a clean Esko case from what she knows and files it - on your sign-off.</div>
+      </div>
+    </div>
 
     <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(0,255,224,0.2); margin-bottom: -1px;">
       <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(0,255,224,0.2); gap: 4px;">
@@ -1813,10 +2127,21 @@
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
         <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Mei-in-a-Box: customer support bot</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">After a build, hand the customer their own Mei - a single-operative, customer-branded deployment that answers their team's WebCenter questions in plain language, grounded in that customer's own solution plus the support playbook. The rest of the crew stays internal; each instance is isolated with its own auth. Support that ships with the build, no consultant in the loop.</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">After a build, leave the customer their own Mei - a self-service WebCenter support bot scoped to their solution and grounded in the docs Haku wrote during the build, with no consultant in the loop.</div>
       </div>
     </div>
 
+    <!-- ============ EI ============ -->
+    <div class="reveal" style="margin: 38px 0 12px; display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px;">
+      <span style="font-family: 'Noto Serif JP', serif; font-size: 24px; color: #e8c14a; text-shadow: 0 0 14px rgba(232,193,74,0.4); line-height: 1;">英</span>
+      <span style="font-size: 16px; font-weight: 600; color: var(--text); letter-spacing: 0.02em;">Ei</span>
+      <span style="font-family: monospace; font-size: 10px; letter-spacing: 0.18em; color: var(--text-dim); text-transform: uppercase;">The Counsel</span>
+      <span style="margin-left: auto; font-family: monospace; font-size: 10px; letter-spacing: 0.12em; color: var(--text-muted); text-transform: uppercase;">focus · judgment, not execution</span>
+    </div>
+
+    <div class="reveal" style="font-size: 12px; color: var(--text-muted); font-style: italic; margin: -2px 0 10px 40px; line-height: 1.5;">Ei owns no work-product track, so she has no release lane. Her craft - direction, positioning, go / no-go, and red-teaming a plan before the crew commits - lives in the ei-counsel-kata skill and is refined there, not shipped as versioned features.</div>
+
+    <!-- ============ PLATFORM / CREW-WIDE ============ -->
     <div class="reveal" style="margin: 38px 0 12px; display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px;">
       <span style="font-family: monospace; font-size: 11px; letter-spacing: 0.3em; color: var(--text-dim); text-transform: uppercase;">// Platform · crew-wide</span>
       <span style="margin-left: auto; font-family: monospace; font-size: 10px; letter-spacing: 0.12em; color: var(--text-muted); text-transform: uppercase;">focus · shared surfaces + remote</span>
@@ -1824,13 +2149,46 @@
 
     <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(0,255,224,0.24); margin-bottom: -1px;">
       <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(0,255,224,0.24); gap: 4px;">
-        <span style="font-family: 'Noto Serif JP', serif; font-size: 18px; color: var(--teal); text-shadow: 0 0 12px rgba(0,255,224,0.4); line-height: 1;">影組</span>
-        <span style="font-family: monospace; font-size: 11px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">v0.6.11</span>
+        <span style="font-family: 'Noto Serif JP', serif; font-size: 16px; color: var(--teal); text-shadow: 0 0 12px rgba(0,255,224,0.4); line-height: 1;">影組</span>
+        <span style="font-family: monospace; font-size: 11px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">LIVE</span>
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Mobile Shell - the crew in your pocket</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">On the home network, open KG on your phone and it greets you with a purpose-built, touch-first surface instead of the desktop cockpit. Two tabs: <strong style="color: var(--text);">Shadow</strong> - the same direct line to the box, with the conversation carried over from the laptop - and <strong style="color: var(--text);">Tasks</strong> - watch what the crew is running and fire a new job to the right operative with one tap. The full dashboard stays one tap away when you want it. <em>The crew, in your pocket.</em></div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Always on - the home server</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">KG runs 24/7 on a dedicated mini-PC under a process manager (API, UI, and a source-pull loop), reachable from personal devices over a private mesh and, from a locked-down work laptop, through a secure tunnel. The crew never sleeps.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">v0.6.11</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Mobile shell - the crew in your pocket</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">On a phone, KG collapses to a touch-first shell: talk to the Shadow and watch the task list, so you can check on the crew from anywhere on the home network.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 12px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">OUTPUTS</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">One place for the work + the public face</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Every operative's work product lands under a per-operative output tree, browsable in the OUTPUTS tab. And the crew's public face - this presentation, a live keynote, and the Tōshi manual - is served from kage-gumi.com with its own quiet analytics.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(0,255,224,0.2); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(0,255,224,0.2); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--teal); text-shadow: var(--teal-glow);">v0.9</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">planned</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Dashboard intelligence</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Richer data surfaces: an operative deep-dive page, a token-burn chart per operative, task-volume over time, global search across everything, and task tags.</div>
       </div>
     </div>
 
@@ -1840,11 +2198,12 @@
         <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">horizon</span>
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Remote access, anywhere</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">A hardened, always-on front door to the full cockpit - reach it from any device, on or off the home network, secure by default. Check in on Ryū's overnight runs from a phone. Single-user by design - no multi-user complexity, no login UI. The system works exactly as intended for one operator.</div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Remote access, hardened</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">The self-hosted deploy already realises most of this. The remaining polish is a hardened, always-available gateway so the whole system works exactly as intended for one operator, from anywhere.</div>
       </div>
     </div>
 
+    <!-- ============ THE MIND ============ -->
     <div class="reveal" style="margin: 38px 0 12px; display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px;">
       <span style="font-family: monospace; font-size: 11px; letter-spacing: 0.3em; color: var(--text-dim); text-transform: uppercase;">// The horizon · the mind</span>
       <span style="margin-left: auto; font-family: monospace; font-size: 10px; letter-spacing: 0.12em; color: var(--text-muted); text-transform: uppercase;">focus · the crew's own model</span>
@@ -1857,7 +2216,7 @@
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
         <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">冴 Sae: the crew's own Esko model</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">An LLM that speaks WebCenter natively - grounded in our own Esko corpus today, distilled into weights we own and run on the box tomorrow. The written scroll (Densho) becomes a mind. <a href="#sae" style="color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(0,255,224,0.35);">See the Sae section below →</a></div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">An LLM that speaks WebCenter natively, trained on the crew's own accumulated craft. The far horizon - the crew's own mind. <a href="#sae" style="color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(0,255,224,0.35);">See the Sae section below →</a></div>
       </div>
     </div>
 
