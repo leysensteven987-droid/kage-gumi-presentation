@@ -1175,6 +1175,97 @@
   <p>When Mei answers a WebCenter question or Ren generates a script, it's drawing on a real body of work, not hallucinating from documentation. That's the difference between a general AI tool and something purpose-built over years.</p>
 </section>
 
+<!-- THE CREW -->
+<section id="crew">
+  <div class="section-tag">The operatives</div>
+  <h2>Meet the crew <span class="jp">影組メンバー</span></h2>
+  <p>Each operative has a Japanese name chosen for what it means, not just as decoration. The character shapes how that operative behaves.</p>
+
+  <div class="op-grid">
+    <div class="op-card op-mei reveal" data-glyph="明">
+      <div class="op-head"><span class="op-id">KG-01</span><span class="op-dot"></span></div>
+      <div class="op-glyph">明</div>
+      <div class="op-name">Mei</div>
+      <div class="op-role">Support Agent</div>
+      <div class="op-sub">Esko / WebCenter</div>
+      <div class="op-meaning">"Bright": clarity, illumination</div>
+      <div class="op-desc">The crew's living WebCenter reference: every API and JSP endpoint, the full manuals and database reference, every attribute and error pattern. Ask in plain language, get a working answer. Mei prepares the ground before anything else happens.</div>
+    </div>
+
+    <div class="op-card op-ren reveal" data-glyph="錬">
+      <div class="op-head"><span class="op-id">KG-02</span><span class="op-dot"></span></div>
+      <div class="op-glyph">錬</div>
+      <div class="op-name">Ren</div>
+      <div class="op-role">Builder</div>
+      <div class="op-sub">Scripting, config &amp; integration</div>
+      <div class="op-meaning">"Tempered": forged, refined</div>
+      <div class="op-desc">The crew's forge - Ren authors the whole WebCenter surface, not just scripts. Every scripting context (Dashboard, Rule Engine, Workflow Node, SDK/JSP, Scriptable-List SQL, Jasper, action buttons, custom form extensions) plus the configuration around them: attribute categories, lists, task types, project statuses, templates, whole workflows. And past classic WebCenter - Workato/iPaaS recipes with diagrams, Automation Engine tickets, bidirectional Miro workflow boards, even KG web itself. Each context has its own rules and Ren knows them all; every artifact comes back versioned, diffable, KG-branded and committed to the repo. Ren writes it - Haku takes it live. Tempered by the work, refined until it holds.</div>
+    </div>
+
+    <div class="op-card op-haku reveal" data-glyph="博">
+      <div class="op-head"><span class="op-id">KG-03</span><span class="op-dot"></span></div>
+      <div class="op-glyph">博</div>
+      <div class="op-name">Haku</div>
+      <div class="op-role">Deploy &amp; Doc</div>
+      <div class="op-sub">Deploy, sync &amp; docs</div>
+      <div class="op-meaning">"Sound of jewels": clarity, precision</div>
+      <div class="op-desc">The one who takes the build live. After Ren authors something, Haku deploys it straight into WebCenter - dashboard and rule scripts via Playwright, and the config surface (attributes, categories, lists, reports, workflows, task types, dashboards, users and groups) via the WebCenter API. She keeps repo and server in lockstep both ways - a nightly mirror pulls every live script back into the repo, and a drift guard captures a colleague's in-WebCenter edit before any push can overwrite it. Then she documents it: clean Azure DevOps specs published to the wiki, and answers written back into DevOps work items when a colleague asks the crew for help. Searchable, shareable, stored. The inspector's eye she first opened - <span class="jp">透</span> Tōshi - has since grown into an operative of her own (see her card).</div>
+    </div>
+
+    <div class="op-card op-ryu reveal" data-glyph="龍">
+      <div class="op-head"><span class="op-id">KG-04</span><span class="op-dot"></span></div>
+      <div class="op-glyph">龍</div>
+      <div class="op-name">Ryū</div>
+      <div class="op-role">Night Runner</div>
+      <div class="op-sub">Overnight Automation</div>
+      <div class="op-meaning">"Dragon": powerful, tireless</div>
+      <div class="op-desc">Runs scheduled tasks while I sleep. Surfaces his own proposals for the next run, queues scripts for review, and delivers a morning digest. Launch a proposal and it becomes a real, tracked dashboard task. Dragons don't rest. Neither does Ryū.</div>
+    </div>
+
+    <div class="op-card op-cho reveal" data-glyph="聴">
+      <div class="op-head"><span class="op-id">KG-05</span><span class="op-dot"></span></div>
+      <div class="op-glyph">聴</div>
+      <div class="op-name">Chō</div>
+      <div class="op-role">Meeting Listener</div>
+      <div class="op-sub">Capture &amp; Summarize</div>
+      <div class="op-meaning">"To listen": attentive, fully present</div>
+      <div class="op-desc">Sits in the shadows of a call and listens. Captures the audio, transcribes it on-device with faster-whisper - nothing ever leaves the machine - and hands back a clean summary: decisions, action items, open questions. A meeting stops being something you re-type from memory and becomes reusable text that feeds straight back into project work and the crew's knowledge.</div>
+    </div>
+
+    <div class="op-card op-sumi reveal" data-glyph="墨">
+      <div class="op-head"><span class="op-id">KG-06</span><span class="op-dot"></span></div>
+      <div class="op-glyph">墨</div>
+      <div class="op-name">Sumi</div>
+      <div class="op-role">Record-Keeper</div>
+      <div class="op-sub">Customer Ledger</div>
+      <div class="op-meaning">"Ink": permanent, deliberate</div>
+      <div class="op-desc">The ear hears; the ink keeps. After Chō summarises a meeting, Sumi files it into a durable, per-customer record - then puts it to work. The dossier loads into the crew's memory, so the next build already knows the customer's history, and the changes agreed in the call can fire straight off as tasks: a WebCenter config fix can start the moment the meeting ends. Faithful and factual, never inventing an attendee or a date.</div>
+    </div>
+
+    <div class="op-card op-ei reveal" data-glyph="英">
+      <div class="op-head"><span class="op-id">KG-07</span><span class="op-dot"></span></div>
+      <div class="op-glyph">英</div>
+      <div class="op-name">Ei</div>
+      <div class="op-role">The Counsel</div>
+      <div class="op-sub">Advisor &amp; Strategist</div>
+      <div class="op-meaning">"Brilliance": the clarity to call it straight</div>
+      <div class="op-desc">The crew's conscience and strategist. Where the others act on the world, Ei acts on the plan - direction, positioning, the go/no-go call. The judgment layer: she tells me whether it's the right move before the rest of the crew commits.</div>
+    </div>
+
+    <div class="op-card op-toshi reveal" data-glyph="透">
+      <div class="op-head"><span class="op-id">THE EYE</span><span class="op-dot"></span></div>
+      <div class="op-glyph">透</div>
+      <div class="op-name">Tōshi</div>
+      <div class="op-role">The Seer</div>
+      <div class="op-sub">Inspector · Recon</div>
+      <div class="op-meaning">"Clairvoyance": to see straight through</div>
+      <div class="op-desc">Where the others build and deploy, Tōshi <em>reveals</em>. One click on any WebCenter page and she lays out everything nested inside it - dashboards, saved searches, forms - each a direct link to its editor; hover to highlight a node on the page, pick an element to jump back to its row, and export the whole map as a handover-ready ticket. She walks a dashboard's full reference graph too, flagging anything deleted. Born as Haku's inspector eye, she now rides along as a one-click Chrome extension and a KG panel - and since every build starts by seeing the ground first, Tōshi is never idle. The shadow that reads the blueprint behind the glass.</div>
+      <a class="op-link" href="https://kage-gumi.com/kage-gumi-presentation/toshi.html" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:7px; margin-top:16px; font-family:monospace; font-size:12px; letter-spacing:0.4px; color:var(--op-toshi); text-decoration:none; border:1px solid rgba(143,217,255,0.45); background:rgba(143,217,255,0.08); border-radius:7px; padding:8px 14px; transition:background .15s,border-color .15s;" onmouseover="this.style.background='rgba(143,217,255,0.16)';this.style.borderColor='rgba(143,217,255,0.8)';" onmouseout="this.style.background='rgba(143,217,255,0.08)';this.style.borderColor='rgba(143,217,255,0.45)';"><span class="jp" style="font-size:15px;">透</span> See Tōshi in action - the manual &amp; feature guide ↗</a>
+    </div>
+
+  </div>
+</section>
+
 <!-- WEBCENTER FOCUS -->
 <section id="webcenter">
   <div class="section-tag">The problem it solves</div>
@@ -1324,97 +1415,6 @@
         <p class="wc-scenario-desc">Ei is the one operative who never touches the system - her work is judgment, not execution. Bring her a direction and she stress-tests it: the pre-mortem, the red-team, the go/no-go, the risk nobody has named yet. She won't write the code or run the deploy - she tells me whether it's the right call before the rest of the crew moves. She names the real risk before it costs anything.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- THE CREW -->
-<section id="crew">
-  <div class="section-tag">The operatives</div>
-  <h2>Meet the crew <span class="jp">影組メンバー</span></h2>
-  <p>Each operative has a Japanese name chosen for what it means, not just as decoration. The character shapes how that operative behaves.</p>
-
-  <div class="op-grid">
-    <div class="op-card op-mei reveal" data-glyph="明">
-      <div class="op-head"><span class="op-id">KG-01</span><span class="op-dot"></span></div>
-      <div class="op-glyph">明</div>
-      <div class="op-name">Mei</div>
-      <div class="op-role">Support Agent</div>
-      <div class="op-sub">Esko / WebCenter</div>
-      <div class="op-meaning">"Bright": clarity, illumination</div>
-      <div class="op-desc">The crew's living WebCenter reference: every API and JSP endpoint, the full manuals and database reference, every attribute and error pattern. Ask in plain language, get a working answer. Mei prepares the ground before anything else happens.</div>
-    </div>
-
-    <div class="op-card op-ren reveal" data-glyph="錬">
-      <div class="op-head"><span class="op-id">KG-02</span><span class="op-dot"></span></div>
-      <div class="op-glyph">錬</div>
-      <div class="op-name">Ren</div>
-      <div class="op-role">Builder</div>
-      <div class="op-sub">Scripting, config &amp; integration</div>
-      <div class="op-meaning">"Tempered": forged, refined</div>
-      <div class="op-desc">The crew's forge - Ren authors the whole WebCenter surface, not just scripts. Every scripting context (Dashboard, Rule Engine, Workflow Node, SDK/JSP, Scriptable-List SQL, Jasper, action buttons, custom form extensions) plus the configuration around them: attribute categories, lists, task types, project statuses, templates, whole workflows. And past classic WebCenter - Workato/iPaaS recipes with diagrams, Automation Engine tickets, bidirectional Miro workflow boards, even KG web itself. Each context has its own rules and Ren knows them all; every artifact comes back versioned, diffable, KG-branded and committed to the repo. Ren writes it - Haku takes it live. Tempered by the work, refined until it holds.</div>
-    </div>
-
-    <div class="op-card op-haku reveal" data-glyph="博">
-      <div class="op-head"><span class="op-id">KG-03</span><span class="op-dot"></span></div>
-      <div class="op-glyph">博</div>
-      <div class="op-name">Haku</div>
-      <div class="op-role">Deploy &amp; Doc</div>
-      <div class="op-sub">Deploy, sync &amp; docs</div>
-      <div class="op-meaning">"Sound of jewels": clarity, precision</div>
-      <div class="op-desc">The one who takes the build live. After Ren authors something, Haku deploys it straight into WebCenter - dashboard and rule scripts via Playwright, and the config surface (attributes, categories, lists, reports, workflows, task types, dashboards, users and groups) via the WebCenter API. She keeps repo and server in lockstep both ways - a nightly mirror pulls every live script back into the repo, and a drift guard captures a colleague's in-WebCenter edit before any push can overwrite it. Then she documents it: clean Azure DevOps specs published to the wiki, and answers written back into DevOps work items when a colleague asks the crew for help. Searchable, shareable, stored. The inspector's eye she first opened - <span class="jp">透</span> Tōshi - has since grown into an operative of her own (see her card).</div>
-    </div>
-
-    <div class="op-card op-ryu reveal" data-glyph="龍">
-      <div class="op-head"><span class="op-id">KG-04</span><span class="op-dot"></span></div>
-      <div class="op-glyph">龍</div>
-      <div class="op-name">Ryū</div>
-      <div class="op-role">Night Runner</div>
-      <div class="op-sub">Overnight Automation</div>
-      <div class="op-meaning">"Dragon": powerful, tireless</div>
-      <div class="op-desc">Runs scheduled tasks while I sleep. Surfaces his own proposals for the next run, queues scripts for review, and delivers a morning digest. Launch a proposal and it becomes a real, tracked dashboard task. Dragons don't rest. Neither does Ryū.</div>
-    </div>
-
-    <div class="op-card op-cho reveal" data-glyph="聴">
-      <div class="op-head"><span class="op-id">KG-05</span><span class="op-dot"></span></div>
-      <div class="op-glyph">聴</div>
-      <div class="op-name">Chō</div>
-      <div class="op-role">Meeting Listener</div>
-      <div class="op-sub">Capture &amp; Summarize</div>
-      <div class="op-meaning">"To listen": attentive, fully present</div>
-      <div class="op-desc">Sits in the shadows of a call and listens. Captures the audio, transcribes it on-device with faster-whisper - nothing ever leaves the machine - and hands back a clean summary: decisions, action items, open questions. A meeting stops being something you re-type from memory and becomes reusable text that feeds straight back into project work and the crew's knowledge.</div>
-    </div>
-
-    <div class="op-card op-sumi reveal" data-glyph="墨">
-      <div class="op-head"><span class="op-id">KG-06</span><span class="op-dot"></span></div>
-      <div class="op-glyph">墨</div>
-      <div class="op-name">Sumi</div>
-      <div class="op-role">Record-Keeper</div>
-      <div class="op-sub">Customer Ledger</div>
-      <div class="op-meaning">"Ink": permanent, deliberate</div>
-      <div class="op-desc">The ear hears; the ink keeps. After Chō summarises a meeting, Sumi files it into a durable, per-customer record - then puts it to work. The dossier loads into the crew's memory, so the next build already knows the customer's history, and the changes agreed in the call can fire straight off as tasks: a WebCenter config fix can start the moment the meeting ends. Faithful and factual, never inventing an attendee or a date.</div>
-    </div>
-
-    <div class="op-card op-ei reveal" data-glyph="英">
-      <div class="op-head"><span class="op-id">KG-07</span><span class="op-dot"></span></div>
-      <div class="op-glyph">英</div>
-      <div class="op-name">Ei</div>
-      <div class="op-role">The Counsel</div>
-      <div class="op-sub">Advisor &amp; Strategist</div>
-      <div class="op-meaning">"Brilliance": the clarity to call it straight</div>
-      <div class="op-desc">The crew's conscience and strategist. Where the others act on the world, Ei acts on the plan - direction, positioning, the go/no-go call. The judgment layer: she tells me whether it's the right move before the rest of the crew commits.</div>
-    </div>
-
-    <div class="op-card op-toshi reveal" data-glyph="透">
-      <div class="op-head"><span class="op-id">THE EYE</span><span class="op-dot"></span></div>
-      <div class="op-glyph">透</div>
-      <div class="op-name">Tōshi</div>
-      <div class="op-role">The Seer</div>
-      <div class="op-sub">Inspector · Recon</div>
-      <div class="op-meaning">"Clairvoyance": to see straight through</div>
-      <div class="op-desc">Where the others build and deploy, Tōshi <em>reveals</em>. One click on any WebCenter page and she lays out everything nested inside it - dashboards, saved searches, forms - each a direct link to its editor; hover to highlight a node on the page, pick an element to jump back to its row, and export the whole map as a handover-ready ticket. She walks a dashboard's full reference graph too, flagging anything deleted. Born as Haku's inspector eye, she now rides along as a one-click Chrome extension and a KG panel - and since every build starts by seeing the ground first, Tōshi is never idle. The shadow that reads the blueprint behind the glass.</div>
-      <a class="op-link" href="https://kage-gumi.com/kage-gumi-presentation/toshi.html" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:7px; margin-top:16px; font-family:monospace; font-size:12px; letter-spacing:0.4px; color:var(--op-toshi); text-decoration:none; border:1px solid rgba(143,217,255,0.45); background:rgba(143,217,255,0.08); border-radius:7px; padding:8px 14px; transition:background .15s,border-color .15s;" onmouseover="this.style.background='rgba(143,217,255,0.16)';this.style.borderColor='rgba(143,217,255,0.8)';" onmouseout="this.style.background='rgba(143,217,255,0.08)';this.style.borderColor='rgba(143,217,255,0.45)';"><span class="jp" style="font-size:15px;">透</span> See Tōshi in action - the manual &amp; feature guide ↗</a>
-    </div>
-
   </div>
 </section>
 
@@ -2283,7 +2283,7 @@
       <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;">Built and running: an owned, growing scroll of Esko craft. Browse a solution, tailor it to your build, and deliver it into a customer's WebCenter - guardrail-bound.</div>
     </div>
     <div style="text-align: center; color: var(--crimson); font-size: 18px; opacity: 0.6;">→</div>
-    <div style="background: var(--bg-card); border: 1px solid rgba(0,255,224,0.5); padding: 24px 20px; text-align: center; box-shadow: 0 0 22px rgba(0,255,224,0.12);">
+    <div style="background: var(--bg-card); border: 1px solid rgba(0,255,224,0.35); padding: 24px 20px; text-align: center;">
       <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--teal); text-transform: uppercase; margin-bottom: 10px;">03 · Mind</div>
       <div style="font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 8px;">冴 Sae</div>
       <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;">The scroll becomes a mind - the crew's own model, trained on that craft, that speaks WebCenter natively.</div>
