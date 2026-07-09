@@ -338,6 +338,15 @@
     scroll-margin-top: 118px;   /* clear the sticky topbar (60) + sub-nav (46) on anchor jump */
   }
 
+  /* Gallery screenshots: break out of the 720 text lane into a wider gallery lane,
+     one big shot per row, each 2x capture scaled to fit its cell (crisp, no clipping). */
+  #dashboard > div[style*="grid-template-columns: 1fr 1fr"] {
+    max-width: 1040px !important;
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+  #dashboard img { display: block; width: 100%; height: auto; }
+
   .section-tag {
     font-size: 10px;
     letter-spacing: 0.35em;
