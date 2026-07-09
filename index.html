@@ -1196,9 +1196,9 @@
     <div class="ba-panel ba-after">
       <div class="ba-label">With Kage-gumi</div>
       <div class="ba-item">Ask Mei, the WebCenter support operative, in plain language</div>
-      <div class="ba-item">Ren generates, versions, and stores scripts with diffs</div>
+      <div class="ba-item">Ren authors the whole surface - scripts, config, workflows - versioned with diffs</div>
       <div class="ba-item">Dashboard shows all operative tasks and status at a glance</div>
-      <div class="ba-item">Haku writes documentation automatically as builds happen</div>
+      <div class="ba-item">Haku deploys the build into WebCenter and documents it automatically</div>
       <div class="ba-item">Logs are surfaced and summarised, not buried</div>
       <div class="ba-item">Ryū handles overnight batch work autonomously</div>
       <div class="ba-item">Chō captures &amp; summarises the meeting and Sumi files it - be present, not the note-taker</div>
@@ -1237,7 +1237,7 @@
         </div>
         <div class="wc-scenario-label">Scenario 02</div>
         <div class="wc-scenario-title">"Build a display script that shows me status progression of a project"</div>
-        <p class="wc-scenario-desc">A script is just one example - Ren builds the whole WebCenter surface: Workflow, Task, Rule Engine and Dashboard scripting, but also attribute categories, lists and all the rest of the configuration. Each context has its own APIs and constraints, and Ren knows them all. Everything comes back versioned and diffable, and Ren pushes it straight into WebCenter himself - no copy-paste step.</p>
+        <p class="wc-scenario-desc">A script is just one example - Ren authors the whole WebCenter surface: Workflow, Task, Rule Engine and Dashboard scripting, but also attribute categories, lists and all the rest of the configuration - plus Workato recipes, Automation Engine tickets and Miro workflow boards. Each context has its own APIs and constraints, and Ren knows them all. Everything comes back versioned, diffable and committed to the repo - then handed to Haku to take live.</p>
       </div>
 
       <div class="wc-scenario reveal">
@@ -1250,8 +1250,8 @@
           <span class="status-chip chip-idle">Idle</span>
         </div>
         <div class="wc-scenario-label">Scenario 03</div>
-        <div class="wc-scenario-title">"Document this workflow - and find what we already have on it"</div>
-        <p class="wc-scenario-desc">Haku documents what was just built, but also surfaces what already exists: existing scripts, prior configurations, related workflows. She can read a live WebCenter artifact via Playwright and write a functional spec from what she actually sees. Output is clean, shareable, Azure DevOps-ready.</p>
+        <div class="wc-scenario-title">"Take what Ren built live - then document it and find what we already have"</div>
+        <p class="wc-scenario-desc">Haku deploys Ren's work into WebCenter via Playwright - keeping repo and server in lockstep with a nightly mirror and a drift guard that protects a colleague's live edits - then writes it up. She documents what was built and surfaces what already exists: existing scripts, prior configurations, related workflows. She can read a live artifact and write a functional spec from what she actually sees. Output is clean, shareable, Azure DevOps-ready.</p>
       </div>
 
       <div class="wc-scenario reveal">
@@ -1349,9 +1349,9 @@
       <div class="op-glyph">錬</div>
       <div class="op-name">Ren</div>
       <div class="op-role">Builder</div>
-      <div class="op-sub">Scripting &amp; all configuration</div>
+      <div class="op-sub">Scripting, config &amp; integration</div>
       <div class="op-meaning">"Tempered": forged, refined</div>
-      <div class="op-desc">Built around WebCenter, end to end - not just scripts. Workflows, Tasks, Rule Engine-Dashboard-Workflow Node scripting, but also attribute categories, lists ... and all the rest of the configuration, plus integration and migration specs and Workato recipes &amp; diagrams. Each context has its own rules and Ren knows them all. And Ren doesn't stop at writing the code: he uploads scripts straight into WebCenter himself, no copy-paste step. Tempered by the work - refined until it holds.</div>
+      <div class="op-desc">The crew's forge - Ren authors the whole WebCenter surface, not just scripts. Every scripting context (Dashboard, Rule Engine, Workflow Node, SDK/JSP, Scriptable-List SQL, Jasper, action buttons, custom form extensions) plus the configuration around them: attribute categories, lists, task types, project statuses, templates, whole workflows. And past classic WebCenter - Workato/iPaaS recipes with diagrams, Automation Engine tickets, bidirectional Miro workflow boards, even KG web itself. Each context has its own rules and Ren knows them all; every artifact comes back versioned, diffable, KG-branded and committed to the repo. Ren writes it - Haku takes it live. Tempered by the work, refined until it holds.</div>
     </div>
 
     <div class="op-card op-haku reveal" data-glyph="博">
@@ -1359,9 +1359,9 @@
       <div class="op-glyph">博</div>
       <div class="op-name">Haku</div>
       <div class="op-role">Deploy &amp; Doc</div>
-      <div class="op-sub">Sync &amp; Docs</div>
+      <div class="op-sub">Deploy, sync &amp; docs</div>
       <div class="op-meaning">"Sound of jewels": clarity, precision</div>
-      <div class="op-desc">Turns messy work into clean documentation, then pushes the work itself live. After Ren builds something, Haku writes it up (what it does, what it touches, how to use it) and deploys scripts straight into WebCenter via Playwright. Searchable, shareable, stored. The inspector's eye she first opened - <span class="jp">透</span> Tōshi - has since grown into an operative of her own (see her card).</div>
+      <div class="op-desc">The one who takes the build live. After Ren authors something, Haku deploys it straight into WebCenter via Playwright - dashboard and rule scripts today, and steadily the whole surface: attributes, categories, lists, reports, workflows, task types, dashboards, users and groups. She keeps repo and server in lockstep both ways - a nightly mirror pulls every live script back into the repo, and a drift guard captures a colleague's in-WebCenter edit before any push can overwrite it. Then she documents it: clean Azure DevOps specs published to the wiki, and answers written back into DevOps work items when a colleague asks the crew for help. Searchable, shareable, stored. The inspector's eye she first opened - <span class="jp">透</span> Tōshi - has since grown into an operative of her own (see her card).</div>
     </div>
 
     <div class="op-card op-ryu reveal" data-glyph="龍">
@@ -1632,7 +1632,7 @@
       <span style="font-family: 'Noto Serif JP', serif; font-size: 24px; color: #34d399; text-shadow: 0 0 14px rgba(52,211,153,0.45); line-height: 1;">博</span>
       <span style="font-size: 16px; font-weight: 600; color: var(--text); letter-spacing: 0.02em;">Haku</span>
       <span style="font-family: monospace; font-size: 10px; letter-spacing: 0.18em; color: var(--text-dim); text-transform: uppercase;">Deploy & Doc</span>
-      <span style="margin-left: auto; font-family: monospace; font-size: 10px; letter-spacing: 0.12em; color: var(--text-muted); text-transform: uppercase;">focus · read · document · sync</span>
+      <span style="margin-left: auto; font-family: monospace; font-size: 10px; letter-spacing: 0.12em; color: var(--text-muted); text-transform: uppercase;">focus · deploy · document · sync</span>
     </div>
 
     <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
@@ -1654,6 +1654,37 @@
       <div style="background: var(--bg-card); padding: 20px 24px;">
         <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Haku: Dashboard Script Sync</div>
         <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Haku pushes edited dashboard scripts directly into WebCenter via Playwright - no manual copy-paste. Every edit in the repo lands live on the server in a single automated step.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">v0.6.8</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Haku: rule-action deploy + two-way sync</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Haku now takes both the script types Ren writes most - Dashboard scripts and JavaScript Rule Actions - live into WebCenter, create-or-update, straight after an edit. And she keeps the two in lockstep both ways: a nightly mirror pulls every live script back into the repo, and a pre-push drift guard captures a colleague's in-WebCenter edit before any deploy can overwrite it. The repo is a faithful backup, never a clobber.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(240,165,0,0.3); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(240,165,0,0.3); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--amber); text-shadow: 0 0 12px rgba(240,165,0,0.4);">v0.7</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">in progress</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Haku: full-surface deploy</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Deployment is spreading past scripts. Haku now takes 8 of 9 artifact families live into WebCenter - dashboard &amp; rule scripts, attributes &amp; categories, lists, reports, workflows &amp; task types, dashboards, and users &amp; groups. What's left is the last family (action buttons) and wrapping it all in a one-click in-dashboard loop: Ren generates → review → confirm → Haku deploys from KG web, with rollback-by-copy before any destructive edit.</div>
+        <div style="margin-top: 16px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+            <span style="font-family: monospace; font-size: 9px; letter-spacing: 0.2em; color: var(--text-dim); text-transform: uppercase;">Artifact deploy coverage</span>
+            <span style="font-family: monospace; font-size: 11px; color: var(--green); text-shadow: 0 0 10px rgba(76,255,145,0.35);">8 / 9</span>
+          </div>
+          <div style="height: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); overflow: hidden;">
+            <div style="height: 100%; width: 89%; background: linear-gradient(90deg, rgba(76,255,145,0.45), var(--green)); box-shadow: 0 0 12px rgba(76,255,145,0.45);"></div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1680,7 +1711,18 @@
       <span style="font-family: 'Noto Serif JP', serif; font-size: 24px; color: #a78bfa; text-shadow: 0 0 14px rgba(167,139,250,0.45); line-height: 1;">錬</span>
       <span style="font-size: 16px; font-weight: 600; color: var(--text); letter-spacing: 0.02em;">Ren</span>
       <span style="font-family: monospace; font-size: 10px; letter-spacing: 0.18em; color: var(--text-dim); text-transform: uppercase;">Builder</span>
-      <span style="margin-left: auto; font-family: monospace; font-size: 10px; letter-spacing: 0.12em; color: var(--text-muted); text-transform: uppercase;">focus · generate → deploy</span>
+      <span style="margin-left: auto; font-family: monospace; font-size: 10px; letter-spacing: 0.12em; color: var(--text-muted); text-transform: uppercase;">focus · author every context</span>
+    </div>
+
+    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
+      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
+        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">v0.6.2</span>
+        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
+      </div>
+      <div style="background: var(--bg-card); padding: 20px 24px;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Ren: the full authoring surface</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Not just scripts. Ren writes every WebCenter scripting context - Dashboard, Rule Engine, Workflow Node, SDK/JSP, Scriptable-List SQL, Jasper, action buttons, custom form extensions - and the configuration around them: attribute categories, lists, task types, project statuses, templates, whole workflows. Past classic WebCenter too: Workato/iPaaS recipes with diagrams, Automation Engine tickets, bidirectional Miro workflow boards. Each context carries its own rules and Ren knows them all - every artifact versioned, diffable and KG-branded.</div>
+      </div>
     </div>
 
     <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
@@ -1690,40 +1732,10 @@
       </div>
       <div style="background: var(--bg-card); padding: 20px 24px;">
         <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Git Integration (Ren auto-push)</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Ren commits and pushes generated scripts to the repository automatically after every task. Codebase and Claude Code stay in sync - no manual push step required.</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Ren commits and pushes his generated source to the repository automatically after every task - the write side, not the deploy. Codebase and Claude Code stay in sync; taking it live into WebCenter is Haku's step.</div>
       </div>
     </div>
 
-    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid var(--border); margin-bottom: -1px;">
-      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--border); gap: 4px;">
-        <span style="font-family: monospace; font-size: 13px; color: var(--green); text-shadow: 0 0 12px rgba(76,255,145,0.4);">v0.6.8</span>
-        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
-      </div>
-      <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Ren: Playwright Deploy - scripts</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">The immediate necessity, live today: Ren pushes the two script types he writes most - Dashboard scripts and JavaScript Rule Actions - straight into WebCenter via the canonical Playwright sync, automatically after every edit. Generate → save → live, no copy-paste. Creates a new script if it doesn't exist yet, edits it in place if it does.</div>
-      </div>
-    </div>
-
-    <div class="reveal" style="display: grid; grid-template-columns: 110px 1fr; border: 1px solid rgba(240,165,0,0.3); margin-bottom: -1px;">
-      <div style="background: var(--bg-deep); padding: 20px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(240,165,0,0.3); gap: 4px;">
-        <span style="font-family: monospace; font-size: 13px; color: var(--amber); text-shadow: 0 0 12px rgba(240,165,0,0.4);">v0.7</span>
-        <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">in progress</span>
-      </div>
-      <div style="background: var(--bg-card); padding: 20px 24px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">Ren: Playwright Deploy - full coverage</div>
-        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">Most of the surface already deploys. Ren now writes 8 of 9 artifact families straight into WebCenter - dashboard &amp; rule scripts, attributes &amp; categories, lists, reports, workflows &amp; task types, dashboards, and users &amp; groups. What's left is the last family (action buttons) and wrapping it all in a one-click in-dashboard loop: generate → review → confirm → deploy from KG web, with rollback-by-copy before any destructive edit.</div>
-        <div style="margin-top: 16px;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
-            <span style="font-family: monospace; font-size: 9px; letter-spacing: 0.2em; color: var(--text-dim); text-transform: uppercase;">Artifact deploy coverage</span>
-            <span style="font-family: monospace; font-size: 11px; color: var(--green); text-shadow: 0 0 10px rgba(76,255,145,0.35);">8 / 9</span>
-          </div>
-          <div style="height: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); overflow: hidden;">
-            <div style="height: 100%; width: 89%; background: linear-gradient(90deg, rgba(76,255,145,0.45), var(--green)); box-shadow: 0 0 12px rgba(76,255,145,0.45);"></div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class="reveal" style="margin: 38px 0 12px; display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px;">
       <span style="font-family: 'Noto Serif JP', serif; font-size: 24px; color: #38bdf8; text-shadow: 0 0 14px rgba(56,189,248,0.45); line-height: 1;">聴</span>
