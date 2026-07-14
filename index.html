@@ -1318,6 +1318,7 @@
   <a href="#name">Name</a>
   <a href="#origin">Origin</a>
   <a href="#webcenter">WebCenter</a>
+  <a href="#brain">Knowledge</a>
   <a href="#crew">The Crew</a>
   <a href="#architecture">Architecture</a>
   <a href="#dashboard">Dashboard</a>
@@ -1468,6 +1469,195 @@
   </div>
 
   <p class="reveal" style="max-width: 640px; margin-top: 32px; font-size: 17px; font-weight: 300; line-height: 1.6; color: var(--text); border-left: 3px solid var(--teal); padding-left: 24px;">And it doesn't have to stay personal. Because Mei already carries the WebCenter support playbook, after a build I can drop a tailored instance at the customer and let their team use it as a self-service support bot that answers the same questions I would, without me in the loop.</p>
+</section>
+
+<!-- KNOWLEDGE BRAIN -->
+<style>
+  /* ── KNOWLEDGE BRAIN (#brain) ── */
+  #brain .brain-lead {
+    font-size: clamp(17px, 1.7vw, 21px);
+    font-weight: 400;
+    color: var(--text);
+    max-width: 720px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .brain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin: 44px 0 40px;
+    max-width: 860px;
+  }
+  .brain-proof {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 30px 28px 34px;
+    position: relative;
+    overflow: hidden;
+  }
+  .brain-proof::after {                 /* faint kanji watermark, ink not neon (matches .kanji-block) */
+    content: attr(data-k);
+    position: absolute;
+    right: -8px; bottom: -24px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 96px;
+    font-weight: 700;
+    color: var(--ink-deep);
+    opacity: 0.26;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .brain-proof-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 10px;
+    position: relative; z-index: 1;
+  }
+  .brain-proof-desc {
+    font-size: 13.5px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.55;
+    position: relative; z-index: 1;
+  }
+
+  /* KG-chat placeholder panel */
+  .brain-chat {
+    max-width: 720px;
+    background: var(--bg-deep);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .brain-chat-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 18px;
+    background: var(--bg-header);
+    border-bottom: 1px solid var(--border);
+  }
+  .brain-chat-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--teal);
+    box-shadow: 0 0 0 3px var(--teal-dim);
+  }
+  .brain-chat-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    color: var(--crimson);
+    letter-spacing: 0.08em;
+  }
+  .brain-chat-op {
+    margin-left: auto;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .brain-chat-body {
+    padding: 24px 22px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .brain-msg { display: flex; flex-direction: column; gap: 7px; }
+  .brain-msg-who {
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .brain-who-op { color: var(--teal); }
+  .brain-bubble {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 14px 18px;
+  }
+  .brain-bubble-q {
+    background: var(--bg-card);
+    color: var(--text);
+    border-left: 3px solid var(--crimson);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .brain-bubble-a {
+    background: rgba(47,232,210,0.05);
+    border-left: 3px solid var(--teal);
+  }
+  .brain-bubble-a p {
+    margin: 0 0 10px;
+    max-width: none;
+    color: var(--text-sec);
+    font-size: 14px;
+    line-height: 1.62;
+  }
+  .brain-bubble-a p:last-child { margin-bottom: 0; }
+  .brain-chat-note {
+    padding: 14px 22px 18px;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  @media (max-width: 760px) {
+    .brain-grid { grid-template-columns: 1fr; }
+  }
+</style>
+<section id="brain">
+  <div class="section-tag">The knowledge</div>
+  <h2>A WebCenter-native knowledge brain <span class="jp">知の蔵</span></h2>
+  <p class="brain-lead">Every skill, every pattern, every hard-won lesson, absorbed and retrievable.</p>
+  <p>Not search over documents. Judgment over a corpus. It knows a dashboard script from a rule-engine script, knows the SDK surface, knows the guardrails, because it has read everything I have and reasons the way I would.</p>
+
+  <div class="brain-grid reveal">
+    <div class="brain-proof" data-k="蔵">
+      <div class="brain-proof-title">Absorbed</div>
+      <div class="brain-proof-desc">Skills, knowledge base, product manuals, config, years of build patterns.</div>
+    </div>
+    <div class="brain-proof" data-k="礎">
+      <div class="brain-proof-title">Grounded</div>
+      <div class="brain-proof-desc">Answers come from the corpus, not guesses.</div>
+    </div>
+    <div class="brain-proof" data-k="通">
+      <div class="brain-proof-title">Native</div>
+      <div class="brain-proof-desc">Speaks WebCenter, not just about it.</div>
+    </div>
+  </div>
+
+  <!-- KG-chat panel: static, styled Q -> A that mirrors the dashboard chat.
+       PLACEHOLDER COPY (generic, craft-level, no customer specifics) - finalise before ship. -->
+  <div class="brain-chat reveal" aria-label="Example Kage-gumi dashboard chat exchange">
+    <div class="brain-chat-bar">
+      <span class="brain-chat-dot" aria-hidden="true"></span>
+      <span class="brain-chat-title">影組 · CHAT</span>
+      <span class="brain-chat-op">Mei · KG-01</span>
+    </div>
+    <div class="brain-chat-body">
+      <div class="brain-msg">
+        <span class="brain-msg-who">You</span>
+        <div class="brain-bubble brain-bubble-q">How would you architect a docRef-driven variant cascade in WebCenter?</div>
+      </div>
+      <div class="brain-msg">
+        <span class="brain-msg-who brain-who-op">Mei</span>
+        <div class="brain-bubble brain-bubble-a">
+          <p>Model the base as a master document, then link each variant back to it through a document-reference attribute, so a variant inherits by pointer rather than by copy.</p>
+          <p>Drive the cascade with an On Change script on the master: when a shared attribute changes, resolve the linked variants through their docRef and push the new value down, guarded so a variant that has locally overridden a field is never clobbered.</p>
+          <p>Keep the inheritance rules in the attribute category, not in the workflow, so the same cascade holds whether the change arrives through a task, a rule, or a direct edit.</p>
+        </div>
+      </div>
+    </div>
+    <div class="brain-chat-note">Illustrative exchange</div>
+  </div>
 </section>
 
 <!-- THE CREW -->
@@ -1749,7 +1939,7 @@
   <div class="section-tag">What's next</div>
   <h2>The release plan <span class="jp">ロードマップ</span></h2>
   <p>Kage-gumi isn't finished. It's a living system that grows deliberately, not all at once. The plan below is the <strong style="color: var(--text);">major blocks, built in sequence</strong>, each one standing on the ones before it. Read top to bottom and you see how the crew grew from a dashboard into a platform, and where it's headed next.</p>
-  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-07-13</div>
+  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-07-14</div>
 
   <div style="display: flex; flex-direction: column; gap: 2px; margin-top: 40px; max-width: 760px;">
 
