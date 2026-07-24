@@ -128,7 +128,7 @@
 
   .gaps { margin-top: 24px; border-left: 2px solid var(--amber); padding: 4px 0 4px 22px; }
   .gaps li { color: var(--text-muted); font-size: 15px; margin-bottom: 9px; list-style: none; }
-  .gaps li::before { content: "— "; color: var(--amber); }
+  .gaps li::before { content: "· "; color: var(--amber); }
 
   .pull {
     margin-top: 26px; padding: 24px 26px;
@@ -166,7 +166,7 @@
     <div class="kanji">峠</div>
     <h1>The Pass</h1>
     <div class="role">Personal app &middot; curvy-road planning &amp; turn-by-turn navigation</div>
-    <p class="lede">Navigation that optimises for the road instead of the arrival time — running on hardware in the house, with no subscription and no account.</p>
+    <p class="lede">Navigation that optimises for the road instead of the arrival time, running on hardware in the house, with no subscription and no account.</p>
     <div class="status">
       <span class="chip live">Working prototype</span>
       <span class="chip">Verified 31/31</span>
@@ -177,18 +177,18 @@
 
   <section>
     <div class="eyebrow">The name</div>
-    <h2>峠 — the mountain pass</h2>
+    <h2>峠 · the mountain pass</h2>
     <p>A <em>tōge</em> is the road over the ridge: the part of the journey that exists because the mountain is in the way, and which riders take precisely for that reason. It's a compound character that means, literally, "up-down-mountain."</p>
-    <p>It was chosen over a more analytically "correct" shortlist name. The drift-culture association was raised, weighed, and accepted — the mark is worth more than the caution.</p>
+    <p>It was chosen over a more analytically "correct" shortlist name. The drift-culture association was raised, weighed, and accepted: the mark is worth more than the caution.</p>
   </section>
 
   <section>
     <div class="eyebrow">The problem</div>
     <h2>Every nav app wants to get you there fast</h2>
-    <p>Commercial navigation is built around a single objective: minimise time. That is exactly the wrong objective on a motorcycle on a Sunday. The good road is the slow one — the one with bends, elevation and no lorries — and no mainstream router will choose it for you.</p>
+    <p>Commercial navigation is built around a single objective: minimise time. That is exactly the wrong objective on a motorcycle on a Sunday. The good road is the slow one (bends, elevation, no lorries), and no mainstream router will choose it for you.</p>
     <p>The apps that do serve riders charge a yearly subscription, hold the route library on someone else's servers, and can change terms at any point. Tōge is the answer to "what would it take to just own this?"</p>
     <div class="pull">
-      <p><strong>The whole routing engine runs on a small box at home.</strong> No per-request API bill, no rate limit, no account, no telemetry leaving the house — and the custom route profiles are text files that can be tuned by hand rather than settings someone else chose.</p>
+      <p><strong>The whole routing engine runs on a small box at home.</strong> No per-request API bill, no rate limit, no account, no telemetry leaving the house. The custom route profiles are text files that can be tuned by hand rather than settings someone else chose.</p>
     </div>
   </section>
 
@@ -204,7 +204,7 @@
       <div class="card">
         <div class="num">02</div>
         <h3>Cockpit gauge</h3>
-        <p>Speed on a 240° dial with the current limit marked directly on the arc — so "am I over?" is a glance at a shape, not a comparison of two numbers.</p>
+        <p>Speed on a 240° dial with the current limit marked directly on the arc, so "am I over?" is a glance at a shape, not a comparison of two numbers.</p>
       </div>
       <div class="card">
         <div class="num">03</div>
@@ -231,16 +231,16 @@
 
   <section>
     <div class="eyebrow">Design</div>
-    <h2>KG Light Teal — two liveries, every hex measured</h2>
-    <p>The brand was locked in a written spec before a single colour went into the app, and the app was then checked against it by an automated harness that reads the rendered values back out of the running page — because a colour that only exists in the stylesheet isn't a colour the rider sees.</p>
+    <h2>KG Light Teal: two liveries, every hex measured</h2>
+    <p>The brand was locked in a written spec before a single colour went into the app, and the app was then checked against it by an automated harness that reads the rendered values back out of the running page, because a colour that only exists in the stylesheet isn't a colour the rider sees.</p>
     <div class="swatches">
-      <div class="sw"><i style="background:#0A5C55"></i><b>#0A5C55</b><em>Route — day</em></div>
-      <div class="sw"><i style="background:#35C4B5"></i><b>#35C4B5</b><em>Route — night</em></div>
+      <div class="sw"><i style="background:#0A5C55"></i><b>#0A5C55</b><em>Route · day</em></div>
+      <div class="sw"><i style="background:#35C4B5"></i><b>#35C4B5</b><em>Route · night</em></div>
       <div class="sw"><i style="background:#F4F2EC"></i><b>#F4F2EC</b><em>Bone, never white</em></div>
       <div class="sw"><i style="background:#E8365D"></i><b>#E8365D</b><em>Destination</em></div>
     </div>
     <div class="rows">
-      <div class="row"><dt>Two homes</dt><dd>The palette lives in both the interface stylesheet and the map style — chrome and map canvas are painted by different systems and have to be recoloured together.</dd></div>
+      <div class="row"><dt>Two homes</dt><dd>The palette lives in both the interface stylesheet and the map style: chrome and map canvas are painted by different systems and have to be recoloured together.</dd></div>
       <div class="row"><dt>Deliberately unbranded</dt><dd>The speed roundel and the motorway exit sign keep their real-world colours. Realism beats brand on the pieces a rider recognises by reflex.</dd></div>
       <div class="row"><dt>Verification</dt><dd>An automated harness loads the app in both liveries, reads back the computed colours and the live route-line paint, and screenshots the result.</dd></div>
     </div>
@@ -250,7 +250,7 @@
     <div class="eyebrow">The engineering note</div>
     <h2>Memory is an import cost, not a serving cost</h2>
     <p>The obvious assumption about self-hosting a country-scale road graph is that it needs an enormous amount of memory, and that adding neighbouring countries means buying hardware. That assumption is wrong in a useful way.</p>
-    <p>The graph is memory-mapped, so serving it runs on a small heap and lets the operating system's page cache do the work — a whole country's road network sits in a few hundred megabytes on disk. The heavy memory use is a <strong>one-time preparation step</strong> when the graph is first built. Which means the expensive part can be done anywhere and the result copied across, or skipped entirely at the cost of slightly slower queries that a single user will never notice.</p>
+    <p>The graph is memory-mapped, so serving it runs on a small heap and lets the operating system's page cache do the work: a whole country's road network sits in a few hundred megabytes on disk. The heavy memory use is a <strong>one-time preparation step</strong> when the graph is first built. Which means the expensive part can be done anywhere and the result copied across, or skipped entirely at the cost of slightly slower queries that a single user will never notice.</p>
     <p>Separating build cost from serving cost turned "you need a hardware upgrade" into "you need ninety seconds and a coffee."</p>
   </section>
 
@@ -260,9 +260,9 @@
     <p>What works: routing on both profiles, live turn-by-turn with the full instrument set, both liveries, geocoding, and an automated test harness that passes end to end against the real running app.</p>
     <ul class="gaps">
       <li>One country is imported. Adding neighbours is understood but not done.</li>
-      <li>The route <em>planner</em> — waypoints, saved routes, GPX, the eight-wind "roulette" ride generator — exists as a mockup only.</li>
+      <li>The route <em>planner</em> (waypoints, saved routes, GPX, the eight-wind "roulette" ride generator) exists as a mockup only.</li>
       <li>Live data (road closures, traffic, fixed speed cameras) is researched and costed but not built.</li>
-      <li>Crowd-sourced live mobile speed traps are structurally out of reach — there's no legitimate source. That gap is accepted, not being solved.</li>
+      <li>Crowd-sourced live mobile speed traps are structurally out of reach: there's no legitimate source. That gap is accepted, not being solved.</li>
       <li>Verification runs on simulated position data. Real-world riding remains the honest test.</li>
     </ul>
   </section>

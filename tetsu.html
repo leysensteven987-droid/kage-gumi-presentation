@@ -152,7 +152,7 @@
 
   .gaps { margin-top: 24px; border-left: 2px solid var(--amber); padding: 4px 0 4px 22px; }
   .gaps li { color: var(--text-muted); font-size: 15px; margin-bottom: 9px; list-style: none; }
-  .gaps li::before { content: "— "; color: var(--amber); }
+  .gaps li::before { content: "· "; color: var(--amber); }
 
   .pull {
     margin-top: 26px; padding: 24px 26px;
@@ -190,7 +190,7 @@
     <div class="kanji chrome">鉄</div>
     <h1 class="chrome">The Wrench</h1>
     <div class="role">Personal app &middot; one motorcycle, documented properly</div>
-    <p class="lede">A build book and service log for a single machine — a murdered-out Harley-Davidson Forty-Eight — with the factory workshop manual searchable inside it.</p>
+    <p class="lede">A build book and service log for a single machine, a murdered-out Harley-Davidson Forty-Eight, with the factory workshop manual searchable inside it.</p>
     <div class="status">
       <span class="chip live">Live</span>
       <span class="chip">Manual full-text searchable</span>
@@ -202,7 +202,7 @@
   <section>
     <div class="eyebrow">The problem</div>
     <h2>The knowledge is scattered</h2>
-    <p>Everything you need to keep one bike right exists — it's just spread across a 700-page PDF nobody opens, a forum thread from 2014, a receipt in a drawer, and memory. When the question is "what torque, and when did I last do this?", none of those answer in under ten minutes.</p>
+    <p>Everything you need to keep one bike right exists; it's just spread across a 700-page PDF nobody opens, a forum thread from 2014, a receipt in a drawer, and memory. When the question is "what torque, and when did I last do this?", none of those answer in under ten minutes.</p>
     <p>Tetsu is a single place for one specific motorcycle: what it is, what's been done to it, what's due, and what the factory actually says.</p>
   </section>
 
@@ -213,7 +213,7 @@
       <div class="card">
         <div class="num">01</div>
         <h3>The garage</h3>
-        <p>The bike itself — specs, fluid capacities and grades, torque figures — in one reference card instead of scattered across sources of varying trust.</p>
+        <p>The bike itself (specs, fluid capacities and grades, torque figures) in one reference card instead of scattered across sources of varying trust.</p>
       </div>
       <div class="card">
         <div class="num">02</div>
@@ -228,28 +228,28 @@
       <div class="card">
         <div class="num">04</div>
         <h3>Build book</h3>
-        <p>Every modification, with its part and its price. Paste an accessory link and it fills in the picture, name and price by itself — quick-add, because friction is what stops a log being kept.</p>
+        <p>Every modification, with its part and its price. Paste an accessory link and it fills in the picture, name and price by itself. Quick-add, because friction is what stops a log being kept.</p>
       </div>
       <div class="card">
         <div class="num">05</div>
         <h3>The workshop manual, openable</h3>
-        <p>The full factory service manual as searchable text — case-insensitive full-text search across every chapter, not a PDF you scroll.</p>
+        <p>The full factory service manual as searchable text: case-insensitive full-text search across every chapter, not a PDF you scroll.</p>
       </div>
       <div class="card">
         <div class="num">06</div>
         <h3>Ask Tetsu</h3>
-        <p>A chat grounded in <em>this</em> bike's data plus the relevant manual passages — so a torque figure comes out of the book rather than out of a language model's memory.</p>
+        <p>A chat grounded in <em>this</em> bike's data plus the relevant manual passages, so a torque figure comes out of the book rather than out of a language model's memory.</p>
       </div>
     </div>
     <div class="pull">
-      <p><strong>Grounding is the whole point of the chat.</strong> A general assistant will confidently give you a torque spec for the wrong model year. Tetsu retrieves the passage from the actual manual and answers from it — the difference between a plausible number and a correct one is a stripped thread.</p>
+      <p><strong>Grounding is the whole point of the chat.</strong> A general assistant will confidently give you a torque spec for the wrong model year. Tetsu retrieves the passage from the actual manual and answers from it. The difference between a plausible number and a correct one is a stripped thread.</p>
     </div>
   </section>
 
   <section>
     <div class="eyebrow">Design</div>
     <h2>Monochrome metal</h2>
-    <p>Tetsu was rebranded away from the crew's dark-and-crimson chrome into an identity of its own. The first attempt reached for ember orange, a stylised skull and hazard stripes — the obvious motorcycle clichés — and was rejected outright.</p>
+    <p>Tetsu was rebranded away from the crew's dark-and-crimson chrome into an identity of its own. The first attempt reached for ember orange, a stylised skull and hazard stripes: the obvious motorcycle clichés. It was rejected outright.</p>
     <p>What replaced it: black, gunmetal, brushed steel and bone, with a chrome gradient as the only thing that could be called an accent. Status colours are deliberately desaturated so they read as function, not decoration. The 鉄 character is the hero mark and the watermark. No colour. No skull.</p>
     <div class="swatches">
       <div class="sw"><i style="background:#0b0b0c"></i><b>#0b0b0c</b><em>Black</em></div>
@@ -259,9 +259,9 @@
       <div class="sw"><i style="background:#efe9dd"></i><b>#efe9dd</b><em>Bone</em></div>
     </div>
     <div class="rows">
-      <div class="row"><dt>Type</dt><dd>Condensed uppercase for headlines — the Harley heritage voice — monospace for data, a gothic cut for the 鉄 glyph. Local faces only, no web fonts in the app itself.</dd></div>
+      <div class="row"><dt>Type</dt><dd>Condensed uppercase for headlines (the Harley heritage voice), monospace for data, a gothic cut for the 鉄 glyph. Local faces only, no web fonts in the app itself.</dd></div>
       <div class="row"><dt>Motif</dt><dd>Brushed-metal texture, corner rivets, chrome-gradient headlines on a dark gunmetal ground.</dd></div>
-      <div class="row"><dt>Language</dt><dd>English — the jargon is English. Torque, service intervals, part names. Language follows the domain, not the sibling app it was cloned from.</dd></div>
+      <div class="row"><dt>Language</dt><dd>English, because the jargon is English. Torque, service intervals, part names. Language follows the domain, not the sibling app it was cloned from.</dd></div>
       <div class="row"><dt>Reference</dt><dd>Harley-Davidson's own site: light, premium, bold condensed, monochrome. No loud colour anywhere.</dd></div>
     </div>
   </section>
@@ -269,7 +269,7 @@
   <section>
     <div class="eyebrow">Honest state</div>
     <h2>What's built</h2>
-    <p>Shipped and in use: the garage, service schedule, logbook, build book with link preview, the searchable workshop manual, photo slots, and the grounded chat. It is an installable app on a phone, which is where it gets used — standing next to the bike, not at a desk.</p>
+    <p>Shipped and in use: the garage, service schedule, logbook, build book with link preview, the searchable workshop manual, photo slots, and the grounded chat. It is an installable app on a phone, which is where it gets used: standing next to the bike, not at a desk.</p>
     <ul class="gaps">
       <li>It documents exactly one motorcycle. Multi-bike support isn't built, and isn't currently wanted.</li>
       <li>The chat depends on a local assistant being installed; without it the feature degrades to a note rather than an error.</li>
