@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>市川 ICHIKAWA - The Market Scout</title>
+<meta name="description" content="Ichikawa (市川) - a personal recipe engine that turns a week of dinners into one ordered shopping list. Part of the Kage-gumi personal crew.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.92em' font-size='88' fill='%23FF9DB2'>市</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* neutral graphite ground - the Sumi-e Ink baseline, shared with the KG decks */
+    --bg:         #171514;
+    --bg-deep:    #110f0e;
+    --bg-card:    #1e1c1b;
+    --bg-card-h:  #242221;
+    --border:     #302e2d;
+    --border-sub: #2a2827;
+    --text:       #e7e5e4;
+    --text-sec:   #d1cfce;
+    --text-muted: #8f8d8c;
+    --text-dim:   #575554;
+    --ink:        #656362;
+    --ink-deep:   #373534;
+    --crimson:    #e8365d;
+    --amber:      #f0a500;
+    --green:      #7f9d8a;
+    /* this app's identity - kawaii-bento sakura */
+    --accent:     #FF9DB2;
+    --accent-dim: rgba(255,157,178,0.12);
+    --accent-sub: rgba(255,157,178,0.30);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    background-image: radial-gradient(120% 90% at 50% 0%, #1b1817 0%, var(--bg) 46%, var(--bg-deep) 100%);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  /* ── top bar ── */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 13px 30px;
+    background: rgba(17,15,14,0.88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-sub);
+  }
+  .topbar .mark {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--accent);
+  }
+  .topbar .mark span {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.34em;
+    color: var(--text-muted);
+  }
+  .topbar .back {
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--text-dim);
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    padding: 6px 12px;
+    transition: color .3s ease, border-color .3s ease, background .3s ease;
+  }
+  .topbar .back:hover, .topbar .back:focus-visible {
+    color: var(--crimson);
+    border-color: #4a1a24;
+    background: #1f0f13;
+    outline: none;
+  }
+
+  /* ── layout ── */
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 30px 110px; }
+
+  section { padding: 74px 0 0; }
+  .eyebrow {
+    font-family: ui-monospace, monospace;
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.18;
+    margin-bottom: 18px;
+  }
+  h3 { font-size: 17px; font-weight: 600; margin-bottom: 7px; }
+  p  { color: var(--text-sec); max-width: 68ch; }
+  p + p { margin-top: 14px; }
+  .lede { font-size: 18px; line-height: 1.62; color: var(--text-sec); }
+
+  /* ── hero ── */
+  .hero {
+    position: relative;
+    padding: 92px 0 6px;
+    overflow: hidden;
+  }
+  .hero .brush {
+    position: absolute;
+    top: -40px;
+    right: -30px;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 300px;
+    line-height: 1;
+    color: var(--accent);
+    opacity: 0.06;
+    pointer-events: none;
+    user-select: none;
+  }
+  .hero .kanji {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 66px;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .hero h1 {
+    font-size: 46px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    margin: 20px 0 6px;
+    line-height: 1.08;
+  }
+  .hero .role {
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 26px;
+  }
+  .hero .lede { max-width: 60ch; }
+
+  /* ── status strip ── */
+  .status {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  .chip {
+    font-family: ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    background: var(--bg-card);
+  }
+  .chip.live   { color: var(--accent); border-color: var(--accent-sub); background: var(--accent-dim); }
+  .chip.build  { color: var(--amber);  border-color: #4a3a0e; background: #1f180433; }
+
+  /* ── cards ── */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+    gap: 16px;
+    margin-top: 26px;
+  }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 22px 24px;
+    transition: background .35s ease, border-color .35s ease, transform .35s cubic-bezier(.2,.7,.2,1);
+  }
+  .card:hover { background: var(--bg-card-h); border-color: var(--accent-sub); transform: translateY(-2px); }
+  .card .num {
+    font-family: ui-monospace, monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .card p { font-size: 14.5px; color: var(--text-muted); max-width: none; }
+
+  /* ── plain rows ── */
+  .rows { margin-top: 22px; border-top: 1px solid var(--border-sub); }
+  .row {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 22px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-sub);
+  }
+  .row dt {
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding-top: 3px;
+  }
+  .row dd { color: var(--text-sec); font-size: 15px; }
+
+  /* ── swatches ── */
+  .swatches { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+  .sw { width: 108px; }
+  .sw i {
+    display: block;
+    height: 52px;
+    border-radius: 9px;
+    border: 1px solid var(--border);
+  }
+  .sw b {
+    display: block;
+    font-family: ui-monospace, monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-top: 8px;
+  }
+  .sw em {
+    display: block;
+    font-style: normal;
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+
+  /* ── honest gaps ── */
+  .gaps {
+    margin-top: 24px;
+    border-left: 2px solid var(--amber);
+    padding: 4px 0 4px 22px;
+  }
+  .gaps li { color: var(--text-muted); font-size: 15px; margin-bottom: 9px; list-style: none; }
+  .gaps li::before { content: "— "; color: var(--amber); }
+
+  /* ── footer ── */
+  footer {
+    margin-top: 96px;
+    padding-top: 34px;
+    border-top: 1px solid var(--border-sub);
+    text-align: center;
+  }
+  footer .punch {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    color: var(--text-sec);
+    letter-spacing: 0.05em;
+  }
+  footer .note {
+    font-family: ui-monospace, monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    color: var(--text-dim);
+    margin-top: 14px;
+  }
+
+  @media (max-width: 720px) {
+    .wrap { padding: 0 20px 80px; }
+    .hero { padding-top: 60px; }
+    .hero h1 { font-size: 34px; }
+    .hero .brush { font-size: 200px; top: -20px; }
+    h2 { font-size: 25px; }
+    .row { grid-template-columns: 1fr; gap: 4px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="mark">市川 <span>ICHIKAWA</span></div>
+  <a class="back" href="/">&larr; 影組 KAGE-GUMI</a>
+</div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="brush" aria-hidden="true">市</div>
+    <div class="kanji">市川</div>
+    <h1>The Market Scout</h1>
+    <div class="role">Personal operative &middot; recipes, groceries, routing</div>
+    <p class="lede">A week of dinners, decided in about a minute — and turned into one shopping list, ordered the way the shop is actually laid out.</p>
+    <div class="status">
+      <span class="chip live">Live</span>
+      <span class="chip">208-recipe library</span>
+      <span class="chip">Dutch UI</span>
+      <span class="chip">Own repo, own address</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="eyebrow">The problem</div>
+    <h2>The constraint isn't cooking. It's time.</h2>
+    <p>Deciding what to eat five nights a week is a small tax that gets paid over and over. The recipe apps that exist solve discovery — they show you a thousand dishes you'll never make. The actual bottleneck is narrower: cooking for two, on a weeknight, with a fixed amount of attention to spend.</p>
+    <p>So Ichikawa doesn't rank recipes by how good they look. It ranks them by <strong>how much of your evening they take</strong> — and it splits that into hands-on minutes and waiting minutes, because those are not the same cost. Forty minutes with thirty of them in the oven is a different evening than twenty-five minutes standing at the hob.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">What it does</div>
+    <h2>Library, week, list, route</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="num">01</div>
+        <h3>A library that's actually yours</h3>
+        <p>208 recipes, curated from dishes already cooked and liked — not a stock catalogue. Search by keyword, filter by "under N minutes", remove what stopped earning its place.</p>
+      </div>
+      <div class="card">
+        <div class="num">02</div>
+        <h3>Add by pasting a link</h3>
+        <p>Drop in any recipe URL and it reads the page's structured recipe data — title, servings, ingredients, steps, image. Phone-friendly, because that's where links get found.</p>
+      </div>
+      <div class="card">
+        <div class="num">03</div>
+        <h3>Surprise me</h3>
+        <p>One tap fills Monday to Sunday from the library, with one dish deliberately carried over to the next day. Leftovers are a feature, not an accident.</p>
+      </div>
+      <div class="card">
+        <div class="num">04</div>
+        <h3>One shopping list, done properly</h3>
+        <p>Quantities scale to the number of eaters, then merge across the whole week — unit-aware, so 200 g and 300 g of the same thing becomes one line, not two.</p>
+      </div>
+      <div class="card">
+        <div class="num">05</div>
+        <h3>Walk the shop once</h3>
+        <p>The list regroups itself by aisle and draws a walking route through the store, so you cross the floor once instead of doubling back for the yoghurt.</p>
+      </div>
+      <div class="card">
+        <div class="num">06</div>
+        <h3>Photo inbox</h3>
+        <p>Snap a page from a cookbook and it's stored for later conversion. Deliberately <em>not</em> a live AI call — the transcription happens offline, at no per-photo cost.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Timing data</div>
+    <h2>Every step knows its own minutes</h2>
+    <p>The active/passive split only works if the data underneath it exists. Every active recipe in the library was enriched step by step — each step tagged with its minutes and whether it's hands-on or waiting — plus a per-recipe hint on what to start in parallel while something else simmers.</p>
+    <p>That enrichment pass was itself run by a fleet of agents rather than by hand, which is the point of keeping a crew: the tedious, wide, mechanical job is exactly the one to hand off.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Design</div>
+    <h2>Kawaii bento</h2>
+    <p>Ichikawa is the one member of the crew that isn't dark and ominous. It's a domestic tool used at the kitchen counter and in a supermarket aisle, and it's dressed for that: soft sakura pink, rounded type, a panda-with-ramen mark, generous tap targets.</p>
+    <div class="swatches">
+      <div class="sw"><i style="background:#FF9DB2"></i><b>#FF9DB2</b><em>Sakura — identity</em></div>
+      <div class="sw"><i style="background:#171514"></i><b>#171514</b><em>Graphite ground</em></div>
+      <div class="sw"><i style="background:#e7e5e4"></i><b>#e7e5e4</b><em>Bone, never white</em></div>
+      <div class="sw"><i style="background:#7f9d8a"></i><b>#7f9d8a</b><em>Done / in the basket</em></div>
+    </div>
+    <div class="rows">
+      <div class="row"><dt>Type</dt><dd>M PLUS Rounded 1c + Baloo 2 — rounded, friendly, legible at arm's length with wet hands.</dd></div>
+      <div class="row"><dt>Language</dt><dd>Dutch. The domain decides the language: the groceries are Belgian, so the UI is too.</dd></div>
+      <div class="row"><dt>Defaults</dt><dd>Two people, five dinners a week. Both adjustable, neither asked for every time.</dd></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Honest state</div>
+    <h2>What's built, what isn't</h2>
+    <p>Shipped: the library, search and time filter, add-from-URL, the weekly randomiser, the unit-aware shopping list, aisle grouping and the walking route, the mobile recipe editor, per-step timing across the whole active library, and the photo inbox.</p>
+    <ul class="gaps">
+      <li>Store floorplan geometry is schematic, not a faithful survey of the building.</li>
+      <li>Price comparison across shops, promotions and a pantry model are deferred — researched, not built.</li>
+      <li>Photo-to-recipe conversion is a manual trigger, by choice: a live vision call per photo would cost money on every use, and the offline route costs nothing.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="punch">One week. One list. One lap of the shop.</div>
+    <div class="note">市川 ICHIKAWA &middot; 影組 KAGE-GUMI</div>
+  </footer>
+
+</div>
+
+<!-- GoatCounter analytics - privacy-friendly, no cookies. Shares the "kage-gumi" site; this
+     page logs its own path so its views stay separable from the other decks. -->
+<script data-goatcounter="https://kage-gumi.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
