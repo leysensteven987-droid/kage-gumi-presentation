@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>鉄 TETSU - The Wrench</title>
-<meta name="description" content="Tetsu (鉄) - a build-book and maintenance log for one motorcycle, with the workshop manual searchable and a chat grounded in it. Part of the Kage-gumi personal crew.">
+<title>鉄 TETSU: The Wrench</title>
+<meta name="description" content="Tetsu (鉄) is a build-book and maintenance log for one motorcycle, with the workshop manual searchable and a chat grounded in it. Part of the Kage-gumi personal crew.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.92em' font-size='88' fill='%23d7dae0'>鉄</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -175,6 +175,84 @@
   }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
+<!-- KG analytics beacon - silent, no cookies, no gate. One hit per load to the KG
+     Cloudflare Worker, plus an engagement beacon (dwell + scroll depth) on
+     tab-hide / unload. The KG box polls /export and renders the ANALYTICS view.
+     Attribution: ?v=<name> named links + referrer + Cloudflare edge org/geo. -->
+<script>
+(function () {
+  var BASE = "https://kage-gate.kage-gumi.workers.dev";
+  var DECK = "tetsu";
+  // session id joins this view's hit to its engagement row (sid)
+  var sid = (function () {
+    try { if (crypto && crypto.randomUUID) return crypto.randomUUID(); } catch (e) {}
+    return "s-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 10);
+  })();
+
+  function send(path, obj) {
+    try {
+      var payload = JSON.stringify(obj);
+      var sent = false;
+      // text/plain Blob via sendBeacon avoids a CORS preflight; fetch keepalive is the fallback.
+      if (navigator.sendBeacon) {
+        try { sent = navigator.sendBeacon(BASE + path, new Blob([payload], { type: "text/plain" })); } catch (e) {}
+      }
+      if (!sent) {
+        fetch(BASE + path, { method: "POST", keepalive: true, body: payload }).catch(function () {});
+      }
+    } catch (e) {}
+  }
+
+  // load hit (now carries sid so engagement can be joined to the view)
+  send("/hit", {
+    deck: DECK,
+    v: (new URLSearchParams(location.search).get("v") || ""),
+    referrer: document.referrer || "",
+    path: location.pathname,
+    sid: sid
+  });
+
+  // --- engagement: foreground dwell + scroll depth ---------------------
+  var dwellMs = 0;            // accumulated active (foreground) ms
+  var segStart = (document.visibilityState === "hidden") ? 0 : Date.now();
+  var maxDepth = 0;          // furthest scroll %, 0-100
+
+  function accrue() { if (segStart) { dwellMs += Date.now() - segStart; segStart = 0; } }
+
+  function measureDepth() {
+    try {
+      var doc = document.documentElement;
+      var scrollH = Math.max(doc.scrollHeight, document.body ? document.body.scrollHeight : 0);
+      if (scrollH <= 0) return;
+      var seen = (window.scrollY + window.innerHeight) / scrollH * 100;
+      if (seen > maxDepth) maxDepth = Math.min(100, seen);
+    } catch (e) {}
+  }
+  measureDepth();
+  window.addEventListener("scroll", measureDepth, { passive: true });
+  window.addEventListener("resize", measureDepth, { passive: true });
+
+  var engSent = false;       // guard: /eng may fire on both hide + pagehide
+  function sendEng() {
+    accrue();
+    measureDepth();
+    send("/eng", {
+      sid: sid,
+      deck: DECK,
+      dwellMs: dwellMs,
+      depth: Math.round(maxDepth),
+      depthKind: "scroll"
+    });
+    engSent = true;          // box dedups by sid (max), so a later resend is safe
+  }
+
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") { accrue(); sendEng(); }
+    else if (!segStart) { segStart = Date.now(); }   // resume the dwell timer
+  });
+  window.addEventListener("pagehide", sendEng);
+})();
+</script>
 </head>
 <body>
 

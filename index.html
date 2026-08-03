@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>影組 KAGE-GUMI - Shadow Crew Protocol</title>
+<title>影組 KAGE-GUMI: Shadow Crew Protocol</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'%3E%3Crect width='32' height='32' rx='6' fill='%23110f0e'/%3E%3Crect width='32' height='32' rx='6' fill='none' stroke='%23e8365d' stroke-width='1.5' opacity='0.6'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Noto Serif JP%2C Yu Mincho%2C MS Mincho%2C serif' font-size='20' font-weight='700' fill='%23e8365d'%3E%E5%BD%B1%3C/text%3E%3C/svg%3E">
 <style>
 @font-face {
@@ -84,7 +84,7 @@
     --amber:        #f0a500;
     --green:        #4cff91;
     /* per-operative accents - mirror agentColor in CLAUDE.md */
-    --op-mei:       #2fe8d2;
+    --op-mei:       #ff7a68;
     --op-ren:       #a78bfa;
     --op-haku:      #7aa694;
     --op-ryu:       #f0a500;
@@ -518,7 +518,7 @@
 
   .op-card {
     --op-accent: var(--op-mei);
-    --op-accent-soft: rgba(47,232,210,0.15);
+    --op-accent-soft: rgba(255,122,104,0.15);
     position: relative;
     background:
       radial-gradient(130% 70% at 50% -10%, var(--op-accent-soft) 0%, transparent 55%),
@@ -648,7 +648,7 @@
   }
 
   /* per-operative accent - drives glyph, border, dot, glow and echo (agentColor map) */
-  .op-card.op-mei  { --op-accent: var(--op-mei);  --op-accent-soft: rgba(47,232,210,0.08); }
+  .op-card.op-mei  { --op-accent: var(--op-mei);  --op-accent-soft: rgba(255,122,104,0.08); }
   .op-card.op-ren  { --op-accent: var(--op-ren);  --op-accent-soft: rgba(167,139,250,0.09); }
   .op-card.op-haku { --op-accent: var(--op-haku); --op-accent-soft: rgba(122,166,148,0.08); }
   .op-card.op-ryu  { --op-accent: var(--op-ryu);  --op-accent-soft: rgba(240,165,0,0.08); }
@@ -1833,7 +1833,7 @@
   <div class="section-tag">What's next</div>
   <h2>The release plan <span class="jp">ロードマップ</span></h2>
   <p>Kage-gumi isn't finished. It's a living system that grows deliberately, not all at once. The plan below is the <strong style="color: var(--text);">major blocks, built in sequence</strong>, each one standing on the ones before it. Read top to bottom and you see how the crew grew from a dashboard into a platform, and where it's headed next.</p>
-  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-07-15</div>
+  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-08-03</div>
 
   <div style="display: flex; flex-direction: column; gap: 2px; margin-top: 40px; max-width: 760px;">
 
@@ -2259,7 +2259,7 @@
   </div>
 
   <div style="margin-top: 48px; display: flex; flex-wrap: wrap; gap: 8px;">
-    <span class="status-chip" style="color: var(--op-mei); border-color: rgba(47,232,210,0.35); background: rgba(47,232,210,0.08);">Mei · WebCenter Support</span>
+    <span class="status-chip" style="color: var(--op-mei); border-color: rgba(255,122,104,0.35); background: rgba(255,122,104,0.08);">Mei · WebCenter Support</span>
     <span class="status-chip" style="color: var(--op-ren); border-color: rgba(167,139,250,0.35); background: rgba(167,139,250,0.08);">Ren · Builder</span>
     <span class="status-chip" style="color: var(--op-haku); border-color: rgba(122,166,148,0.35); background: rgba(122,166,148,0.08);">Haku · Deploy &amp; Doc</span>
     <span class="status-chip" style="color: var(--op-ryu); border-color: rgba(240,165,0,0.35); background: rgba(240,165,0,0.08);">Ryū · Overnight</span>
