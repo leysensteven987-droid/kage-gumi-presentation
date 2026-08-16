@@ -116,13 +116,12 @@
   /* the eye is a lens now, not a line drawing: it carries its own depth, so dimming it
      just flattens the ramp it is built out of. Full strength, one size up to hold the iris. */
   .bar .eye{width:21px;height:21px;flex:none}
-  .bar .mark{font-family:var(--serif);font-weight:900;font-size:23px;color:var(--toshi-ink);line-height:1}
   .bar .nm{font-family:var(--mono);font-size:12px;letter-spacing:.5em;color:var(--text-2)}
   .bar .sub{font-family:var(--mono);font-size:9px;letter-spacing:.3em;color:var(--dim);text-transform:uppercase}
+  /* quiet right-side meta, same register as the main deck's topbar-right: no chip, no border. */
   .bar .ver{
-    margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--toshi-mut);
-    border:1px solid color-mix(in srgb, var(--toshi) 22%, var(--hairline));
-    background:rgba(91,141,239,.05);padding:5px 12px;border-radius:2px;white-space:nowrap;
+    margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--dim);
+    white-space:nowrap;
   }
   .bar .home{display:flex;align-items:baseline;gap:9px;text-decoration:none;padding:4px 2px}
   /* 影組 is the wordmark of the site this links to, set as TEXT in neutral ink. It was
@@ -130,15 +129,17 @@
   .bar .home .hk{font-family:var(--serif);font-weight:900;font-size:15px;color:var(--ink)}
   .bar .home .ht{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:var(--dim)}
   .bar .home:hover .ht{color:var(--muted)}
-  nav.toc{max-width:1180px;margin:0 auto;padding:0 72px 12px;display:flex;gap:24px;flex-wrap:wrap}
+  /* a quiet strip, not a second row of buttons: down a notch on size, spacing and gap
+     from the section headings' .tag register. */
+  nav.toc{max-width:1180px;margin:0 auto;padding:0 72px 12px;display:flex;gap:18px;flex-wrap:wrap}
   nav.toc a{
-    font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;
+    font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
     color:var(--dim);text-decoration:none;transition:color .3s ease;
   }
   nav.toc a:hover{color:var(--toshi)}
 
   /* ============ hero ============ */
-  .hero{min-height:88vh;display:flex;align-items:center;overflow:visible;padding-top:40px;padding-bottom:60px}
+  .hero{min-height:90vh;display:flex;align-items:center;overflow:visible;padding-top:56px;padding-bottom:80px}
   /* The hero used to be built around a 560px blurred 透. Deleting it left the right half of the
      page empty, so the mark that replaced it is the one the extension actually wears: the SAME
      drawn eye as the title bar and the toolbar icon, bare and large.
@@ -536,7 +537,6 @@
          brow, half-lidded hood over a deep pupil in a mid iris, aura clipped INSIDE the
          almond (kg-design principle 6: nothing glows). Gaze is down-left, at the page. -->
     <svg class="eye" viewBox="0 0 24 24"><defs><linearGradient id="tsh-e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b47a8"/><stop offset="1" stop-color="#0c1836"/></linearGradient><linearGradient id="tsh-ev" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05091a" stop-opacity=".62"/><stop offset="1" stop-color="#05091a" stop-opacity="0"/></linearGradient><radialGradient id="tsh-ea" gradientUnits="userSpaceOnUse" cx="11.00" cy="12.55" r="7.4"><stop offset="0" stop-color="#8dafee" stop-opacity=".55"/><stop offset=".55" stop-color="#5b8def" stop-opacity=".22"/><stop offset="1" stop-color="#5b8def" stop-opacity="0"/></radialGradient></defs><clipPath id="tsh-ec"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z"/></clipPath><clipPath id="tsh-eh"><path d="M 2 12 s 3 -5.1 10 -5.1 s 10 5.1 10 5.1 s -3 7 -10 7 s -10 -7 -10 -7 z"/></clipPath><g transform="translate(12,12) scale(1.018) translate(-12,-12)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z" fill="url(#tsh-e)"/><g clip-path="url(#tsh-ec)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7" transform="translate(0,1.7)" fill="none" stroke="#132a63" stroke-width="3.4" stroke-linecap="round" opacity=".62"/></g><g clip-path="url(#tsh-ec)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z" fill="url(#tsh-ea)"/></g><g clip-path="url(#tsh-eh)"><circle cx="11.00" cy="12.55" r="4.3" fill="#5b8def"/><circle cx="11.00" cy="12.55" r="2.2" fill="#132a63"/><circle cx="9.37" cy="10.74" r="1.29" fill="#eef3fb" opacity="0.58"/></g><g clip-path="url(#tsh-ec)"><rect x="0" y="0" width="24" height="14" fill="url(#tsh-ev)"/></g><g fill="none" stroke-linecap="round"><path d="M 22 12 s -3 7 -10 7 s -10 -7 -10 -7" stroke="#2563eb" stroke-width="2.5"/><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7" stroke="#8dafee" stroke-width="2.5"/></g></g></svg>
-    <span class="mark">透</span>
     <div>
       <div class="nm">TŌSHI</div>
       <div class="sub">THE SEER · lift the veil</div>
@@ -549,12 +549,8 @@
   <nav class="toc">
     <a href="#live">Live</a>
     <a href="#what">What it is</a>
-    <a href="#install">Install</a>
-    <a href="#compat">Compatibility</a>
-    <a href="#toolbar">The controls</a>
     <a href="#features">Features</a>
-    <a href="#views">Three views</a>
-    <a href="#tips">Tips</a>
+    <a href="#install">Install</a>
     <a href="#whatsnew">What's new</a>
     <a href="#roadmap">Roadmap</a>
   </nav>
@@ -567,28 +563,13 @@
     <span class="tag"><i>//</i> TŌSHI · WEBCENTER PAGE INSPECTOR</span>
     <div class="hero-romaji">TŌSHI</div>
     <h1>The Seer. <em>Lift the veil.</em></h1>
-    <p class="lead">Open Tōshi on any <b>WebCenter</b> page and she reveals what it's built from:
-      every dashboard, saved search and task, nested as it really is on the page, each one a click
-      from its editor. On a task page a pinned <b>TASK</b> row names its task type and links straight
-      to it; land on a project's dashboard and a thin strip (or <b>B</b>) jumps you straight into the
-      project, past the dashboard; from a project or task page another strip links you straight to its <b>history</b>, and on a history page one click <b>expands every truncated entry</b>. On a workflow's editor canvas a strip (or <b>M</b>) reads the whole canvas into a legible <b>node-link map</b>: every step at its real position, every transition drawn; the <b>References</b> view draws the same way (<b>V</b>), where a dashboard shared by 2+ parents stands out as a <b>hub</b>, and the map <b>exports to Zuan</b> <span class="expbadge">Experimental &middot; prerelease</span>, KG web's own workflow editor, still under active development and not ready for use. And when something's off, the <b>Support bundle</b> view exports a full <b>support package</b>:
-      the reachable diagnostics (health checks, system info, host OS and system history) and the real
-      <b>server logs</b> (server.log, SEVERE.log, catalina.log from WebCenter's <b>Site Service</b>), trimmed
-      to a <b>log window</b> you pick and wrapped in a branded <b>report.html</b> support opens in any browser.
-      And when a task's <b>workflow has gone into error</b>, one press builds a support-ready <b>workflow-error recap</b>:
-      the real error message, the failed node in plain terms, the execution path in readable node names and a
-      screenshot, ready to <b>copy as a ticket</b> or <b>download as a bundle</b>.
-      <b>Stop hunting the system to find what's in front of you.</b></p>
+    <p class="lead">Open Tōshi on any <b>WebCenter</b> page and she names what it's built from: every dashboard, saved search and task, nested as it really is, each one a click from its editor. She reads a workflow canvas into a legible <b>node-link map</b>, and turns a task whose workflow has errored into a <b>support package</b> in one press. <b>Stop hunting the system to find what's in front of you.</b></p>
     <div class="pills">
-      <span class="pill"><b>◉</b> in-browser, instant</span>
-      <span class="pill"><b>↗</b> click straight to the editor</span>
       <span class="pill"><b>▦</b> X-ray the whole page</span>
-      <span class="pill"><b>◎</b> point &amp; locate</span>
-      <span class="pill"><b>⤓</b> export a handover doc</span>
-      <span class="pill"><b>▤</b> one-press support package</span>
       <span class="pill"><b>⧉</b> map a workflow's canvas</span>
+      <span class="pill"><b>◈</b> read the references</span>
       <span class="pill"><b>⚠</b> recap a workflow error</span>
-      <span class="pill"><b>⌨</b> drive it from the keyboard</span>
+      <span class="pill"><b>▤</b> one-press support package</span>
     </div>
     <div class="hero-sig">
       <span class="seal seal--sm">透</span>
