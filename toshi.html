@@ -205,8 +205,6 @@
   }
   .store-note{font-size:14px;color:var(--muted);margin-top:14px;line-height:1.7}
   .note.appreciation{border-left:3px solid color-mix(in srgb, var(--toshi) 60%, transparent)}
-  .fromsource{margin-top:40px}
-  .fromsource .subhead{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
   .liveshot{
     margin:0 0 44px;background:var(--panel);
     border:1px solid color-mix(in srgb, var(--toshi) 14%, var(--hairline));
@@ -292,23 +290,6 @@
     background:var(--panel-2);padding:1px 7px;white-space:nowrap;
   }
 
-  /* ============ install steps ============ */
-  .steps{list-style:none;counter-reset:step;max-width:720px}
-  .steps li{
-    counter-increment:step;position:relative;padding:16px 0 16px 64px;
-    border-bottom:1px solid var(--hairline);font-size:14.5px;color:var(--muted);line-height:1.7;
-  }
-  .steps li:last-child{border-bottom:none}
-  .steps li::before{
-    content:counter(step, decimal-leading-zero);
-    position:absolute;left:0;top:18px;
-    font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--toshi-mut);
-  }
-  .steps li::after{
-    content:"";position:absolute;left:38px;top:22px;width:12px;height:1px;
-    background:linear-gradient(90deg, var(--dim), transparent);
-  }
-  .path{font-family:var(--mono);font-size:12px;color:var(--toshi-mut);letter-spacing:.02em}
   .note{
     max-width:720px;margin-top:36px;padding:18px 24px;position:relative;
     border:1px solid var(--hairline);border-radius:3px;background:var(--panel);
@@ -717,22 +698,10 @@
   </div>
   <div class="install-primary">
     <a class="store-btn" href="https://chromewebstore.google.com/detail/%E9%80%8F-t%C5%8Dshi-kage-gumi/mmdcociekeljppgoojjnboamoddlbibb?authuser=0&amp;hl=en-GB" target="_blank" rel="noopener">Add to Chrome from the Web Store →</a>
-    <p class="store-note">One click, straight from the Chrome Web Store. No need to ask anyone for a link, just add it and open a WebCenter page.</p>
+    <p class="store-note">One click, straight from the Chrome Web Store. No need to ask anyone for a link: add it, pin it from the puzzle-piece menu, then open a WebCenter page and click the icon. Click it again to toggle the panel off.</p>
   </div>
   <p class="note appreciation"><b>One small thing.</b> If you install Tōshi, a quick heads-up to me is genuinely
     appreciated. It is completely optional and not needed to use it, but knowing someone is running it means a lot.</p>
-  <div class="fromsource">
-    <div class="subhead">// Prefer to run it from source? (KG devs)</div>
-    <ol class="steps">
-      <li>Open <span class="kbd">chrome://extensions</span></li>
-      <li>Turn on <b>Developer mode</b> (top-right toggle)</li>
-      <li>Click <b>Load unpacked</b> and select the extension folder
-        <br><span class="path">…\kage-gumi\extensions\toshi</span></li>
-      <li>Pin <b>Tōshi</b> to the toolbar (puzzle-piece icon → pin)</li>
-      <li>Open a WebCenter page and click the <b>Tōshi</b> icon, and the panel slides in.
-        Click the icon again to toggle it off.</li>
-    </ol>
-  </div>
 </section>
 
 <div class="rule"><div></div></div>
@@ -744,7 +713,7 @@
     <h2>Browser compatibility</h2>
     <p class="sec-intro">Tōshi is a <b>Manifest V3</b> extension built on Chromium APIs:
       <code>chrome.scripting</code> with a <b>MAIN-world</b> probe and a shadow-DOM panel. The line is
-      simple: any <b>Chromium</b> browser that loads an unpacked MV3 extension runs her; Gecko and WebKit
+      simple: any <b>Chromium</b> browser that can install from the Chrome Web Store runs her; Gecko and WebKit
       would need a port.</p>
   </div>
   <div class="tbl-scroll">
@@ -757,25 +726,25 @@
           <td class="br">Google Chrome</td>
           <td class="eng">Chromium · Blink</td>
           <td><span class="cstat full">✓ full</span></td>
-          <td class="nt">Primary target: every build is tested here. Load unpacked from <code>chrome://extensions</code>.</td>
+          <td class="nt">Primary target: every build is tested here.</td>
         </tr>
         <tr>
           <td class="br">Microsoft Edge</td>
           <td class="eng">Chromium · Blink</td>
           <td><span class="cstat full">✓ full</span></td>
-          <td class="nt">Same MV3 + <code>chrome.scripting</code> + MAIN-world probe. Load unpacked from <code>edge://extensions</code>. Often the sanctioned Chromium browser on a locked-down corporate laptop.</td>
+          <td class="nt">Same MV3 + <code>chrome.scripting</code> + MAIN-world probe, and it installs from the Chrome Web Store. Often the sanctioned Chromium browser on a locked-down corporate laptop.</td>
         </tr>
         <tr>
           <td class="br">Brave</td>
           <td class="eng">Chromium · Blink</td>
           <td><span class="cstat full">✓ full</span></td>
-          <td class="nt">Identical engine and APIs. Load unpacked from <code>brave://extensions</code>.</td>
+          <td class="nt">Identical engine and APIs, and it installs straight from the Chrome Web Store.</td>
         </tr>
         <tr>
           <td class="br">Opera · Vivaldi · Arc</td>
           <td class="eng">Chromium · Blink</td>
           <td><span class="cstat works">◐ works</span></td>
-          <td class="nt">Chromium siblings: load-unpacked behaves the same. Not part of the tested set, but no reason she wouldn't run.</td>
+          <td class="nt">Chromium siblings, all of which can install a Chrome Web Store extension. Not part of the tested set, but no reason she wouldn't run.</td>
         </tr>
         <tr>
           <td class="br">Firefox</td>
@@ -787,14 +756,14 @@
           <td class="br">Safari</td>
           <td class="eng">WebKit</td>
           <td><span class="cstat no">✕ no</span></td>
-          <td class="nt">Requires converting to a Safari Web Extension via Xcode (no load-unpacked). Not on the roadmap.</td>
+          <td class="nt">Requires converting to a Safari Web Extension via Xcode. Not on the roadmap.</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <p class="note"><b>Rule of thumb.</b> If the browser has an <code>…://extensions</code> page with a
-    <b>Developer mode</b> toggle and <b>Load unpacked</b>, Tōshi runs: that's every Chromium browser.
-    Where Chrome is locked down on a corporate machine, that usually means <b>Edge</b>.</p>
+  <p class="note"><b>Rule of thumb.</b> If the browser can install from the <b>Chrome Web Store</b>, Tōshi runs:
+    that's every Chromium browser. Where Chrome itself is locked down on a corporate machine, that usually
+    means <b>Edge</b>, which installs Web Store extensions once you allow it.</p>
 </section>
 
 <div class="rule"><div></div></div>
