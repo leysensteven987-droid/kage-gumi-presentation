@@ -105,6 +105,11 @@
 
   .rule{max-width:1180px;margin:80px auto 0;padding:0 72px}
   .rule div{height:1px;background:linear-gradient(90deg, transparent, var(--hairline) 18%, var(--hairline) 82%, transparent)}
+  /* Hero-to-first-section junction only (not the global rule rhythm above): the hero already
+     closes on its own pills, and the shared section padding-top of 120px below carries the
+     rest of the breathing room, so this one hairline needs far less lead-in than the 80px
+     every other .rule uses between two body sections. */
+  .hero + .rule{margin-top:8px}
 
   /* ============ topbar ============ */
   /* Retokenised 2026-08-17 off the CPO runbook's header/.brandline (docs/kage-gumi-cpo-demo-
@@ -151,7 +156,7 @@
      said the product's name three times over (brandline, eyebrow tag, romaji line) before the
      copy even started. Mirroring the CPO runbook / main deck opener, the title now sits close
      under the nav: block flow, no forced min-height, tightened padding on the 4px ladder. */
-  .hero{overflow:visible;padding-top:40px;padding-bottom:24px}
+  .hero{overflow:visible;padding-top:40px;padding-bottom:8px}
   /* The mark stays: the SAME drawn eye as the title bar and the toolbar icon, bare and large.
      kg-design allows exactly this: the mark "bare (strokes only, no ground) on splashes and as
      a watermark". It is a drawing, not a glyph, so it costs no font and cannot fall back; and it
@@ -176,7 +181,7 @@
   .hero h1{font-family:var(--sans);font-weight:600;font-size:42px;line-height:1.35;letter-spacing:.01em;color:var(--text);margin-bottom:32px}
   .hero h1 em{font-style:normal;color:var(--toshi);font-weight:400}
   .hero .lead{font-size:15.5px;color:var(--muted);line-height:1.85;max-width:58ch;margin-bottom:40px}
-  .pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
+  .pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px}
   .pill{
     font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted);
     border:1px solid var(--hairline);background:var(--panel);
