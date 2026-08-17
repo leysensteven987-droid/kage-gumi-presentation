@@ -112,39 +112,43 @@
   .hero + .rule{margin-top:8px}
 
   /* ============ topbar ============ */
-  /* Retokenised 2026-08-17 off the CPO runbook's header/.brandline (docs/kage-gumi-cpo-demo-
-     runbook.html ~L27-46) and the main deck's .topbar (docs/kage-gumi-presentation.html
-     ~L1305-1314): mark + wide-letterspaced wordmark + one right-hand mono meta line, baseline-
-     aligned on a single row under a hairline, quiet nav strip directly beneath. Same shape,
-     Tōshi's own slate/blue tokens. */
+  /* Retokenised 2026-08-17 to the house personal-deck shell (docs/kage-gumi-toge-presentation.html
+     ~L44-67), so this deck reads as one set with Tōge / Tetsu / Ichikawa / Raiden rather than as
+     its own thing: ONE centred row, mark + wordmark left, the `← 影組 KAGE-GUMI` wayfinder right,
+     a quiet nav strip beneath. Layout is Tōge's verbatim; every colour is Tōshi's own slate/blue.
+     The version + product line moved OFF this bar and into the hero's .role eyebrow, which is
+     where the siblings carry it, and which is what stopped the bar wrapping to three rows on a
+     phone. */
   header{
     position:sticky;top:0;z-index:50;
     background:linear-gradient(180deg, var(--bg) 70%, rgba(18,24,38,.85));
     backdrop-filter:blur(6px);border-bottom:1px solid var(--hairline);
-    padding:18px 0 14px;
+    padding:13px 0 12px;
   }
-  .bar{max-width:1180px;margin:0 auto;padding:0 72px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
-  /* the eye is a lens now, not a line drawing: it carries its own depth, so dimming it
-     just flattens the ramp it is built out of. Full strength, sized to read as a real mark at
-     the brandline's scale (the CPO runbook's kanji brandmark sits at 30px; 32px lands on the
-     4px ladder at the same visual weight). */
-  .bar .eye{width:32px;height:32px;flex:none}
+  .bar{max-width:1180px;margin:0 auto;padding:0 72px;display:flex;align-items:center;gap:13px}
+  /* the eye is a lens, not a line drawing: it carries its own depth, so dimming it just
+     flattens the ramp it is built out of. Full strength, sized to the siblings' brandmark
+     (Tōge's 峠 sits at 20px type; 28px of drawn mark lands at the same visual weight). */
+  .bar .eye{width:28px;height:28px;flex:none}
   .bar .nm{
-    font-family:var(--sans);letter-spacing:.42em;color:var(--toshi);
-    font-size:13px;font-weight:500;text-transform:uppercase;
+    font-family:var(--sans);letter-spacing:.34em;color:var(--toshi);
+    font-size:12.5px;font-weight:600;text-transform:uppercase;
   }
-  /* the only right-side cluster: one quiet meta line, same register as the main deck's
-     topbar-right (Steven Leysen · Personal Presentation · 2026). No chip, no border,
-     no second mark competing with the eye + the footer seal. */
-  .bar .meta{
-    margin-left:auto;font-family:var(--mono);font-size:10.5px;letter-spacing:.28em;
-    text-transform:uppercase;color:var(--dim);white-space:nowrap;
+  /* the wayfinder home. Identical slot, register and copy to every other personal deck, so the
+     way back is in the same place whichever one you landed on. The 影組 here is a NAME in a
+     wayfinder, not ornament: the kanji-are-seals-only rule stands for the body of the page. */
+  .bar .back{
+    margin-left:auto;font-family:var(--mono);font-size:11px;letter-spacing:.16em;
+    color:var(--dim);text-decoration:none;white-space:nowrap;
+    border:1px solid transparent;border-radius:4px;padding:6px 12px;
+    transition:color .3s ease, border-color .3s ease, background .3s ease;
   }
-  .bar .meta a{color:var(--dim);text-decoration:none;transition:color .3s ease}
-  .bar .meta a:hover{color:var(--muted)}
+  .bar .back:hover, .bar .back:focus-visible{
+    color:var(--toshi-mut);border-color:var(--toshi-dim);background:rgba(91,141,239,.07);outline:none;
+  }
   /* a quiet strip, not a second row of buttons: down a notch on size, spacing and gap
      from the section headings' .tag register. */
-  nav.toc{max-width:1180px;margin:14px auto 0;padding:0 72px;display:flex;gap:18px;flex-wrap:wrap}
+  nav.toc{max-width:1180px;margin:13px auto 0;padding:0 72px;display:flex;gap:18px;flex-wrap:wrap}
   nav.toc a{
     font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
     color:var(--dim);text-decoration:none;transition:color .3s ease;
@@ -156,30 +160,38 @@
      said the product's name three times over (brandline, eyebrow tag, romaji line) before the
      copy even started. Mirroring the CPO runbook / main deck opener, the title now sits close
      under the nav: block flow, no forced min-height, tightened padding on the 4px ladder. */
-  .hero{overflow:visible;padding-top:40px;padding-bottom:8px}
-  /* The mark stays: the SAME drawn eye as the title bar and the toolbar icon, bare and large.
-     kg-design allows exactly this: the mark "bare (strokes only, no ground) on splashes and as
-     a watermark". It is a drawing, not a glyph, so it costs no font and cannot fall back; and it
-     is held under 1 opacity by `opacity` rather than by a blur, so nothing on this page glows. */
-  .hero-mark{
-    position:absolute;right:40px;top:24px;
-    width:clamp(140px, 16vw, 220px);height:auto;opacity:.22;pointer-events:none;z-index:0;
+  /* Restacked 2026-08-17 onto Tōge's hero (docs/kage-gumi-toge-presentation.html ~L82-95):
+     mark, then headline, then a mono .role eyebrow, then the lede, then the pills, all in one
+     left column, with a large faint watermark of the same mark bled top-right. `overflow:hidden`
+     (was visible) is what lets the watermark run off the edge cleanly instead of widening
+     the page. */
+  .hero{overflow:hidden;padding-top:56px;padding-bottom:8px}
+  /* The mark, twice, and it is the SAME drawn eye as the title bar and the toolbar icon in both
+     places. kg-design allows exactly this: the mark "bare (strokes only, no ground) on splashes
+     and as a watermark". It is a drawing, not a glyph, so it costs no font and cannot fall back;
+     both copies are held under 1 by `opacity` rather than by a blur, so nothing here glows.
+     · .hero-glyph sits in Tōge's .kanji slot: solid, in the flow, directly above the headline.
+     · .hero-brush sits in Tōge's .brush slot: big, ~.09, bled off the top-right corner.
+     ⚠ .hero-brush must NOT reach into the copy column. .hero-copy tops out at 640px inside a
+     ~1036px content box, and the brush is capped at 320px, so on a wide screen they never share
+     horizontal space. On a phone the two DO overlap by necessity, which is why the mobile block
+     drops the brush to .06 and pins it to the corner: at that weight it reads as ground, not as
+     an illustration fighting the headline (the exact overshoot the seal rule warns about). */
+  .hero-brush{
+    position:absolute;right:0;top:-16px;
+    width:clamp(180px, 24vw, 320px);height:auto;opacity:.09;
+    pointer-events:none;user-select:none;z-index:0;
   }
-  /* ⚠ three numbers here are load-bearing:
-     · `right` must be POSITIVE. `body{overflow-x:hidden}` clips anything hanging off the right
-       edge dead straight, so a negative offset does not bleed the mark off the page, it saws
-       the lens in half.
-     · with the hero collapsed to its content height (no more 90vh to centre in), the mark can no
-       longer float at a vertical midpoint: it is now pinned near the TOP of the hero instead,
-       sized down (400px to 220px cap) so its footprint fits above the lede/pills without ever
-       reaching into that column. It stays on the right, .hero-copy tops out at 620px wide inside
-       a ~1036px content box, so the two never share horizontal space regardless of height.
-     · `opacity` is a watermark's, not an illustration's. At .5 and 520px the eye out-shouted the
-       headline it sits beside, the same overshoot the seal rule warns about. When in doubt on
-       this component: smaller and fainter. */
-  .hero-copy{max-width:620px;position:relative;z-index:2}
-  .hero h1{font-family:var(--sans);font-weight:600;font-size:42px;line-height:1.35;letter-spacing:.01em;color:var(--text);margin-bottom:32px}
+  .hero-glyph{display:block;width:62px;height:62px}
+  .hero-copy{max-width:640px;position:relative;z-index:2}
+  .hero h1{font-family:var(--sans);font-weight:600;font-size:42px;line-height:1.2;letter-spacing:.01em;color:var(--text);margin:22px 0 10px}
   .hero h1 em{font-style:normal;color:var(--toshi);font-weight:400}
+  /* the eyebrow the sibling decks all carry under the headline: what this is, and which build.
+     It used to live in the title bar, where it was the line that wrapped the bar on a phone. */
+  .hero .role{
+    font-family:var(--mono);font-size:11px;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--dim);margin-bottom:28px;
+  }
   .hero .lead{font-size:15.5px;color:var(--muted);line-height:1.85;max-width:58ch;margin-bottom:40px}
   .pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px}
   .pill{
@@ -462,6 +474,66 @@
     .phase{grid-template-columns:96px 32px 1fr}
     .rm::before,.rm::after{left:112px}
   }
+  /* ⚠ Added 2026-08-17. Until this block existed the deck's NARROWEST breakpoint was 1100px,
+     so a phone rendered the desktop layout at 40px gutters: the title bar wrapped to three
+     rows before the page even started, the nav strip took two more, the 42px headline broke
+     mid-phrase, and the hero watermark sat squarely behind it. Everything here is the same
+     step-down the sibling decks take at 720px (docs/kage-gumi-toge-presentation.html ~L145-152),
+     plus the multi-column blocks this deck has and Tōge does not. */
+  @media (max-width:720px){
+    header{padding:11px 0 10px}
+    .bar{padding:0 20px;gap:10px}
+    .bar .eye{width:24px;height:24px}
+    .bar .nm{font-size:11px;letter-spacing:.26em}
+    .bar .back{font-size:9.5px;letter-spacing:.1em;padding:5px 8px}
+    /* one line that scrolls sideways, never two rows of wrapped links: a wrapping nav is what
+       pushed the hero below the fold. `flex:none` on the items is load-bearing, or flexbox
+       shrinks each label until it ellipsises instead of letting the strip overflow. */
+    nav.toc{margin-top:11px;padding:0 20px;gap:15px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+    nav.toc::-webkit-scrollbar{display:none}
+    nav.toc a{flex:none}
+    /* the scrollbar is hidden, so the last link would just look CLIPPED. Fading the right edge
+       is what says "there is more, push it" without adding a control. */
+    nav.toc{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 34px),transparent 100%);
+            mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 34px),transparent 100%)}
+
+    section{padding:64px 20px 24px}
+    .rule{margin-top:48px;padding:0 20px}
+    footer{padding-left:20px;padding-right:20px}
+
+    .hero{padding-top:36px}
+    .hero-glyph{width:50px;height:50px}
+    /* pinned to the corner and dropped to .06: on a phone the copy column IS the full width,
+       so the watermark and the headline share space by necessity. At this weight it reads as
+       ground rather than as a second object behind the type. */
+    .hero-brush{width:190px;top:-8px;right:0;opacity:.06}
+    .hero h1{font-size:29px;line-height:1.24;margin:18px 0 9px}
+    .hero .role{font-size:10px;letter-spacing:.22em;margin-bottom:24px}
+    .hero .lead{font-size:15px;line-height:1.75;margin-bottom:32px}
+
+    h2{font-size:23px;gap:10px}
+    .sec-head{margin-bottom:36px}
+    .tag{font-size:10px;letter-spacing:.3em}
+    .cl-entry{grid-template-columns:1fr;gap:8px}
+
+    /* the roadmap keeps its rail on a phone, it just moves to the left edge. Collapsing .phase
+       to a single 1fr column instead LOOKS like it works and does not: .ph-when is
+       `text-align:right` and .ph-node is `justify-self:center`, so the stacked cells inherit a
+       right-aligned date and a floating centred dot with no rail under it. Two columns, the
+       narrow one carrying the node, is the honest phone form of the same object. */
+    .rm::before{left:4px;top:0}
+    .phase{grid-template-columns:18px 1fr;padding-bottom:40px}
+    .ph-node{grid-column:1;grid-row:1;justify-self:start;margin-top:5px}
+    .ph-when{grid-column:2;grid-row:1;text-align:left;padding:0 0 10px 0}
+    .ph-n,.ph-st{display:inline-block;vertical-align:baseline}
+    .ph-st{margin-top:0;margin-left:12px}
+    .ph-body{grid-column:2;grid-row:2;padding-left:0}
+    .ph-body h4{font-size:17px}
+
+    /* the anchors land the section top under the sticky header otherwise, so every jump from
+       the nav strip arrives with its `// TAG` eyebrow already scrolled behind the bar. */
+    section{scroll-margin-top:30px}
+  }
 </style>
 <!-- KG analytics beacon - silent, no cookies, no gate. One hit per load to the KG
      Cloudflare Worker, plus an engagement beacon (dwell + scroll depth) on
@@ -553,7 +625,7 @@
          almond (kg-design principle 6: nothing glows). Gaze is down-left, at the page. -->
     <svg class="eye" viewBox="0 0 24 24"><defs><linearGradient id="tsh-e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b47a8"/><stop offset="1" stop-color="#0c1836"/></linearGradient><linearGradient id="tsh-ev" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05091a" stop-opacity=".62"/><stop offset="1" stop-color="#05091a" stop-opacity="0"/></linearGradient><radialGradient id="tsh-ea" gradientUnits="userSpaceOnUse" cx="11.00" cy="12.55" r="7.4"><stop offset="0" stop-color="#8dafee" stop-opacity=".55"/><stop offset=".55" stop-color="#5b8def" stop-opacity=".22"/><stop offset="1" stop-color="#5b8def" stop-opacity="0"/></radialGradient></defs><clipPath id="tsh-ec"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z"/></clipPath><clipPath id="tsh-eh"><path d="M 2 12 s 3 -5.1 10 -5.1 s 10 5.1 10 5.1 s -3 7 -10 7 s -10 -7 -10 -7 z"/></clipPath><g transform="translate(12,12) scale(1.018) translate(-12,-12)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z" fill="url(#tsh-e)"/><g clip-path="url(#tsh-ec)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7" transform="translate(0,1.7)" fill="none" stroke="#132a63" stroke-width="3.4" stroke-linecap="round" opacity=".62"/></g><g clip-path="url(#tsh-ec)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z" fill="url(#tsh-ea)"/></g><g clip-path="url(#tsh-eh)"><circle cx="11.00" cy="12.55" r="4.3" fill="#5b8def"/><circle cx="11.00" cy="12.55" r="2.2" fill="#132a63"/><circle cx="9.37" cy="10.74" r="1.29" fill="#eef3fb" opacity="0.58"/></g><g clip-path="url(#tsh-ec)"><rect x="0" y="0" width="24" height="14" fill="url(#tsh-ev)"/></g><g fill="none" stroke-linecap="round"><path d="M 22 12 s -3 7 -10 7 s -10 -7 -10 -7" stroke="#2563eb" stroke-width="2.5"/><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7" stroke="#8dafee" stroke-width="2.5"/></g></g></svg>
     <div class="nm">TŌSHI</div>
-    <span class="meta">Chrome extension · v0.4.78 · <a href="https://kage-gumi.com" title="Return to kage-gumi.com">kage-gumi.com</a></span>
+    <a class="back" href="https://kage-gumi.com" title="Return to kage-gumi.com">&larr; 影組 KAGE-GUMI</a>
   </div>
   <nav class="toc">
     <a href="#live">Live</a>
@@ -567,9 +639,11 @@
 
 <!-- HERO -->
 <section class="hero">
-  <svg class="hero-mark" aria-hidden="true" viewBox="0 0 24 24"><defs><linearGradient id="thm-e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b47a8"/><stop offset="1" stop-color="#0c1836"/></linearGradient><linearGradient id="thm-ev" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05091a" stop-opacity=".62"/><stop offset="1" stop-color="#05091a" stop-opacity="0"/></linearGradient><radialGradient id="thm-ea" gradientUnits="userSpaceOnUse" cx="11.00" cy="12.55" r="7.4"><stop offset="0" stop-color="#8dafee" stop-opacity=".55"/><stop offset=".55" stop-color="#5b8def" stop-opacity=".22"/><stop offset="1" stop-color="#5b8def" stop-opacity="0"/></radialGradient></defs><clipPath id="thm-ec"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z"/></clipPath><clipPath id="thm-eh"><path d="M 2 12 s 3 -5.1 10 -5.1 s 10 5.1 10 5.1 s -3 7 -10 7 s -10 -7 -10 -7 z"/></clipPath><g transform="translate(12,12) scale(1.018) translate(-12,-12)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z" fill="url(#thm-e)"/><g clip-path="url(#thm-ec)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7" transform="translate(0,1.7)" fill="none" stroke="#132a63" stroke-width="3.4" stroke-linecap="round" opacity=".62"/></g><g clip-path="url(#thm-ec)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z" fill="url(#thm-ea)"/></g><g clip-path="url(#thm-eh)"><circle cx="11.00" cy="12.55" r="4.3" fill="#5b8def"/><circle cx="11.00" cy="12.55" r="2.2" fill="#132a63"/><circle cx="9.37" cy="10.74" r="1.29" fill="#eef3fb" opacity="0.58"/></g><g clip-path="url(#thm-ec)"><rect x="0" y="0" width="24" height="14" fill="url(#thm-ev)"/></g><g fill="none" stroke-linecap="round"><path d="M 22 12 s -3 7 -10 7 s -10 -7 -10 -7" stroke="#2563eb" stroke-width="2.5"/><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7" stroke="#8dafee" stroke-width="2.5"/></g></g></svg>
+  <svg class="hero-brush" aria-hidden="true" viewBox="0 0 24 24"><defs><linearGradient id="thm-e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b47a8"/><stop offset="1" stop-color="#0c1836"/></linearGradient><linearGradient id="thm-ev" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05091a" stop-opacity=".62"/><stop offset="1" stop-color="#05091a" stop-opacity="0"/></linearGradient><radialGradient id="thm-ea" gradientUnits="userSpaceOnUse" cx="11.00" cy="12.55" r="7.4"><stop offset="0" stop-color="#8dafee" stop-opacity=".55"/><stop offset=".55" stop-color="#5b8def" stop-opacity=".22"/><stop offset="1" stop-color="#5b8def" stop-opacity="0"/></radialGradient></defs><clipPath id="thm-ec"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z"/></clipPath><clipPath id="thm-eh"><path d="M 2 12 s 3 -5.1 10 -5.1 s 10 5.1 10 5.1 s -3 7 -10 7 s -10 -7 -10 -7 z"/></clipPath><g transform="translate(12,12) scale(1.018) translate(-12,-12)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z" fill="url(#thm-e)"/><g clip-path="url(#thm-ec)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7" transform="translate(0,1.7)" fill="none" stroke="#132a63" stroke-width="3.4" stroke-linecap="round" opacity=".62"/></g><g clip-path="url(#thm-ec)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z" fill="url(#thm-ea)"/></g><g clip-path="url(#thm-eh)"><circle cx="11.00" cy="12.55" r="4.3" fill="#5b8def"/><circle cx="11.00" cy="12.55" r="2.2" fill="#132a63"/><circle cx="9.37" cy="10.74" r="1.29" fill="#eef3fb" opacity="0.58"/></g><g clip-path="url(#thm-ec)"><rect x="0" y="0" width="24" height="14" fill="url(#thm-ev)"/></g><g fill="none" stroke-linecap="round"><path d="M 22 12 s -3 7 -10 7 s -10 -7 -10 -7" stroke="#2563eb" stroke-width="2.5"/><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7" stroke="#8dafee" stroke-width="2.5"/></g></g></svg>
   <div class="hero-copy">
+    <svg class="hero-glyph" aria-hidden="true" viewBox="0 0 24 24"><defs><linearGradient id="thg-e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b47a8"/><stop offset="1" stop-color="#0c1836"/></linearGradient><linearGradient id="thg-ev" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05091a" stop-opacity=".62"/><stop offset="1" stop-color="#05091a" stop-opacity="0"/></linearGradient><radialGradient id="thg-ea" gradientUnits="userSpaceOnUse" cx="11.00" cy="12.55" r="7.4"><stop offset="0" stop-color="#8dafee" stop-opacity=".55"/><stop offset=".55" stop-color="#5b8def" stop-opacity=".22"/><stop offset="1" stop-color="#5b8def" stop-opacity="0"/></radialGradient></defs><clipPath id="thg-ec"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z"/></clipPath><clipPath id="thg-eh"><path d="M 2 12 s 3 -5.1 10 -5.1 s 10 5.1 10 5.1 s -3 7 -10 7 s -10 -7 -10 -7 z"/></clipPath><g transform="translate(12,12) scale(1.018) translate(-12,-12)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z" fill="url(#thg-e)"/><g clip-path="url(#thg-ec)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7" transform="translate(0,1.7)" fill="none" stroke="#132a63" stroke-width="3.4" stroke-linecap="round" opacity=".62"/></g><g clip-path="url(#thg-ec)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z" fill="url(#thg-ea)"/></g><g clip-path="url(#thg-eh)"><circle cx="11.00" cy="12.55" r="4.3" fill="#5b8def"/><circle cx="11.00" cy="12.55" r="2.2" fill="#132a63"/><circle cx="9.37" cy="10.74" r="1.29" fill="#eef3fb" opacity="0.58"/></g><g clip-path="url(#thg-ec)"><rect x="0" y="0" width="24" height="14" fill="url(#thg-ev)"/></g><g fill="none" stroke-linecap="round"><path d="M 22 12 s -3 7 -10 7 s -10 -7 -10 -7" stroke="#2563eb" stroke-width="2.5"/><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7" stroke="#8dafee" stroke-width="2.5"/></g></g></svg>
     <h1>The Seer. <em>Lift the veil.</em></h1>
+    <div class="role">Chrome extension &middot; v0.4.78 &middot; WebCenter page inspector</div>
     <p class="lead">Open Tōshi on any <b>WebCenter</b> page and she names what it's built from: every dashboard, saved search and task, nested as it really is, each one a click from its editor. She reads every attribute label back as <b>the internal name your scripts have to use</b>, reads a workflow canvas into a legible <b>node-link map</b>, and turns a task whose workflow has errored into a <b>support package</b> in one press. <b>Stop hunting the system to find what's in front of you.</b></p>
     <div class="pills">
       <span class="pill"><b>▦</b> X-ray the whole page</span>
