@@ -643,7 +643,7 @@
   <div class="hero-copy">
     <svg class="hero-glyph" aria-hidden="true" viewBox="0 0 24 24"><defs><linearGradient id="thg-e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b47a8"/><stop offset="1" stop-color="#0c1836"/></linearGradient><linearGradient id="thg-ev" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05091a" stop-opacity=".62"/><stop offset="1" stop-color="#05091a" stop-opacity="0"/></linearGradient><radialGradient id="thg-ea" gradientUnits="userSpaceOnUse" cx="11.00" cy="12.55" r="7.4"><stop offset="0" stop-color="#8dafee" stop-opacity=".55"/><stop offset=".55" stop-color="#5b8def" stop-opacity=".22"/><stop offset="1" stop-color="#5b8def" stop-opacity="0"/></radialGradient></defs><clipPath id="thg-ec"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z"/></clipPath><clipPath id="thg-eh"><path d="M 2 12 s 3 -5.1 10 -5.1 s 10 5.1 10 5.1 s -3 7 -10 7 s -10 -7 -10 -7 z"/></clipPath><g transform="translate(12,12) scale(1.018) translate(-12,-12)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z" fill="url(#thg-e)"/><g clip-path="url(#thg-ec)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7" transform="translate(0,1.7)" fill="none" stroke="#132a63" stroke-width="3.4" stroke-linecap="round" opacity=".62"/></g><g clip-path="url(#thg-ec)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z" fill="url(#thg-ea)"/></g><g clip-path="url(#thg-eh)"><circle cx="11.00" cy="12.55" r="4.3" fill="#5b8def"/><circle cx="11.00" cy="12.55" r="2.2" fill="#132a63"/><circle cx="9.37" cy="10.74" r="1.29" fill="#eef3fb" opacity="0.58"/></g><g clip-path="url(#thg-ec)"><rect x="0" y="0" width="24" height="14" fill="url(#thg-ev)"/></g><g fill="none" stroke-linecap="round"><path d="M 22 12 s -3 7 -10 7 s -10 -7 -10 -7" stroke="#2563eb" stroke-width="2.5"/><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7" stroke="#8dafee" stroke-width="2.5"/></g></g></svg>
     <h1>The Seer. <em>Lift the veil.</em></h1>
-    <div class="role">Chrome extension &middot; v0.4.80 &middot; WebCenter page inspector</div>
+    <div class="role">Chrome extension &middot; v0.4.81 &middot; WebCenter page inspector</div>
     <p class="lead">Open Tōshi on any <b>WebCenter</b> page and she names what it's built from: every dashboard, saved search and task, nested as it really is, each one a click from its editor. She reads every attribute label back as <b>the internal name your scripts have to use</b>, reads a workflow canvas into a legible <b>node-link map</b>, and turns a task whose workflow has errored into a <b>support package</b> in one press. <b>Stop hunting the system to find what's in front of you.</b></p>
     <div class="pills">
       <span class="pill"><b>▦</b> X-ray the whole page</span>
@@ -1054,6 +1054,11 @@
   <div class="changelog">
 
     <div class="cl-entry">
+      <div class="clv"><span class="clb">v0.4.81</span><div class="cld">2026-08-17</div></div>
+      <p class="clh"><b>A pick keeps the colour it was hovered in.</b> Every kind of thing Tōshi finds has its own colour, and a dashboard script is <b>violet</b> wherever it appears: the tag on the row, the row's own tint, the box it draws on the page as you sweep past it. Clicking the row then drew that same element in the house blue instead, so the one colour telling you <i>this is a script and not an attribute category or a saved search</i> was dropped at exactly the moment you committed to one. The pick box now takes the colour of whatever you picked, and what marks it as picked is the heavier ring it already wore. Nothing else about picking changed.</p>
+    </div>
+
+    <div class="cl-entry">
       <div class="clv"><span class="clb">v0.4.80</span><div class="cld">2026-08-17</div></div>
       <p class="clh"><b>A reference points at something. Now the panel points there too.</b> Drilling an attribute category into its <b>document references</b> gave you the list but not the place: hovering a reference lit up the whole category, which on a project attributes page is the entire screen, so the box told you nothing you did not already know. Each reference now boxes <b>its own attribute row</b> on the page, the label, the Upload/New/Link controls and the documents linked under it, and hovering one of those documents boxes <b>that document's row</b> inside the reference table. It reads the attribute id WebCenter already stamps on the reference's document table, so nothing is matched on a label and a relabelled site behaves the same as any other. A reference that this page does not render keeps the category box, and a reference belonging to some <i>other</i> document you drilled into never claims a row here, which is the case where a guess would have quietly pointed at the wrong attribute.</p>
     </div>
@@ -1306,7 +1311,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="q">"See what the page is built from, then go straight to it."</div>
-  <div class="meta">TŌSHI · THE SEER · <span class="kg">Kage-gumi (影組)</span> · Chrome extension v0.4.80</div>
+  <div class="meta">TŌSHI · THE SEER · <span class="kg">Kage-gumi (影組)</span> · Chrome extension v0.4.81</div>
   <div class="seals">
     <span class="seal seal--sm">透</span>
     <span class="seal seal--sm seal--mark" title="Kage-gumi"><svg viewBox="0 0 32 32" style="width:20px;height:20px;display:block"><g fill="none" stroke-linecap="round" stroke-width="3.625"><path d="M 20.125 6.875 L 12.375 10.4375" stroke="#8dafee"/><path d="M 21.875 12.75 L 10.75 17.9375" stroke="#5b8def"/><path d="M 23 18.25 L 9.125 25.125" stroke="#2563eb"/></g></svg></span>
