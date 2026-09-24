@@ -1465,9 +1465,9 @@
 .op-name{ color:var(--text) !important; }
 
 /* ── the BUILDS bench (KURA + SHIN) ───────────────────────────────────────
-   Prose only, deliberately: neither tool earns a screenshot yet. Kura is a plan,
-   and Shin's every screen is an estate readout - there is no frame of it that is
-   not a customer's migration surface. */
+   Prose only, deliberately: every screen of either tool is an estate readout -
+   there is no frame of Kura or Shin that is not a customer's live surface.
+   (2026-09-25: Kura moved from plan to built; the card text says so.) */
 .bench-grid{ display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:34px; }
 @media(max-width:820px){ .bench-grid{ grid-template-columns:1fr; } }
 .bench{ position:relative; overflow:hidden; padding:26px 24px 24px;
@@ -1541,16 +1541,21 @@
   <a href="#webcenter">WebCenter</a>
   <a href="#brain">Knowledge</a>
   <a href="#crew">The Crew</a>
+  <a href="#numbers">Numbers</a>
   <a href="#architecture">Architecture</a>
+  <a href="#day">A Day</a>
   <a href="#dashboard">Dashboard</a>
   <a href="#mobile">Mobile</a>
+  <a href="#arsenal">Arsenal</a>
+  <a href="#shipped">Shipped</a>
+  <a href="#now">Now</a>
   <a href="#roadmap">Roadmap</a>
   <span class="subnav-sep"></span>
   <span class="subnav-label">The Vision</span>
   <a href="#horizon" class="vision">Horizon</a>
   <a href="#studio"  class="vision"><span class="jp">工房</span>Studio</a>
   <a href="#densho"  class="vision"><span class="jp">伝書</span>Densho</a>
-  <a href="#bench"   class="vision">Bench</a>
+  <a href="#bench"   class="vision"><span class="jp">蔵審</span>Kura &amp; Shin</a>
   <a href="#sae"     class="vision goal"><span class="jp">冴</span>Sae</a>
 </nav>
 
@@ -1562,6 +1567,7 @@
     <h1 class="hero-logo"><svg class="kgmark" viewBox="0 0 32 32" width="200" height="200" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1a2130"/><g fill="none" stroke-linecap="round" stroke-width="3.625"><path d="M 20.125 6.875 L 12.375 10.4375" stroke="#8dafee"/><path d="M 21.875 12.75 L 10.75 17.9375" stroke="#5b8def"/><path d="M 23 18.25 L 9.125 25.125" stroke="#2563eb"/></g></svg></h1>
     <div class="hero-romaji">Kage-gumi · Shadow Crew</div>
     <p class="hero-desc">A personal team of AI assistants, each with a specific job, built around the work we do every day in WebCenter. Not a chatbot. A crew that runs in the background so I can focus on what actually matters.</p>
+    <a class="hero-fresh" href="#shipped">Updated 25 September 2026 · see what shipped since 3 September →</a>
   </div>
 </div>
 
@@ -1653,6 +1659,17 @@
       </div>
     </div>
 
+    <div style="background: var(--bg-card); border: 1px solid rgba(91,141,239,0.25); padding: 24px 28px; display: grid; grid-template-columns: 80px 1fr; gap: 24px; align-items: start;">
+      <div>
+        <div style="font-family: 'Noto Serif JP', serif; font-size: 36px; font-weight: 300; color: var(--teal); line-height: 1;">2026</div>
+        <div style="font-size: 9px; font-family: monospace; color: var(--teal); letter-spacing: 0.15em; margin-top: 4px; text-transform: uppercase;">09 Apr · Built</div>
+      </div>
+      <div>
+        <div style="font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px;">The first commit, and then the rest</div>
+        <div style="font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55;">The repository opens on 9 April 2026. By 25 September it holds nearly 6,900 commits, seven named operatives, a workshop of tools behind them, and colleagues signing in with roles of their own. September alone brought more than two thousand commits by hand.</div>
+      </div>
+    </div>
+
   </div>
 
   <blockquote>The AI didn't replace the experience. It finally made 16 years of it instantly usable.</blockquote>
@@ -1677,6 +1694,9 @@
       <div class="ba-item">Half-present in meetings, taking notes instead of actually being in the room</div>
       <div class="ba-item">Constantly searching the WebCenter system to work out which dashboards, searches and forms are nested on a page</div>
       <div class="ba-item">Drawing workflow diagrams in a generic tool that knows nothing about WebCenter, then rebuilding them by hand in the system</div>
+      <div class="ba-item">Opening two environments side by side to work out what changed in the configuration, after it is already live</div>
+      <div class="ba-item">Surveying a legacy BLUE estate by hand before a migration can even be quoted</div>
+      <div class="ba-item">Hand-writing qualification evidence for a validated (pharma) build, one screenshot at a time</div>
     </div>
     <div class="ba-panel ba-after">
       <div class="ba-label">With Kage-gumi</div>
@@ -1688,6 +1708,9 @@
       <div class="ba-item">Chō captures &amp; summarises the meeting and Sumi files it: be present, not the note-taker</div>
       <div class="ba-item">Tōshi X-rays any page: every nested dashboard, search and form, in one click</div>
       <div class="ba-item">Zuan diagrams a workflow in WebCenter's own language and pushes it straight to the server, or pulls an existing one back to edit</div>
+      <div class="ba-item">Kura mirrors every estate's configuration into git overnight: drift becomes a diff, not an afternoon</div>
+      <div class="ba-item">Shin reads the harvested estate and drafts the BLUE-to-WebCenter mapping and Design Plan, with every unmatched construct left open for a decision</div>
+      <div class="ba-item">Akashi derives the test protocol, runs it read-only and stamps a screenshot on every executed step</div>
     </div>
   </div>
 
@@ -1775,6 +1798,8 @@
     </div>
   </div>
 
+  <p class="reveal">Concretely, as of today: <strong style="color: var(--text);">twenty-five work skills</strong> backed by <strong style="color: var(--text);">178 reference files</strong>, about 59,000 lines of them. One skill per product and per scripting context (classic WebCenter across ten of them, WebCenter Pack, the Esko cloud platform, BLUE, ArtPro+ and DeskPack, Automated Packshots, Comply, Automation Engine, Workato, Miro) plus a craft shelf for UI design, software design, AI engineering and writing for leadership, and the crew's own counsel and release protocols. Scheduled jobs fold Esko's knowledge base, release notes and hotfix catalogue back in on their own, and every absorbed item carries a stamp saying where it came from.</p>
+
 </section>
 
 <!-- THE CREW -->
@@ -1844,7 +1869,7 @@
         <div class="op-sc-tag">Real scenario</div>
         <div class="op-sc-head"><span class="op-sc-glyph">龍</span><span class="op-sc-who">Ryū · KG-04 Night Runner</span></div>
         <div class="op-sc-q">"Keep the customer's Azure DevOps docs in step with WebCenter, overnight"</div>
-        <div class="op-sc-desc">Every night Ryū pulls the live WebCenter config and reconciles it into the customer's Azure DevOps wiki and board (new config documented, deleted config flagged), then leaves a morning digest. Just one of nine time-zone-pinned missions he works while I sleep.</div>
+        <div class="op-sc-desc">Every night Ryū pulls the live WebCenter config and reconciles it into the customer's Azure DevOps wiki and board (new config documented, deleted config flagged), then leaves a morning digest. Just one of the 32 jobs on his schedule board.</div>
         <span class="status-chip chip-complete">Scheduled</span>
       </div>
       <div class="op-head"><span class="op-id">KG-04</span><span class="op-dot"></span></div>
@@ -1853,7 +1878,7 @@
       <div class="op-role">Night Runner</div>
       <div class="op-sub">Overnight Automation</div>
       <div class="op-meaning">"Dragon": powerful, tireless</div>
-      <div class="op-desc">Runs scheduled tasks while I sleep. Surfaces his own proposals for the next run, queues scripts for review, and delivers a morning digest. Launch a proposal and it becomes a real, tracked dashboard task. Dragons don't rest. Neither does Ryū.</div>
+      <div class="op-desc">Runs scheduled tasks while I sleep: 32 of them on the board today, from the nightly configuration mirrors and script backups to skill linting and the morning digest. Since September the night also runs a Studio sprint, working through the items a human put on tonight's list. He surfaces his own proposals for the next run, and a proposal launched becomes a real, tracked dashboard task. Dragons don't rest. Neither does Ryū.</div>
     </div>
 
     <div class="op-card op-cho reveal" data-glyph="聴">
@@ -1862,7 +1887,7 @@
         <div class="op-sc-tag">Real scenario</div>
         <div class="op-sc-head"><span class="op-sc-glyph">聴</span><span class="op-sc-who">Chō · KG-05 Meeting Listener</span></div>
         <div class="op-sc-q">"Capture this customer call and turn it into something I can use"</div>
-        <div class="op-sc-desc">Chō listens and transcribes locally with faster-whisper (nothing leaves the machine), then returns a structured summary: decisions, action items, open questions. Meeting knowledge becomes reusable text the rest of the crew can act on.</div>
+        <div class="op-sc-desc">Chō listens and transcribes locally with faster-whisper (the audio never leaves the crew's machine), then returns a structured summary: decisions, action items, open questions. Meeting knowledge becomes reusable text the rest of the crew can act on.</div>
         <span class="status-chip chip-active">Listening</span>
       </div>
       <div class="op-head"><span class="op-id">KG-05</span><span class="op-dot"></span></div>
@@ -1871,7 +1896,7 @@
       <div class="op-role">Meeting Listener</div>
       <div class="op-sub">Capture &amp; Summarize</div>
       <div class="op-meaning">"To listen": attentive, fully present</div>
-      <div class="op-desc">Sits in the shadows of a call and listens. Captures the audio, transcribes it on-device with faster-whisper (nothing ever leaves the machine) and hands back a clean summary: decisions, action items, open questions. A meeting stops being something you re-type from memory and becomes reusable text that feeds straight back into project work and the crew's knowledge.</div>
+      <div class="op-desc">Sits in the shadows of a call and listens, from a browser tab through her own Chrome extension or from the room through a microphone. Captures the audio, transcribes it with faster-whisper on the crew's own machine (the audio never leaves it) and hands back a clean summary: decisions, action items, open questions. A meeting stops being something you re-type from memory and becomes reusable text that feeds straight back into project work and the crew's knowledge.</div>
     </div>
 
     <div class="op-card op-sumi reveal" data-glyph="墨">
@@ -1925,11 +1950,150 @@
       <div class="op-role">The Seer</div>
       <div class="op-sub">Inspector · Recon</div>
       <div class="op-meaning">"Clairvoyance": to see straight through</div>
-      <div class="op-desc">Where the others build and deploy, Tōshi <em>reveals</em>. One click on any WebCenter page and she lays out everything nested inside it (dashboards, saved searches, forms), each a direct link to its editor; hover to highlight a node on the page, pick an element to jump back to its row, and export the whole map as a handover-ready ticket. She walks a dashboard's full reference graph too, flagging anything deleted. Born as Haku's inspector eye, she now rides along as a one-click Chrome extension and a KG panel. And since every build starts by seeing the ground first, Tōshi is never idle. The shadow that reads the blueprint behind the glass.</div>
+      <div class="op-desc">Where the others build and deploy, Tōshi <em>reveals</em>. One click on any WebCenter page and she lays out everything nested inside it (dashboards, saved searches, forms), each a direct link to its editor; hover to highlight a node on the page, pick an element to jump back to its row, and export the whole map as a handover-ready ticket. She walks a dashboard's full reference graph too, flagging anything deleted. Born as Haku's inspector eye, she now rides along as a one-click Chrome extension (version 0.4.90 as of this update) and a KG panel, with a filterable project-history audit trail and a map of any workflow canvas. And since every build starts by seeing the ground first, Tōshi is never idle. The shadow that reads the blueprint behind the glass.</div>
       <a class="op-link" href="https://kage-gumi.com/kage-gumi-presentation/toshi.html" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:7px; margin-top:16px; font-family:monospace; font-size:12px; letter-spacing:0.4px; color:var(--op-toshi); text-decoration:none; border:1px solid rgba(118,170,206,0.45); background:rgba(118,170,206,0.08); border-radius:3px; padding:8px 14px; transition:background .15s,border-color .15s;" onmouseover="this.style.background='rgba(118,170,206,0.16)';this.style.borderColor='rgba(118,170,206,0.8)';" onmouseout="this.style.background='rgba(118,170,206,0.08)';this.style.borderColor='rgba(118,170,206,0.45)';"><span class="jp" style="font-size:15px;">透</span> See Tōshi in action: the manual &amp; feature guide ↗</a>
     </div>
 
   </div>
+</section>
+
+<!-- 2026-09-25 REFRESH: shared styles for NUMBERS / A DAY / ARSENAL / SHIPPED / NOW.
+     Class-based on purpose: the two responsive blocks above collapse any INLINE
+     "grid-template-columns: 1fr 1fr;" to one column, and the desktop lane holds every
+     section child to 820px, so each wide block below carries its own escape hatch. -->
+<style>
+  .hero-fresh { display: inline-block; margin-top: 26px; font-family: monospace; font-size: 11px;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); text-decoration: none;
+    border: 1px solid var(--kgm-dim); background: rgba(91,141,239,0.06); padding: 9px 16px; border-radius: 3px; }
+  .hero-fresh:hover { background: rgba(91,141,239,0.14); }
+
+  /* status pills, shared by ARSENAL / NOW */
+  .pill { display: inline-block; font-family: monospace; font-size: 8.5px; font-weight: 400; letter-spacing: 0.14em;
+    text-transform: uppercase; padding: 1px 6px; border: 1px solid; border-radius: 3px; margin-left: 8px;
+    vertical-align: 2px; white-space: nowrap; }
+  .pill.live  { color: var(--green);    border-color: rgba(90,168,133,0.5); }
+  .pill.pre   { color: var(--amber);    border-color: rgba(217,154,43,0.5); }
+  .pill.build { color: var(--teal);     border-color: rgba(91,141,239,0.5); }
+  .pill.plan  { color: var(--text-dim); border-color: var(--border); }
+  .pill.park  { color: var(--text-dim); border-color: var(--border); border-style: dashed; }
+  .pill.new   { color: var(--crimson);  border-color: rgba(224,100,74,0.5); }
+
+  /* ── 数 NUMBERS ── */
+  .numgrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; margin-top: 36px;
+    background: var(--border); border: 1px solid var(--border); }
+  .num { background: var(--bg-card); padding: 22px 18px 20px; }
+  .num-v { font-family: 'Noto Serif JP', serif; font-size: 36px; font-weight: 300; color: var(--text); line-height: 1; }
+  .num-k { font-family: monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--teal); margin-top: 12px; line-height: 1.4; }
+  .num-d { font-size: 12.5px; color: var(--text-muted); line-height: 1.5; margin-top: 8px; }
+  .num-call { margin-top: 28px; border: 1px solid rgba(224,100,74,0.3); border-left: 3px solid var(--crimson);
+    background: rgba(224,100,74,0.04); padding: 26px 30px; }
+  .num-call .num-call-v { font-family: 'Noto Serif JP', serif; font-size: 30px; font-weight: 300; color: var(--text); line-height: 1.2; }
+  .num-call .num-call-v b { color: var(--crimson); font-weight: 400; }
+  .num-call p { max-width: none; margin: 12px 0 0; font-size: 14px; color: var(--text-muted); text-align: left !important; }
+  .num-how { margin-top: 16px; font-family: monospace; font-size: 10px; letter-spacing: 0.08em; color: var(--text-dim); line-height: 1.7; }
+  @media (max-width: 900px) { .numgrid { grid-template-columns: repeat(2, 1fr); } .num-v { font-size: 30px; }
+    .num-call { padding: 20px 20px; } .num-call .num-call-v { font-size: 23px; } }
+
+  /* ── 日 A DAY WITH THE CREW ── */
+  .day-tl { margin-top: 36px; border-top: 1px solid var(--border); }
+  .day-phase { font-family: monospace; font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--text-dim); padding: 22px 0 8px; }
+  .day-row { display: grid; grid-template-columns: 104px 150px 1fr; gap: 18px; align-items: baseline;
+    padding: 13px 0; border-bottom: 1px solid var(--border-sub); }
+  .day-t { font-family: monospace; font-size: 13px; letter-spacing: 0.06em; color: var(--teal); }
+  .day-row.night .day-t { color: var(--op-ryu); }
+  .day-who { font-size: 13px; font-weight: 500; color: var(--text-sec); }
+  .day-who .jp { font-family: 'Noto Serif JP', serif; color: var(--text-muted); margin-right: 5px; }
+  .day-what { font-size: 13.5px; line-height: 1.6; color: var(--text-muted); }
+  @media (max-width: 768px) {
+    .day-row { grid-template-columns: 86px 1fr; gap: 4px 12px; }
+    .day-t { font-size: 11.5px; }
+    .day-who { grid-column: 2; }
+    .day-what { grid-column: 2; }
+  }
+
+  /* ── 武 ARSENAL ── */
+  .ars-legend { display: flex; flex-wrap: wrap; gap: 10px 18px; justify-content: center; margin-top: 22px;
+    font-size: 12px; color: var(--text-muted); }
+  .ars-legend .pill { margin-left: 0; margin-right: 6px; }
+  .ars-group { margin-top: 40px; }
+  .ars-head { display: flex; align-items: baseline; gap: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+  .ars-head .jp { font-family: 'Noto Serif JP', serif; font-size: 24px; color: var(--crimson); line-height: 1; }
+  .ars-head h3 { font-size: 17px; font-weight: 500; color: var(--text); }
+  .ars-head .ars-n { margin-left: auto; font-family: monospace; font-size: 10px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--text-dim); }
+  .ars-sub { font-size: 13px; color: var(--text-muted); margin: 10px 0 0; max-width: none; }
+  .ars-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: 14px;
+    background: var(--border-sub); border: 1px solid var(--border-sub); }
+  .ars-row { background: var(--bg-card); padding: 14px 16px; display: grid; grid-template-columns: 40px 1fr;
+    gap: 14px; align-items: start; }
+  .ars-seal { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px;
+    border-radius: 6px; font-family: 'Noto Serif JP', serif; font-size: 19px; color: var(--teal);
+    background: rgba(91,141,239,0.06); border: 1px solid rgba(91,141,239,0.3); }
+  .ars-seal.code { font-family: monospace; font-size: 9.5px; letter-spacing: 0.04em; }
+  .ars-name { font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.35; }
+  .ars-desc { font-size: 12.5px; color: var(--text-muted); line-height: 1.55; margin-top: 4px; }
+  .ars-skills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+  .ars-skills span { font-size: 12px; color: var(--text-sec); background: var(--bg-card); border: 1px solid var(--border);
+    padding: 4px 10px; border-radius: 3px; }
+  .ars-skills span b { font-family: monospace; font-size: 9px; letter-spacing: 0.12em; color: var(--teal);
+    font-weight: 400; margin-right: 6px; text-transform: uppercase; }
+  @media (max-width: 820px) { .ars-grid { grid-template-columns: 1fr; } .ars-head .ars-n { display: none; } }
+
+  /* ── 出 SHIPPED ── */
+  .ship { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 34px; }
+  .ship-wk { background: var(--bg-card); border: 1px solid var(--border); padding: 22px 24px 18px; }
+  .ship-wk h3 { font-family: monospace; font-size: 10px; font-weight: 400; letter-spacing: 0.24em;
+    text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
+  .ship-wk ul { list-style: none; margin: 0; padding: 0; }
+  .ship-wk li { font-size: 13px; line-height: 1.55; color: var(--text-muted); padding: 7px 0 7px 16px;
+    border-top: 1px solid var(--border-sub); position: relative; }
+  .ship-wk li::before { content: '·'; position: absolute; left: 3px; color: var(--green); font-weight: 700; }
+  .ship-wk li b { color: var(--text); font-weight: 500; }
+  @media (max-width: 820px) { .ship { grid-template-columns: 1fr; } }
+
+  /* ── 今 NOW ── */
+  .now-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: 30px;
+    background: var(--border-sub); border: 1px solid var(--border-sub); }
+  .now-card { background: var(--bg-card); padding: 18px 20px; }
+  .now-card h4 { font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.35; }
+  .now-card p { font-size: 12.5px; line-height: 1.6; color: var(--text-muted); margin: 6px 0 0; max-width: none; text-align: left !important; }
+  .now-label { font-family: monospace; font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--text-dim); margin-top: 40px; }
+  @media (max-width: 820px) { .now-grid { grid-template-columns: 1fr; } }
+
+  /* wide blocks leave the 820px reading lane on desktop (same move as .wc-before-after) */
+  @media (min-width: 769px) {
+    section > .numgrid, section > .num-call, section > .num-how,
+    section > .ars-group, section > .ship, section > .now-grid, section > .now-label { max-width: 1040px !important; }
+  }
+</style>
+
+<!-- BY THE NUMBERS (added 2026-09-25; every figure measured off the repo that day) -->
+<section id="numbers">
+  <div class="section-tag">By the numbers</div>
+  <h2>Measured, not estimated</h2>
+  <p>Every figure below was counted off the repository on 25 September 2026, the day this page was last updated. Nothing is rounded up for effect.</p>
+
+  <div class="numgrid reveal">
+    <div class="num"><div class="num-v">7</div><div class="num-k">Operatives</div><div class="num-d">KG-01 to KG-07, plus Tōshi, the eye that rides in the browser.</div></div>
+    <div class="num"><div class="num-v">215</div><div class="num-k">WebCenter tools</div><div class="num-d">In the crew's own MCP server: read, build and administer an estate by name.</div></div>
+    <div class="num"><div class="num-v">25</div><div class="num-k">Skills</div><div class="num-d">Backed by 178 reference files, about 59,000 lines of Esko craft.</div></div>
+    <div class="num"><div class="num-v">28</div><div class="num-k">Config kinds</div><div class="num-d">Mirrored per WebCenter estate by Kura, from task types to custom form extensions.</div></div>
+    <div class="num"><div class="num-v">32</div><div class="num-k">Scheduled jobs</div><div class="num-d">On the night board: mirrors, backups, audits, harvests, digests, self-tests.</div></div>
+    <div class="num"><div class="num-v">195</div><div class="num-k">Crosswalk rules</div><div class="num-d">That Shin uses to resolve a BLUE construct to its WebCenter realisation.</div></div>
+    <div class="num"><div class="num-v">29</div><div class="num-k">Densho solutions</div><div class="num-d">Each carrying its real deployed code and a live rendered preview.</div></div>
+    <div class="num"><div class="num-v">188</div><div class="num-k">Test files</div><div class="num-d">Offline tests over KG's own code, run repo-wide by one runner.</div></div>
+    <div class="num"><div class="num-v">6,890+</div><div class="num-k">Commits</div><div class="num-d">Since the first one, on 9 April 2026.</div></div>
+    <div class="num"><div class="num-v">2,000+</div><div class="num-k">In September</div><div class="num-d">Commits by hand this month, about 80 a day. The night runner's housekeeping is not counted.</div></div>
+  </div>
+
+  <div class="num-call reveal">
+    <div class="num-call-v">About 630,000 lines of code. Roughly <b>twenty files</b> ever talk to an AI model.</div>
+    <p>Of the 2,323 code files KG has written for itself, about twenty reach a language model: the chat plumbing, seat and budget handling, the night runner's launcher, the meeting summary, the one prose paragraph on the morning digest. Everything else (the mirrors, the harvesters, the guards, the converters, the whole WebCenter arsenal) is plain, deterministic, testable code that would still run tomorrow with no model at all. The AI directs the crew. The crew's hands are ordinary tools.</p>
+  </div>
+  <div class="num-how">How it was counted: git-tracked files only. Code = .mjs .js .jsx .ts .tsx .py .ps1 under KG's own trees (frontend, scripts, playwright, mcp-server, ado, agents, extensions, shared, shell), harvested customer artifacts and build output excluded. "Talks to an AI model" = imports an AI SDK, calls a model API, or launches the Claude CLI; tests and probes excluded.</div>
 </section>
 
 <!-- HOW IT WORKS -->
@@ -2006,6 +2170,41 @@
       <span class="flow-note">task complete</span>
     </div>
   </div>
+
+  <!-- THE WALL (added 2026-09-25) -->
+  <div class="reveal" style="margin-top: 48px; border: 1px solid rgba(90,168,133,0.3); background: rgba(90,168,133,0.04); padding: 28px 32px; max-width: 760px;">
+    <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.3em; color: var(--green); text-transform: uppercase; margin-bottom: 14px;">// And a wall around all three</div>
+    <div style="font-size: 16px; font-weight: 500; color: var(--text); margin-bottom: 10px;">Guard rails the crew cannot talk its way past</div>
+    <p style="max-width: none; margin-bottom: 10px; color: var(--text-muted);">Arms that reach into live customer systems need a wall, and the wall is code, not a prompt. Every write into a WebCenter system checks that connection's own tier first, and a production estate is a <strong style="color: var(--text);">hard never-write, with no override</strong>. A colleague who signs in is confined to the environments they have been granted, the same way across the MCP tools, the command line and Azure DevOps. A non-owner's run can only write inside its own repository. Customer-facing reports pass an outbound redaction gate before they leave.</p>
+    <p style="max-width: none; margin-bottom: 0; color: var(--text-muted);">And since September the guards are being gathered into one register, <span class="jp">守</span> Mamori, each paired with a negative control whose only job is to prove the guard still refuses. A guard that is never tested is a guard that might not be there.</p>
+  </div>
+</section>
+
+<!-- A DAY WITH THE CREW (added 2026-09-25; night half read off the live schedule board) -->
+<section id="day">
+  <div class="section-tag">A day with the crew</div>
+  <h2>Twenty-four hours, on the real schedule</h2>
+  <p>Not a storyboard. The night half is read straight off the crew's schedule board, in the machine's local time; the day half is how the work actually arrives. Fourteen of the 32 scheduled jobs run daily; the rest are weekly or monthly, covering skill linting, Esko knowledge-base and release-note harvests, dashboard-script audits and the Azure DevOps wiki publish.</p>
+
+  <div class="day-tl reveal">
+    <div class="day-phase">// The night shift</div>
+    <div class="day-row night"><div class="day-t">21:30</div><div class="day-who"><span class="jp">蔵</span>Kura</div><div class="day-what">The first customer estate is mirrored: its whole WebCenter configuration, all 28 kinds, committed to git. The other estates follow on their own slots through the night and the day.</div></div>
+    <div class="day-row night"><div class="day-t">22:00</div><div class="day-who"><span class="jp">博</span>Haku</div><div class="day-what">Every live WebCenter script is backed up into the repository, so a colleague's in-system edit is caught before any push can overwrite it.</div></div>
+    <div class="day-row night"><div class="day-t">overnight</div><div class="day-who"><span class="jp">龍</span>Ryū</div><div class="day-what">Runs the Studio sprint: the work items a human put on tonight's list, one after another, inside the token budget.</div></div>
+    <div class="day-row night"><div class="day-t">03:20</div><div class="day-who"><span class="jp">龍</span>Ryū</div><div class="day-what">Yesterday's sessions are harvested, and the durable lessons folded into the crew's memory.</div></div>
+    <div class="day-row night"><div class="day-t">05:30</div><div class="day-who"><span class="jp">新</span>What's New</div><div class="day-what">Every change made across KG in the last day is collected into one digest, with a short prose read on top.</div></div>
+    <div class="day-row night"><div class="day-t">06:10</div><div class="day-who"><span class="jp">龍</span>Ryū</div><div class="day-what">The memory index is checked, so a lesson the crew learned is not silently lost.</div></div>
+    <div class="day-row night"><div class="day-t">07:00</div><div class="day-who"><span class="jp">龍</span>Ryū</div><div class="day-what">Anything that failed overnight gets a second attempt, before anyone is awake to notice.</div></div>
+    <div class="day-row night"><div class="day-t">09:00</div><div class="day-who"><span class="jp">系</span>System</div><div class="day-what">The sign-in gate is probed from the outside, every day.</div></div>
+
+    <div class="day-phase">// The day shift</div>
+    <div class="day-row"><div class="day-t">morning</div><div class="day-who"><span class="jp">読</span>Reads</div><div class="day-what">On the phone, before the first meeting: the digest, the AI dispatch, the night runner's report.</div></div>
+    <div class="day-row"><div class="day-t">a call</div><div class="day-who"><span class="jp">聴</span>Chō · <span class="jp">墨</span>Sumi</div><div class="day-what">A customer call is captured from the browser tab, transcribed on the crew's own machine, summarised and filed under that customer, with the agreed actions landing in Azure DevOps.</div></div>
+    <div class="day-row"><div class="day-t">a corridor</div><div class="day-who"><span class="jp">影</span>Shadow</div><div class="day-what">An order dictated on the phone between two meetings runs on the box. The fleet strip shows how it is doing without anyone asking.</div></div>
+    <div class="day-row"><div class="day-t">a colleague</div><div class="day-who"><span class="jp">博</span>Haku</div><div class="day-what">A colleague's Azure DevOps request is worked, confined to that build and customer, and answered inside the work item.</div></div>
+    <div class="day-row"><div class="day-t">a fault</div><div class="day-who"><span class="jp">報</span>Report</div><div class="day-what">Something breaks on a KG screen. One press files it and hands it to triage, with the context attached.</div></div>
+    <div class="day-row"><div class="day-t">evening</div><div class="day-who"><span class="jp">房</span>Studio</div><div class="day-what">Tomorrow's work is picked, the sprint is closed, and a human presses launch. Nothing on the list fires by itself.</div></div>
+  </div>
 </section>
 
 <!-- SCREENSHOTS -->
@@ -2046,7 +2245,7 @@
 <section id="mobile">
   <div class="section-tag">Shipped product</div>
   <h2>KG Mobile</h2>
-  <p>Kage-gumi is not a desktop tool with a small-screen fallback. It ships a second, purpose-built surface for the phone: its own five-screen shell, installed to the home screen, opening full screen with no browser chrome around it. That surface is where most orders actually get given, standing in a corridor between two meetings rather than sitting at a desk.</p>
+  <p>Kage-gumi is not a desktop tool with a small-screen fallback. It ships a second, purpose-built surface for the phone: its own six-tab shell (command, crew chat, night ops, reads, system and builds), installed to the home screen, opening full screen with no browser chrome around it. That surface is where most orders actually get given, standing in a corridor between two meetings rather than sitting at a desk.</p>
   <p>Same box, same crew, same data. Nothing is mirrored or copied down: the phone talks to the one machine the whole system runs on, over an authenticated connection, and what you are looking at is the live state.</p>
 
   <div class="kgm-strip">
@@ -2076,6 +2275,16 @@
   </div>
 
   <div class="kgm-feats">
+    <div class="kgm-feat reveal">
+      <span class="kgm-seal">衆</span>
+      <h4>Crew chat</h4>
+      <p>The same crew threads as the desktop, from the same store: auto-routed to the right operative, with a files tray for anything a reply names, and stop and resume that behave the way they do at the desk.</p>
+    </div>
+    <div class="kgm-feat reveal">
+      <span class="kgm-seal">工</span>
+      <h4>Builds</h4>
+      <p>Studio's projects, sprints and items, bulk-moved between sprints with a thumb, and the Kura storehouse beside them: every operative's filed work, one tap away.</p>
+    </div>
     <div class="kgm-feat reveal">
       <span class="kgm-seal">令</span>
       <h4>Command</h4>
@@ -2116,9 +2325,216 @@
   <div style="margin-top: 48px; border: 1px solid rgba(217,154,43,0.25); background: rgba(217,154,43,0.04); padding: 32px 36px; max-width: 760px;" class="reveal">
     <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.3em; color: var(--amber); text-transform: uppercase; margin-bottom: 16px;">// What the phone deliberately does not carry</div>
     <div style="font-size: 16px; font-weight: 500; color: var(--text); margin-bottom: 12px;">A smaller surface, not a shrunken one.</div>
-    <p style="max-width: none; margin-bottom: 10px;">Crew chat, the dashboard, Studio, Zuan and Densho are not on the phone, and that is a decision rather than a backlog item. They need room to work, and squeezing them onto a 390 pixel column would make both surfaces worse. The phone carries the five things worth doing away from a desk, and nothing else.</p>
+    <p style="max-width: none; margin-bottom: 10px;">The dashboard, Zuan, Densho and most of the workshop tools are not on the phone, and that is a decision rather than a backlog item. They need room to work, and squeezing them onto a 390 pixel column would make both surfaces worse. Two did earn the move in September: crew chat, whose threads are now the same threads on both surfaces, and Studio, which rides the BUILDS tab beside the Kura storehouse. Everything else stays at the desk.</p>
     <p style="max-width: none; margin-bottom: 10px;">Two real gaps sit behind that choice. There is no service worker yet, so a notification tap does not survive the app being closed in the background. And the surface is tuned to iOS, which is what it runs on every day; Android loads it, but gets far less testing.</p>
-    <p style="max-width: none; color: var(--text-muted); font-style: italic;">Every screenshot above is the running app, photographed on a phone-sized viewport, not a mockup.</p>
+    <p style="max-width: none; margin-bottom: 10px;">Voice is moving home too: dictated orders are being routed to a transcriber on the crew's own machine rather than a phone vendor's cloud, and an Android build is planned as a first-class install rather than a tolerated one.</p>
+    <p style="max-width: none; color: var(--text-muted); font-style: italic;">Every screenshot above is the running app, photographed on a phone-sized viewport, not a mockup. They were taken before September's changes to the tab bar, so the bar in the frame is an older one than the list above.</p>
+  </div>
+</section>
+
+<!-- THE ARSENAL (added 2026-09-25): the complete tool inventory, grouped by purpose -->
+<section id="arsenal">
+  <div class="section-tag">The arsenal</div>
+  <h2>Every tool, as of today</h2>
+  <p>The crew is the part with names. Underneath it sits a workshop of tools, each built for one job, most of them usable with no AI in the loop at all. This is the complete inventory as of 25 September 2026, grouped by what each one is for. A prerelease tag means the tool works and is in use, but is not finished, and the interface says so rather than let it read as done.</p>
+  <div class="ars-legend">
+    <span><span class="pill live">Live</span>shipped, in daily use</span>
+    <span><span class="pill pre">Prerelease</span>works, not finished</span>
+    <span><span class="pill build">Building</span>in the forge now</span>
+    <span><span class="pill new">New</span>landed in the last week</span>
+  </div>
+
+  <!-- 1 · COMMAND SURFACES -->
+  <div class="ars-group reveal">
+    <div class="ars-head"><span class="jp">令</span><h3>Command surfaces</h3><span class="ars-n">13 · where orders are given and read</span></div>
+    <div class="ars-grid">
+      <div class="ars-row"><div class="ars-seal">盤</div><div><div class="ars-name">Dashboard<span class="pill live">Live</span></div><div class="ars-desc">The whole crew on one board: who is running, what closed, what the day has cost, and the live task feed underneath.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">読</div><div><div class="ars-name">Reads<span class="pill new">New</span></div><div class="ars-desc">The morning read, now for every role on desktop and phone: the nightly digest, the AI dispatch, the night runner's report.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">話</div><div><div class="ars-name">Crew Chat<span class="pill live">Live</span></div><div class="ars-desc">A plain-language order, routed to the right operative. Threads, attached files and quick side questions are shared between desktop and phone.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">組</div><div><div class="ars-name">Agents<span class="pill live">Live</span></div><div class="ars-desc">Each operative's own page: its work, its proposals, its record.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">鎖</div><div><div class="ars-name">Chains<span class="pill live">Live</span></div><div class="ars-desc">Multi-operative hand-offs as a proof view. A step can be held for a human's approval, and a failed verdict stops the chain.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">夜</div><div><div class="ars-name">Night Ops<span class="pill live">Live</span></div><div class="ars-desc">The schedule board: every job, its cadence, its last run, and whether it spends tokens.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">影</div><div><div class="ars-name">Shadow console<span class="pill live">Live</span></div><div class="ars-desc">The crew's own console: a live transcript of the work, stop and resume, background runs that survive the turn, and a window that detaches.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">待</div><div><div class="ars-name">Queue<span class="pill live">Live</span></div><div class="ars-desc">Orders written down, tagged with a scope, fired as a batch by a person. Nothing launches on its own.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">報</div><div><div class="ars-name">Report to Shadow<span class="pill new">New</span></div><div class="ars-desc">On any error surface in KG, one press files the fault and hands it to triage, rate-limited so a bad afternoon cannot flood it.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">新</div><div><div class="ars-name">What's New<span class="pill live">Live</span></div><div class="ars-desc">A nightly digest of every change made across KG. Collecting it costs nothing; only the short prose read on top uses a model.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">動</div><div><div class="ars-name">Fleet strip<span class="pill live">Live</span></div><div class="ars-desc">Every long background job shows up on the phone, at zero tokens, so nobody has to ask how a batch is doing.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">系</div><div><div class="ars-name">System<span class="pill live">Live</span></div><div class="ars-desc">Services, safe repository moves, roles, environments, users, the light and dim veils, extension packages.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">携</div><div><div class="ars-name">KG Mobile<span class="pill live">Live</span></div><div class="ars-desc">The installable phone shell: command, crew chat, night ops, reads, system and builds.</div></div></div>
+    </div>
+  </div>
+
+  <!-- 2 · BUILDS -->
+  <div class="ars-group reveal">
+    <div class="ars-head"><span class="jp">工</span><h3>BUILDS: the workshop</h3><span class="ars-n">11 · the tools on the BUILDS rail</span></div>
+    <div class="ars-grid">
+      <div class="ars-row"><div class="ars-seal">伝</div><div><div class="ars-name">Densho<span class="pill pre">Prerelease</span></div><div class="ars-desc">The reusable-solution library: 29 solutions with their real code and a live preview, tailored to your build and delivered under the guardrails.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">時</div><div><div class="ars-name">Toki<span class="pill pre">Prerelease</span></div><div class="ars-desc">The ledger of hours: plan the week, read Friday's totals, export the plan to a calendar.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">図</div><div><div class="ars-name">Zuan<span class="pill pre">Prerelease</span></div><div class="ars-desc">The WebCenter workflow block editor: pull a workflow, edit it on the canvas, push it back through the guard, creating any roles, groups and task types it is missing.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">改</div><div><div class="ars-name">Kai<span class="pill new">New</span></div><div class="ars-desc">Converts a legacy task-type page into a modern task dashboard: decide every attribute and restricted set, create what the target lacks, deploy the package.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">蔵</div><div><div class="ars-name">Kura<span class="pill live">Live</span></div><div class="ars-desc">The storehouse: every operative's filed work, a dossier per customer, and the nightly mirror of each WebCenter estate's configuration.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">聴</div><div><div class="ars-name">Chō<span class="pill pre">Prerelease</span></div><div class="ars-desc">Meeting capture from a browser tab or a room microphone, transcribed on the crew's own machine, summarised.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">墨</div><div><div class="ars-name">Sumi<span class="pill pre">Prerelease</span></div><div class="ars-desc">Files each meeting (and forwarded mail) under its customer, and turns the agreed actions into tracked work with real owners.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">審</div><div><div class="ars-name">Shin<span class="pill pre">Prerelease</span></div><div class="ars-desc">The BLUE-to-WebCenter conversion engine: harvest an estate, map every construct through versioned rules, draft the Design Plan.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">証</div><div><div class="ars-name">Akashi<span class="pill new">New</span></div><div class="ars-desc">Qualification testing for validated (pharma) WebCenter builds: derive a protocol, run it read-only with a stamped screenshot per step, open an executed record laid out like a controlled test script.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">積</div><div><div class="ars-name">Mitsumori<span class="pill new">New</span></div><div class="ars-desc">Presales: the customer's ask shaped into scope, effort, risk and a statement of work, in five steps, before anything is built. Rebuilt and renamed from the SOW copilot.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">房</div><div><div class="ars-name">Studio<span class="pill pre">Prerelease</span></div><div class="ars-desc">Projects, sprints and work items, and the orders they become. Per user since 24 September, with the owner seeing all.</div></div></div>
+    </div>
+  </div>
+
+  <!-- 3 · REACH INTO WEBCENTER -->
+  <div class="ars-group reveal">
+    <div class="ars-head"><span class="jp">手</span><h3>Reach into WebCenter</h3><span class="ars-n">10 · the hands on the system</span></div>
+    <div class="ars-grid">
+      <div class="ars-row"><div class="ars-seal code">MCP</div><div><div class="ars-name">WebCenter MCP server<span class="pill live">Live</span></div><div class="ars-desc">215 tools that read, build and administer a WebCenter estate. One environment at a time, chosen per session, and every answer names the environment it came from.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">CLI</div><div><div class="ars-name">Playwright arsenal<span class="pill live">Live</span></div><div class="ars-desc">Command-line tools for every corner of WebCenter admin: dashboards and their scripts, rule engine, workflows, attributes, lists, menus, templates, reports, saved searches, users and groups, companies, projects.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">BLD</div><div><div class="ars-name">Build orchestrator<span class="pill live">Live</span></div><div class="ars-desc">A declarative manifest of WebCenter artifacts applied in dependency order. Plan mode diffs it against any environment read-only; apply is idempotent and re-verifies the whole manifest.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">SYNC</div><div><div class="ars-name">Script mirror and drift guard<span class="pill live">Live</span></div><div class="ars-desc">Every live dashboard and rule script pulled back into git; a push refuses when the server copy has drifted from the repository.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">訳</div><div><div class="ars-name">Yaku<span class="pill live">Live</span></div><div class="ars-desc">Migrates a legacy attribute-category view into a modern dashboard import, offline.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">NC</div><div><div class="ars-name">Named Configuration tools<span class="pill build">Building</span></div><div class="ars-desc">Export, import, and now synthesise a Named Configuration from a design spine, so a whole solution can move as one package.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">PDF</div><div><div class="ars-name">Report tooling<span class="pill live">Live</span></div><div class="ars-desc">Pushes a Jasper report and checks the rendered PDF's geometry: a clipped or overflowing line of text is flagged before a customer sees it.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">TYPE</div><div><div class="ars-name">Attribute type-change kit<span class="pill live">Live</span></div><div class="ars-desc">A read-only preflight that classifies every stored value before an attribute changes type, plus the runbook for the change.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">INSP</div><div><div class="ars-name">Inspector<span class="pill live">Live</span></div><div class="ars-desc">Dumps a page, a dashboard or a Page Builder page into something a person can read and diff.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">透</div><div><div class="ars-name">Tōshi<span class="pill live">Live</span></div><div class="ars-desc">The Chrome extension, version 0.4.90: X-ray any page, walk its reference graph, map a workflow canvas, bundle the support logs.</div></div></div>
+    </div>
+  </div>
+
+  <!-- 4 · AROUND WEBCENTER -->
+  <div class="ars-group reveal">
+    <div class="ars-head"><span class="jp">外</span><h3>Around WebCenter</h3><span class="ars-n">8 · the systems next door</span></div>
+    <div class="ars-grid">
+      <div class="ars-row"><div class="ars-seal code">ADO</div><div><div class="ars-name">Azure DevOps toolbelt<span class="pill live">Live</span></div><div class="ars-desc">Work items, wiki publishing, test plans, a coverage ledger, meeting tasks assigned to real owners, and colleague case intake. Every write passes a fail-closed guard.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">BLUE</div><div><div class="ars-name">BLUE harvest kit<span class="pill live">Live</span></div><div class="ars-desc">65 tools that capture a legacy BLUE estate without writing to it, run in runbook order, for Shin to read.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">AE</div><div><div class="ars-name">Automation Engine<span class="pill live">Live</span></div><div class="ars-desc">Workflow tickets and script tasks, authored by Ren against the Automation Engine skill.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">iPaaS</div><div><div class="ars-name">Workato<span class="pill live">Live</span></div><div class="ars-desc">Recipe authoring against the Workato skill, and a read-only harvester for a workspace's connections, lookups and packages.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">MIRO</div><div><div class="ars-name">Miro<span class="pill live">Live</span></div><div class="ars-desc">Workflow diagrams both ways: draw a WebCenter workflow on a board, or read a board and build it.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">ABS</div><div><div class="ars-name">Knowledge absorb<span class="pill live">Live</span></div><div class="ars-desc">Pipelines that fold the Esko knowledge base, product manuals, release notes, the hotfix catalogue and internal documentation into the skills, each item stamped with its source.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">聴</div><div><div class="ars-name">Chō capture extension<span class="pill live">Live</span></div><div class="ars-desc">A Chrome extension that captures a meeting running in a browser tab, with a speaker split. Version 0.5.0, packaged for the Web Store.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">KIT</div><div><div class="ars-name">Deployment-kit index<span class="pill live">Live</span></div><div class="ars-desc">Esko's deployment kits indexed and matched, so a migration reuses a kit where one fits instead of rebuilding it.</div></div></div>
+    </div>
+  </div>
+
+  <!-- 5 · GUARDS AND QUALITY -->
+  <div class="ars-group reveal">
+    <div class="ars-head"><span class="jp">守</span><h3>Keeping the crew honest</h3><span class="ars-n">9 · guards, tests, gates</span></div>
+    <div class="ars-grid">
+      <div class="ars-row"><div class="ars-seal code">WRITE</div><div><div class="ars-name">Live-data write guard<span class="pill live">Live</span></div><div class="ars-desc">Every write checks the target connection's own tier. Production is a hard never-write, with no override.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">ENV</div><div><div class="ars-name">Environment scope<span class="pill live">Live</span></div><div class="ars-desc">Each colleague is confined to the environments they are granted, across the MCP server, the command line and the DevOps tools.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">ROLE</div><div><div class="ars-name">Roles<span class="pill live">Live</span></div><div class="ars-desc">Owner, builder and operator, each with an editable permission row: what the role sees, and what it may do.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">WALL</div><div><div class="ars-name">Repo wall<span class="pill live">Live</span></div><div class="ars-desc">A non-owner's run writes only inside its own repository.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">RED</div><div><div class="ars-name">Redaction gates<span class="pill live">Live</span></div><div class="ars-desc">Outbound reports are scanned before they leave, and a harvested credential can never be committed as a test fixture.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">守</div><div><div class="ars-name">Mamori<span class="pill build">Building</span></div><div class="ars-desc">A register of every guardrail, each paired with a negative control that proves it still refuses.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">試</div><div><div class="ars-name">Regression catalogue<span class="pill new">New</span></div><div class="ars-desc">Test cases, runs and coverage for KG itself, with a runner behind them. Phase one landed on 24 September.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">SKILL</div><div><div class="ars-name">Skill self-test loop<span class="pill build">Building</span></div><div class="ars-desc">Tests a skill against real tasks, verifies the output, and keeps a change only when the gain is measured.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">HOOK</div><div><div class="ars-name">Commit and release gates<span class="pill live">Live</span></div><div class="ars-desc">Encoding, script-header and AI-tell checks block a bad commit; a release has to load the built bundle before it ships.</div></div></div>
+    </div>
+  </div>
+
+  <!-- 6 · RUNNING THE HOUSE -->
+  <div class="ars-group reveal">
+    <div class="ars-head"><span class="jp">家</span><h3>Running the house</h3><span class="ars-n">7 · the plumbing that keeps it honest about itself</span></div>
+    <div class="ars-grid">
+      <div class="ars-row"><div class="ars-seal code">SEAT</div><div><div class="ars-name">Seats and token budget<span class="pill live">Live</span></div><div class="ars-desc">Several AI accounts, each showing its real sign-in state and when its window resets, under one daily token budget with a reserve.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">MEM</div><div><div class="ars-name">Memory<span class="pill live">Live</span></div><div class="ars-desc">Sessions harvested nightly and folded into the crew's memory; an index guard checks it every morning.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">FIND</div><div><div class="ars-name">Recall and sessions<span class="pill live">Live</span></div><div class="ars-desc">Search any past conversation across crew chat, Shadow threads and filed output.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">LOG</div><div><div class="ars-name">Task and queue helpers<span class="pill live">Live</span></div><div class="ars-desc">Command-line helpers that keep the dashboard in step with work done from a terminal, so the board always reflects reality.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">KOE</div><div><div class="ars-name">Koe<span class="pill build">Building</span></div><div class="ars-desc">A resident voice transcriber on the crew's own machine, so a dictated order never goes to a phone vendor's cloud.</div></div></div>
+      <div class="ars-row"><div class="ars-seal code">64²</div><div><div class="ars-name">Pixoo desk panel<span class="pill build">Building</span></div><div class="ars-desc">A 64 by 64 LED panel on the desk: one orb per operative, lit by whoever is actually running, plus seat budgets, queue depth and sprint counts.</div></div></div>
+      <div class="ars-row"><div class="ars-seal">機</div><div><div class="ars-name">The Machine<span class="pill build">Building</span></div><div class="ars-desc">The second volume of the crew's own manual, organised by subsystem, with a file-and-line citation behind every claim.</div></div></div>
+    </div>
+  </div>
+
+  <!-- 7 · SKILL FAMILIES -->
+  <div class="ars-group reveal">
+    <div class="ars-head"><span class="jp">学</span><h3>The skill library</h3><span class="ars-n">25 · what the crew knows</span></div>
+    <div class="ars-skills">
+      <span><b>WebCenter</b>Build &amp; feasibility</span><span><b>WebCenter</b>Support</span><span><b>WebCenter</b>Dashboard scripts</span><span><b>WebCenter</b>Rule Engine</span><span><b>WebCenter</b>Workflow scripts</span><span><b>WebCenter</b>SDK / JSP</span><span><b>WebCenter</b>List SQL</span><span><b>WebCenter</b>Jasper reports</span><span><b>WebCenter</b>Documentation</span><span><b>WebCenter</b>Validation (pharma)</span>
+      <span><b>Esko</b>WebCenter Pack</span><span><b>Esko</b>Cloud platform</span><span><b>Esko</b>ArtPro+ &amp; DeskPack</span><span><b>Esko</b>Automated Packshots</span><span><b>Esko</b>Comply</span><span><b>Esko</b>Automation Engine</span><span><b>Legacy</b>BLUE</span>
+      <span><b>Integration</b>Workato / iPaaS</span><span><b>Diagrams</b>Miro workflows</span>
+      <span><b>Craft</b>UI / UX</span><span><b>Craft</b>Software design</span><span><b>Craft</b>AI engineering</span><span><b>Craft</b>Executive briefs</span>
+      <span><b>Crew</b>Ei's counsel</span><span><b>Crew</b>Release protocol</span>
+    </div>
+  </div>
+</section>
+
+<!-- SHIPPED SINCE THE LAST UPDATE (added 2026-09-25; read off git log 2026-09-03 to 2026-09-25) -->
+<section id="shipped">
+  <div class="section-tag">Shipped</div>
+  <h2>Since the last update</h2>
+  <p>The previous version of this page was dated 3 September 2026. In the three weeks since, more than 1,750 commits went in by hand (the night runner's own housekeeping not counted). These are the ones worth a line, week by week.</p>
+
+  <div class="ship">
+    <div class="ship-wk reveal">
+      <h3>3 to 9 September</h3>
+      <ul>
+        <li><b>The fleet strip.</b> Every long background job appears on the phone, at zero tokens.</li>
+        <li><b>What's New.</b> A nightly digest of every change made across KG.</li>
+        <li><b>The Shadow console detaches</b> into a window of its own.</li>
+        <li><b>Ryū's night runs a Studio sprint</b> instead of draining a loose queue.</li>
+        <li><b>A declarative WebCenter build orchestrator</b>, with a read-only plan mode that is safe on any environment.</li>
+        <li><b>The Pixoo desk panel</b> sees first light: operative orbs, lit by whoever is running.</li>
+      </ul>
+    </div>
+    <div class="ship-wk reveal">
+      <h3>10 to 16 September</h3>
+      <ul>
+        <li><b>Kura holds several WebCenter estates per customer</b>, each mirrored on its own.</li>
+        <li><b>Chō's capture extension</b> goes from prototype to a packaged 0.5.0, and a room-microphone source joins it.</li>
+        <li><b>The WebCenter MCP server picks its environment per session</b>, and asks when there is a choice rather than guess.</li>
+        <li><b>Densho pre-fills a build's context</b> from the live estate or its mirror, dry-run proven on a second build.</li>
+        <li><b>Toki exports</b> the week's plan as a calendar file.</li>
+      </ul>
+    </div>
+    <div class="ship-wk reveal">
+      <h3>17 to 21 September</h3>
+      <ul>
+        <li><b>Kura's one-click harvest</b>, watched by a supervisor that spots a stalled scrape and resumes it.</li>
+        <li><b>Shin's first document:</b> the BLUE-to-WebCenter mapping, as one HTML page and one CSV.</li>
+        <li><b>Roles become an editable table</b>, and a builder role joins owner and operator.</li>
+        <li><b>Background work survives the end of a turn</b> on the Shadow console and in crew chat.</li>
+        <li><b>Chains gain a human approval gate.</b></li>
+        <li><b>The Mamori guardrail register</b> lands, with its first negative controls.</li>
+      </ul>
+    </div>
+    <div class="ship-wk reveal">
+      <h3>22 to 25 September</h3>
+      <ul>
+        <li><b>Shin writes the Design Plan as a real Word document</b> on Esko's own template, and proposes the build plan straight into Studio.</li>
+        <li><b>Named Configurations can be imported</b>, and synthesised from a design spine.</li>
+        <li><b>Crew chat reaches the phone</b>, with a files tray on both surfaces.</li>
+        <li><b>Kai, Akashi and Mitsumori</b> take their places on the BUILDS rail.</li>
+        <li><b>Report to Shadow</b> on every error surface in KG.</li>
+        <li><b>Studio goes per user</b>, and a regression catalogue arrives for KG itself.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S BEING WORKED ON NOW (added 2026-09-25; read off the plan registry that day) -->
+<section id="now">
+  <div class="section-tag">In the forge</div>
+  <h2>What's being worked on now</h2>
+  <p>Read off the crew's own plan registry on 25 September 2026: the plans marked as executing, in plain words, and the ones filed next.</p>
+
+  <div class="now-grid reveal">
+    <div class="now-card"><h4>Multi-user, phase two<span class="pill build">Executing</span></h4><p>The roles past owner, builder and operator, a proper user console, and per-user revoke, so the crew can be shared without being loosened.</p></div>
+    <div class="now-card"><h4><span class="jp">審</span> Shin, the conversion verdict<span class="pill build">Executing</span></h4><p>Making the Design Plan answer the first question a migration asks (how much of this estate survives in WebCenter) up front, with the build inventory counted once per archetype.</p></div>
+    <div class="now-card"><h4><span class="jp">蔵</span> Kura, capture stamps<span class="pill build">Executing</span></h4><p>Every harvested bucket records its source, tool and time, so a customer's dossier can say for itself which capture has gone stale.</p></div>
+    <div class="now-card"><h4>Configuration coverage<span class="pill build">Executing</span></h4><p>Widening the mirror from the global kinds to the per-template bindings, where a solution's actual design lives.</p></div>
+    <div class="now-card"><h4><span class="jp">図</span> Zuan, the block craft pass<span class="pill build">Executing</span></h4><p>Every block on the canvas reviewed in batches; after that, provisioning what a drawn workflow needs before it is pushed.</p></div>
+    <div class="now-card"><h4><span class="jp">守</span> Mamori, on a schedule<span class="pill build">Executing</span></h4><p>Putting the negative-control probes on the night board, because a probe that exists is not a probe that runs.</p></div>
+    <div class="now-card"><h4>Voice orders<span class="pill build">Executing</span></h4><p>Wiring the phone's recorder to the crew's own transcriber, which is already running on the server side.</p></div>
+    <div class="now-card"><h4>The skill self-test loop<span class="pill build">Executing</span></h4><p>The remaining stages of test, verify, improve, so a skill gets better only when a measurement says it did.</p></div>
+    <div class="now-card"><h4>Carving the front end<span class="pill build">Executing</span></h4><p>Lifting pages out of one very large interface file, leaf first, re-measuring each one before calling it a leaf.</p></div>
+    <div class="now-card"><h4>Pixoo, live<span class="pill build">Executing</span></h4><p>First light is done; next is the live turn state of every running session on the glass.</p></div>
+  </div>
+
+  <div class="now-label">// Filed next</div>
+  <div class="now-grid reveal" style="margin-top: 12px;">
+    <div class="now-card"><h4>A KG dev server<span class="pill plan">Planned</span></h4><p>A second, fully isolated stack where new tooling is built and exercised against realistic data, reaching the live system only through a reviewed promote step. The plan was filed on 25 September.</p></div>
+    <div class="now-card"><h4>KG Mobile on Android<span class="pill plan">Planned</span></h4><p>A first-class installed app on Android, without regressing the iPhone it was built on. Measured on the real device before any code.</p></div>
+    <div class="now-card"><h4><span class="jp">冴</span> Sae, phase zero<span class="pill plan">Planned</span></h4><p>A provenance stamp on every piece of the corpus, the groundwork any future training run will need.</p></div>
+    <div class="now-card"><h4>Studio to calendar<span class="pill plan">Planned</span></h4><p>A sprint's planned work landing in the calendar, where the week is actually organised.</p></div>
   </div>
 </section>
 
@@ -2127,7 +2543,7 @@
   <div class="section-tag">What's next</div>
   <h2>The release plan</h2>
   <p>Kage-gumi isn't finished. It's a living system that grows deliberately, not all at once. The plan below is the <strong style="color: var(--text);">major blocks, built in sequence</strong>, each one standing on the ones before it. Read top to bottom and you see how the crew grew from a dashboard into a platform, and where it's headed next.</p>
-  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-09-03</div>
+  <div style="font-family: monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-top: -8px; margin-bottom: 8px;">Last updated: 2026-09-25</div>
 
   <div style="display: flex; flex-direction: column; gap: 2px; margin-top: 40px; max-width: 760px;">
 
@@ -2172,7 +2588,7 @@
       </div>
       <div>
         <div style="font-size:15px; font-weight:600; color:var(--text); margin-bottom:6px;">Additional Agents</div>
-        <div style="font-family:monospace; font-size:10px; letter-spacing:0.14em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">Chō · Sumi · Ei</div><div style="font-size:13px; font-weight:300; color:var(--text-muted); line-height:1.58; max-width:none;">The crew past WebCenter. Chō sits in a call and transcribes it on-device, nothing leaving the machine; Sumi files the result into a durable per-customer record that feeds the next build and fires action items into Azure DevOps; Ei is the judgment layer, the go / no-go before the crew commits. Ear, ink, and counsel.</div>
+        <div style="font-family:monospace; font-size:10px; letter-spacing:0.14em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">Chō · Sumi · Ei</div><div style="font-size:13px; font-weight:300; color:var(--text-muted); line-height:1.58; max-width:none;">The crew past WebCenter. Chō sits in a call and transcribes it on the crew's own machine, the audio never leaving it; Sumi files the result into a durable per-customer record that feeds the next build and fires action items into Azure DevOps; Ei is the judgment layer, the go / no-go before the crew commits. Ear, ink, and counsel.</div>
       </div>
     </div>
 
@@ -2183,7 +2599,7 @@
       </div>
       <div>
         <div style="font-size:15px; font-weight:600; color:var(--text); margin-bottom:6px;">KG Mobile</div>
-        <div style="font-family:monospace; font-size:10px; letter-spacing:0.14em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">the crew in your pocket</div><div style="font-size:13px; font-weight:300; color:var(--text-muted); line-height:1.58; max-width:none;">A second surface built for the phone, not a shrunken desktop: its own five-screen shell, installed to the home screen, reaching the same box over an authenticated connection. Give the crew an order by voice from a corridor, drop one from any screen with the context attached, queue a batch for later, and watch the night runner from bed. The place most orders are actually given.</div>
+        <div style="font-family:monospace; font-size:10px; letter-spacing:0.14em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">the crew in your pocket</div><div style="font-size:13px; font-weight:300; color:var(--text-muted); line-height:1.58; max-width:none;">A second surface built for the phone, not a shrunken desktop: its own six-tab shell, installed to the home screen, reaching the same box over an authenticated connection. Give the crew an order by voice from a corridor, drop one from any screen with the context attached, queue a batch for later, carry on a crew-chat thread started at the desk, work a Studio sprint, and watch the night runner from bed. The place most orders are actually given.</div>
         <a href="#mobile" style="display:inline-block; margin-top:12px; font-family:monospace; font-size:11px; letter-spacing:0.06em; color:var(--kgm); text-decoration:none; border-bottom:1px solid var(--kgm-dim);">See the KG Mobile section above →</a>
       </div>
     </div>
@@ -2195,8 +2611,54 @@
       </div>
       <div>
         <div style="font-size:15px; font-weight:600; color:var(--text); margin-bottom:6px;">Densho</div>
-        <div style="font-family:monospace; font-size:10px; letter-spacing:0.14em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">the scroll</div><div style="font-size:13px; font-weight:300; color:var(--text-muted); line-height:1.58; max-width:none;">The crew's own scroll of WebCenter craft. Thirteen flagship solutions, each carrying its real deployed code, design notes and a live rendered preview: browse an entry, tailor it, and deliver it into a customer's WebCenter under the live-data guardrails. The scroll Sae is trained on.</div>
+        <div style="font-family:monospace; font-size:10px; letter-spacing:0.14em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">the scroll</div><div style="font-size:13px; font-weight:300; color:var(--text-muted); line-height:1.58; max-width:none;">The crew's own scroll of WebCenter craft. Twenty-nine solutions, each carrying its real deployed code, design notes and a live rendered preview: browse an entry, tailor it, and deliver it into a customer's WebCenter under the live-data guardrails. The scroll Sae is trained on.</div>
         <a href="#densho" style="display:inline-block; margin-top:12px; font-family:monospace; font-size:11px; letter-spacing:0.06em; color:var(--densho); text-decoration:none; border-bottom:1px solid var(--densho-dim);">See the Densho section below →</a>
+      </div>
+    </div>
+
+    <div class="reveal" style="background: var(--bg-card); border: 1px solid rgba(201,165,94,0.3); padding: 24px 28px; display: grid; grid-template-columns: 96px 1fr; gap: 24px; align-items: start; margin-bottom: -1px;">
+      <div style="text-align:center;">
+        <div style="font-family:'Noto Serif JP',serif; font-size:38px; font-weight:700; color:#c9a55e; line-height:1;">蔵</div>
+        <div style="font-size:8px; font-family:monospace; color:var(--green); letter-spacing:0.14em; margin-top:8px; text-transform:uppercase;">Shipped</div>
+      </div>
+      <div>
+        <div style="font-size:15px; font-weight:600; color:var(--text); margin-bottom:6px;">Kura</div>
+        <div style="font-family:monospace; font-size:10px; letter-spacing:0.14em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">the storehouse</div><div style="font-size:13px; font-weight:300; color:var(--text-muted); line-height:1.58; max-width:none;">Was a plan on the last version of this page; now it runs every night. Each WebCenter estate the crew works on has its configuration mirrored into git (28 kinds, from task types to custom form extensions), one customer can hold several estates, and a supervisor watches every harvest and resumes a stalled one. Every operative's filed work sits on the same shelves.</div>
+        <a href="#bench" style="display:inline-block; margin-top:12px; font-family:monospace; font-size:11px; letter-spacing:0.06em; color:#c9a55e; text-decoration:none; border-bottom:1px solid rgba(201,165,94,0.35);">See Kura and Shin below →</a>
+      </div>
+    </div>
+
+    <div class="reveal" style="background: var(--bg-card); border: 1px solid rgba(111,147,196,0.3); padding: 24px 28px; display: grid; grid-template-columns: 96px 1fr; gap: 24px; align-items: start; margin-bottom: -1px;">
+      <div style="text-align:center;">
+        <div style="font-family:'Noto Serif JP',serif; font-size:38px; font-weight:700; color:#6f93c4; line-height:1;">審</div>
+        <div style="font-size:8px; font-family:monospace; color:var(--amber); letter-spacing:0.14em; margin-top:8px; text-transform:uppercase;">Building</div>
+      </div>
+      <div>
+        <div style="font-size:15px; font-weight:600; color:var(--text); margin-bottom:6px;">Shin</div>
+        <div style="font-family:monospace; font-size:10px; letter-spacing:0.14em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">the conversion engine</div><div style="font-size:13px; font-weight:300; color:var(--text-muted); line-height:1.58; max-width:none;">The flagship build. A harvested BLUE estate goes in; a BLUE-to-WebCenter mapping, a Design Plan in Word on Esko's own template, and a proposed build plan in Studio come out. The mapping runs on 195 versioned crosswalk rules, and a construct no rule covers lands as an open decision, never a guess. Closing the conversion verdict is the work now.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="background: var(--bg-card); border: 1px solid rgba(47,143,131,0.32); padding: 24px 28px; display: grid; grid-template-columns: 96px 1fr; gap: 24px; align-items: start; margin-bottom: -1px;">
+      <div style="text-align:center;">
+        <div style="font-family:'Noto Serif JP',serif; font-size:20px; font-weight:700; color:#2f8f83; line-height:1;">証改積時</div>
+        <div style="font-size:8px; font-family:monospace; color:var(--amber); letter-spacing:0.14em; margin-top:8px; text-transform:uppercase;">Prerelease</div>
+      </div>
+      <div>
+        <div style="font-size:15px; font-weight:600; color:var(--text); margin-bottom:6px;">The new bench</div>
+        <div style="font-family:monospace; font-size:10px; letter-spacing:0.14em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">Akashi · Kai · Mitsumori · Toki</div><div style="font-size:13px; font-weight:300; color:var(--text-muted); line-height:1.58; max-width:none;">Four tools that joined the BUILDS rail this month, each working and each honestly marked unfinished. Akashi produces qualification evidence for validated pharma builds; Kai converts legacy task-type pages into modern task dashboards; Mitsumori turns a customer's ask into scope, effort and a statement of work before anything is built; Toki keeps the ledger of hours.</div>
+        <a href="#arsenal" style="display:inline-block; margin-top:12px; font-family:monospace; font-size:11px; letter-spacing:0.06em; color:#2f8f83; text-decoration:none; border-bottom:1px solid rgba(47,143,131,0.35);">See the full arsenal above →</a>
+      </div>
+    </div>
+
+    <div class="reveal" style="background: var(--bg-card); border: 1px solid var(--border); padding: 24px 28px; display: grid; grid-template-columns: 96px 1fr; gap: 24px; align-items: start; margin-bottom: -1px;">
+      <div style="text-align:center;">
+        <div style="font-family:monospace; font-size:18px; font-weight:600; letter-spacing:0.08em; color:#5b8def; line-height:1; padding-top:6px;">TEAM</div>
+        <div style="font-size:8px; font-family:monospace; color:var(--amber); letter-spacing:0.14em; margin-top:8px; text-transform:uppercase;">In progress</div>
+      </div>
+      <div>
+        <div style="font-size:15px; font-weight:600; color:var(--text); margin-bottom:6px;">Multi-user</div>
+        <div style="font-family:monospace; font-size:10px; letter-spacing:0.14em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">from one person to a team</div><div style="font-size:13px; font-weight:300; color:var(--text-muted); line-height:1.58; max-width:none;">Colleagues already sign in with a role of their own (owner, builder or operator), each confined to the environments they are granted, with an editable permission table behind it. Since 24 September Studio projects, sprints and items are per user. The remaining roles, a user console and per-user revoke are the phase being built now.</div>
       </div>
     </div>
 
@@ -2207,7 +2669,7 @@
       </div>
       <div>
         <div style="font-size:15px; font-weight:600; color:var(--text); margin-bottom:6px;">Zuan</div>
-        <div style="font-family:monospace; font-size:10px; letter-spacing:0.14em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">the workflow editor</div><div style="font-size:13px; font-weight:300; color:var(--text-muted); line-height:1.58; max-width:none;">A WebCenter-native workflow editor built inside KG on a block canvas: drag blocks loaded with real config, not dumb shapes. The north star: design a workflow live in a customer workshop, then push it straight to WebCenter without redrawing it. Read-only rendering runs today; editing and round-trip export are being built.</div>
+        <div style="font-family:monospace; font-size:10px; letter-spacing:0.14em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">the workflow editor</div><div style="font-size:13px; font-weight:300; color:var(--text-muted); line-height:1.58; max-width:none;">A WebCenter-native workflow editor built inside KG on a block canvas: drag blocks loaded with real config, not dumb shapes. The north star: design a workflow live in a customer workshop, then push it straight to WebCenter without redrawing it. Rendering, editing, round-trip and a guarded push are built and proven against a development estate; a workflow can be pulled in, re-targeted and deployed, creating the roles and groups it is missing. The block-by-block craft pass is under way.</div>
       </div>
     </div>
 
@@ -2218,8 +2680,30 @@
       </div>
       <div>
         <div style="font-size:15px; font-weight:600; color:var(--text); margin-bottom:6px;">Kage-gumi Studio</div>
-        <div style="font-family:monospace; font-size:10px; letter-spacing:0.14em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">design to deploy</div><div style="font-size:13px; font-weight:300; color:var(--text-muted); line-height:1.58; max-width:none;">A separate release track that turns KG into a WebCenter build platform: design a project as work items, let Ren execute each one, Ryū runs the queue overnight, and colleagues join with their own Claude tokens. The design-to-deploy loop, fully automated.</div>
+        <div style="font-family:monospace; font-size:10px; letter-spacing:0.14em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">design to deploy</div><div style="font-size:13px; font-weight:300; color:var(--text-muted); line-height:1.58; max-width:none;">A separate release track that turns KG into a WebCenter build platform: design a project as work items, let Ren execute each one, and let Ryū run the sprint overnight. The sprint-to-queue cycle, the overnight sprint and per-user projects are shipped; design mode and colleagues on their own tokens are what is left of the design-to-deploy loop.</div>
         <a href="#studio" style="display:inline-block; margin-top:12px; font-family:monospace; font-size:11px; letter-spacing:0.06em; color:var(--crimson); text-decoration:none; border-bottom:1px solid rgba(224,100,74,0.35);">See the Studio section below →</a>
+      </div>
+    </div>
+
+    <div class="reveal" style="background: var(--bg-card); border: 1px solid var(--border); padding: 24px 28px; display: grid; grid-template-columns: 96px 1fr; gap: 24px; align-items: start; margin-bottom: -1px;">
+      <div style="text-align:center;">
+        <div style="font-family:monospace; font-size:20px; font-weight:600; letter-spacing:0.08em; color:var(--text-muted); line-height:1; padding-top:6px;">DEV</div>
+        <div style="font-size:8px; font-family:monospace; color:var(--text-dim); letter-spacing:0.14em; margin-top:8px; text-transform:uppercase;">Planned</div>
+      </div>
+      <div>
+        <div style="font-size:15px; font-weight:600; color:var(--text); margin-bottom:6px;">KG dev server</div>
+        <div style="font-family:monospace; font-size:10px; letter-spacing:0.14em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">build it beside, not inside</div><div style="font-size:13px; font-weight:300; color:var(--text-muted); line-height:1.58; max-width:none;">A second, fully isolated copy of KG where new tooling is built and exercised against realistic data, unable to touch the live system, customer systems or the phone. Work reaches the live crew only through an explicit, reviewed promote step. Filed as a plan on 25 September; nothing is built yet.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="background: var(--bg-card); border: 1px dashed var(--border); padding: 24px 28px; display: grid; grid-template-columns: 96px 1fr; gap: 24px; align-items: start; margin-bottom: -1px;">
+      <div style="text-align:center;">
+        <div style="font-family:'Noto Serif JP',serif; font-size:26px; font-weight:700; color:var(--text-dim); line-height:1;">大地</div>
+        <div style="font-size:8px; font-family:monospace; color:var(--text-dim); letter-spacing:0.14em; margin-top:8px; text-transform:uppercase;">Parked</div>
+      </div>
+      <div>
+        <div style="font-size:15px; font-weight:600; color:var(--text-muted); margin-bottom:6px;">Daichi</div>
+        <div style="font-family:monospace; font-size:10px; letter-spacing:0.14em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">the Automation Engine operative</div><div style="font-size:13px; font-weight:300; color:var(--text-dim); line-height:1.58; max-width:none;">An operative for Automation Engine work, taken off the live crew and parked on the roadmap until that work is prioritised. The Automation Engine skill keeps covering it in the meantime.</div>
       </div>
     </div>
 
@@ -2282,7 +2766,7 @@
   <div class="section-tag">New direction</div>
   <h2>Kage-gumi Studio</h2>
   <p>Kage-gumi started as a personal AI assistant for daily WebCenter work. Studio is what it becomes next: a <strong style="color: var(--text);">WebCenter build platform</strong>, where entire projects are designed as work items, operatives execute each one, and the result is deployed into WebCenter and committed to the codebase in the same operation.</p>
-  <p style="margin-top: -4px;">Think Azure DevOps. Without the overhead. Your backlog is executed by AI, your build pipeline is Ren, and your overnight CI is Ryū.</p>
+  <p style="margin-top: -4px;">Think Azure DevOps. Without the overhead. Your backlog is executed by AI, your build pipeline is Ren, and your overnight CI is Ryū. And work no longer has to be typed in by hand: a migration survey from Shin can propose a customer's whole build plan straight into Studio, on a two-press confirm.</p>
 
   <!-- STUDIO: LIVE COLLEAGUE CASE INTAKE -->
   <div class="reveal" style="margin-top: 40px; max-width: 760px; border: 1px solid rgba(90,168,133,0.35); background: rgba(90,168,133,0.04); padding: 28px 32px;">
@@ -2338,11 +2822,11 @@
     </div>
     <div class="reveal" style="background: var(--bg-card); border: 1px solid var(--border); padding: 20px 22px;">
       <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 8px;">Overnight builds</div>
-      <div style="font-size: 13px; color: var(--text-muted); line-height: 1.55;">Load up the queue before you leave. Ryū runs each item in order overnight, respects the token budget, and surfaces the results in the morning digest. Wake up to a built system.</div>
+      <div style="font-size: 13px; color: var(--text-muted); line-height: 1.55;">Pick tonight's sprint before you leave and press launch. Ryū works the items in order overnight, respects the token budget, and a sprint closes itself when its last item finishes. Running since early September.</div>
     </div>
     <div class="reveal" style="background: var(--bg-card); border: 1px solid var(--border); padding: 20px 22px;">
       <div style="font-family: monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--crimson); text-transform: uppercase; margin-bottom: 8px;">Colleague access</div>
-      <div style="font-size: 13px; color: var(--text-muted); line-height: 1.55;">Colleagues can participate, using the shared token pool or connecting their own Claude API key. Per-user caps, work item assignment, activity feed. The system scales beyond one person.</div>
+      <div style="font-size: 13px; color: var(--text-muted); line-height: 1.55;">Colleagues already sign in with a role of their own, confined to the environments they are granted, and since 24 September their Studio projects, sprints and items are their own. Bringing their own AI seat and per-user caps are the part still ahead. The system scales beyond one person.</div>
     </div>
   </div>
 
@@ -2387,11 +2871,11 @@
       <div style="display: grid; grid-template-columns: 90px 1fr; border: 1px solid rgba(224,100,74,0.2); margin-bottom: -1px;">
         <div style="background: var(--bg-deep); padding: 14px 12px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(224,100,74,0.2); gap: 3px;">
           <span style="font-family: monospace; font-size: 12px; color: var(--crimson);">v0.2</span>
-          <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">planned</span>
+          <span style="font-size: 9px; font-family: monospace; color: var(--amber); letter-spacing: 0.1em; text-transform: uppercase;">in build</span>
         </div>
         <div style="background: var(--bg-card); padding: 14px 20px;">
           <span style="font-size: 13px; font-weight: 500; color: var(--text);">Design Mode</span>
-          <span style="font-size: 12px; color: var(--text-muted); margin-left: 10px;">Ren helps break down and plan each item before execution</span>
+          <span style="font-size: 12px; color: var(--text-muted); margin-left: 10px;">Ren helps break down and plan each item before execution; an AI-drafted scope now waits for an explicit accept</span>
         </div>
       </div>
 
@@ -2406,25 +2890,25 @@
         </div>
       </div>
 
-      <div style="display: grid; grid-template-columns: 90px 1fr; border: 1px solid rgba(224,100,74,0.2); margin-bottom: -1px;">
-        <div style="background: var(--bg-deep); padding: 14px 12px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(224,100,74,0.2); gap: 3px;">
-          <span style="font-family: monospace; font-size: 12px; color: var(--crimson);">v0.4</span>
-          <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">planned</span>
+      <div style="display: grid; grid-template-columns: 90px 1fr; border: 1px solid rgba(90,168,133,0.3); margin-bottom: -1px;">
+        <div style="background: var(--bg-deep); padding: 14px 12px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(90,168,133,0.3); gap: 3px;">
+          <span style="font-family: monospace; font-size: 12px; color: var(--green);">v0.4</span>
+          <span style="font-size: 9px; font-family: monospace; color: var(--green); letter-spacing: 0.1em; text-transform: uppercase;">shipped</span>
         </div>
         <div style="background: var(--bg-card); padding: 14px 20px;">
-          <span style="font-size: 13px; font-weight: 500; color: var(--text);">Ryū Overnight Build</span>
-          <span style="font-size: 12px; color: var(--text-muted); margin-left: 10px;">Batch queue execution while you sleep, morning digest integration</span>
+          <span style="font-size: 13px; font-weight: 500; color: var(--text);">Ryū Overnight Sprint</span>
+          <span style="font-size: 12px; color: var(--text-muted); margin-left: 10px;">The nightly run works a Studio sprint instead of a loose queue, inside the token budget (since 6 September)</span>
         </div>
       </div>
 
       <div style="display: grid; grid-template-columns: 90px 1fr; border: 1px solid rgba(224,100,74,0.15); margin-bottom: -1px;">
         <div style="background: var(--bg-deep); padding: 14px 12px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid rgba(224,100,74,0.15); gap: 3px;">
-          <span style="font-family: monospace; font-size: 12px; color: rgba(224,100,74,0.5);">v0.5</span>
-          <span style="font-size: 9px; font-family: monospace; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase;">horizon</span>
+          <span style="font-family: monospace; font-size: 12px; color: var(--crimson);">v0.5</span>
+          <span style="font-size: 9px; font-family: monospace; color: var(--amber); letter-spacing: 0.1em; text-transform: uppercase;">in build</span>
         </div>
         <div style="background: var(--bg-card); padding: 14px 20px;">
-          <span style="font-size: 13px; font-weight: 500; color: var(--text-muted);">Colleague Access</span>
-          <span style="font-size: 12px; color: var(--text-dim); margin-left: 10px;">Shared token pool or own API key, per-user caps, activity feed</span>
+          <span style="font-size: 13px; font-weight: 500; color: var(--text);">Colleague Access</span>
+          <span style="font-size: 12px; color: var(--text-muted); margin-left: 10px;">Per-user projects, sprints and items shipped 24 September; own AI seat and per-user caps still ahead</span>
         </div>
       </div>
 
@@ -2457,7 +2941,7 @@
   <div class="section-tag">Built · live now</div>
   <h2>Densho</h2>
   <p>A <em>densho</em> is the scroll a school keeps to record its techniques and pass them to the next generation. <strong style="color: var(--text);">This one is built and running.</strong> Densho is the crew's own library of reusable WebCenter solutions: each entry carrying the <strong style="color: var(--text);">real deployed code</strong>, the design notes, the acceptance criteria, and a live rendered preview of the widget it paints. Twenty-nine solutions are in the scroll today.</p>
-  <p style="margin-top: -4px;">Densho is built to <strong style="color: var(--text);">tailor an entry to <em>your</em> build and deliver it straight into a customer's WebCenter</strong>: a frozen original regenerated for your customer, your statuses, your attributes, then pushed in under the crew's live-data guardrails. The catalog is designed to become a generator, not just a shelf. (The tailor-and-deliver path is built; proving it end-to-end on a second build is the next step.)</p>
+  <p style="margin-top: -4px;">Densho is built to <strong style="color: var(--text);">tailor an entry to <em>your</em> build and deliver it straight into a customer's WebCenter</strong>: a frozen original regenerated for your customer, your statuses, your attributes, then pushed in under the crew's live-data guardrails. The catalog is designed to become a generator, not just a shelf. (The tailor-and-deliver path is built, and in September it was dry-run against a second build, with that build's context pre-filled from its live estate or its mirror. The dry run is the proof claimed here; a live delivery on that second build is not.)</p>
 
   <!-- THE ENGINE LOOP - browse · adapt · deliver -->
   <div class="reveal" style="margin-top: 48px; display: grid; grid-template-columns: 1fr 32px 1fr 32px 1fr; align-items: center; gap: 0; max-width: 760px;">
@@ -2510,9 +2994,9 @@
 
 <!-- KURA + SHIN -->
 <section id="bench">
-  <div class="section-tag">On the bench</div>
-  <h2>Two more in the BUILDS group</h2>
-  <p>Densho is the one that is finished. Two others sit beside it in the same group, at very different stages, and both are named for what they are meant to do rather than for what they do today. No screenshots for either: one has no interface yet, and the other only ever renders somebody's live estate.</p>
+  <div class="section-tag">BUILDS in depth</div>
+  <h2>The storehouse and the examiner</h2>
+  <p>Two of the BUILDS tools carry more weight than a row in the arsenal can hold. On the last version of this page one was a plan and the other half built; both have moved a long way since. No screenshots for either, on purpose: every screen of each one is somebody's live estate.</p>
 
   <div class="bench-grid">
     <div class="bench reveal" data-glyph="蔵" style="--bench-accent: #c9a55e;">
@@ -2523,15 +3007,16 @@
           <div class="bench-role">The storehouse</div>
         </div>
       </div>
-      <span class="bench-state" style="color:#c9a55e; border-color:color-mix(in srgb,#c9a55e 45%,transparent); background:color-mix(in srgb,#c9a55e 10%,transparent);">Planned · not built</span>
+      <span class="bench-state" style="color:#c9a55e; border-color:color-mix(in srgb,#c9a55e 45%,transparent); background:color-mix(in srgb,#c9a55e 10%,transparent);">Built · runs every night</span>
       <div class="bench-body">
-        <p>A <em>kura</em> is the fireproof storehouse a Japanese estate keeps its valuables in. Kura is meant to be the <strong>configuration mirror</strong>: a versioned copy of what a WebCenter instance is actually configured to be, held outside that instance.</p>
-        <p>The problem it exists for is a boring one that costs real days. Configuration lives only in the server that runs it. Nobody can answer "what changed, and when" without opening two environments side by side and reading them, and by then the change is already live.</p>
+        <p>A <em>kura</em> is the fireproof storehouse a Japanese estate keeps its valuables in. Kura is the <strong>configuration mirror</strong>: a versioned copy of what a WebCenter instance is actually configured to be, held outside that instance, plus the shelves where every operative files its work.</p>
+        <p>The problem it exists for is a boring one that costs real days. Configuration lives only in the server that runs it. Nobody could answer "what changed, and when" without opening two environments side by side and reading them, and by then the change was already live. Now the answer is in git.</p>
       </div>
       <ul class="bench-list">
-        <li><b>What it holds</b>: the config surface Ren already authors against: attribute categories and lists, task types, project statuses, templates, workflows.</li>
+        <li><b>What it holds</b>: 28 kinds of configuration per estate, from task types, attribute categories, lists and workflows to report definitions, Page Builder pages, rule scripts and custom form extensions.</li>
         <li><b>Why a mirror</b>: a mirror makes drift a <b>diff</b>. Two captures of the same estate, or one estate against another, and the answer is a list rather than an afternoon.</li>
-        <li><b>Where it stands</b>: the plan is written and readable inside KG. Nothing is built. The page in the rail is honest about that: it renders the plan and nothing else.</li>
+        <li><b>How it runs</b>: every estate the crew works on is mirrored on its own nightly slot. One customer can hold several estates, a production estate is never picked automatically, and a supervisor watches each harvest, spots a stalled one and resumes it.</li>
+        <li><b>Where it goes next</b>: capture stamps on every harvested source, so a customer's dossier can say for itself which capture has gone stale.</li>
       </ul>
     </div>
 
@@ -2543,7 +3028,7 @@
           <div class="bench-role">The conversion report</div>
         </div>
       </div>
-      <span class="bench-state" style="color:#6f93c4; border-color:color-mix(in srgb,#6f93c4 45%,transparent); background:color-mix(in srgb,#6f93c4 10%,transparent);">Building · phase 4 of 5 shipped</span>
+      <span class="bench-state" style="color:#6f93c4; border-color:color-mix(in srgb,#6f93c4 45%,transparent); background:color-mix(in srgb,#6f93c4 10%,transparent);">Building · the flagship</span>
       <div class="bench-body">
         <p><em>Shin</em> is to examine, to adjudicate. Shin reads a captured BLUE estate and renders the <strong>conversion report</strong> for moving it onto WebCenter: what is there, what it maps to, and what nothing maps to.</p>
         <p>The last point is the whole design. A migration survey that quietly invents a target for every construct it does not recognise is worse than no survey, because the gap is only discovered after the quote is signed. Shin surfaces the unmatched construct and asks for a decision.</p>
@@ -2553,6 +3038,8 @@
         <li><b>A readiness gate</b>: per system, re-checked server-side, and every row has to read READY before a run will arm. A scrape of a different estate can never arm the control.</li>
         <li><b>A crosswalk, not a guess</b>: each legacy construct resolves through an explicit rule to its WebCenter realisation. No rule, no answer: it lands on the report as an open decision.</li>
         <li><b>It hands off</b>: a finding leaves as a queued order for the crew or as an item on a Studio project, so the survey ends in scheduled work rather than in a document.</li>
+        <li><b>What it produces today</b>: the BLUE-to-WebCenter mapping (one HTML page and one CSV), a Design Plan written as a real Word document on Esko's own template, and a proposed build plan created in Studio on a two-press confirm. Where one of Esko's deployment kits already covers a construct, the kit's name is proposed instead of a rebuild.</li>
+        <li><b>By the numbers</b>: 195 versioned crosswalk rules, fed by 65 harvest tools. Customer-facing output passes an outbound redaction gate before it leaves.</li>
       </ul>
     </div>
   </div>
