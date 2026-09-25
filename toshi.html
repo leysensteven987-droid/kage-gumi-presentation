@@ -166,11 +166,12 @@
      (was visible) is what lets the watermark run off the edge cleanly instead of widening
      the page. */
   .hero{overflow:hidden;padding-top:56px;padding-bottom:8px}
-  /* The mark, twice, and it is the SAME drawn eye as the title bar and the toolbar icon in both
+  /* The mark, once here (plus the title bar), and it is the SAME drawn eye as the title bar and the toolbar icon in both
      places. kg-design allows exactly this: the mark "bare (strokes only, no ground) on splashes
      and as a watermark". It is a drawing, not a glyph, so it costs no font and cannot fall back;
      both copies are held under 1 by `opacity` rather than by a blur, so nothing here glows.
-     · .hero-glyph sits in Tōge's .kanji slot: solid, in the flow, directly above the headline.
+     · The in-flow .hero-glyph above the headline was removed 25SEP26 (Steven: "banner menu and
+       watermark is enough"); the headline now opens the hero.
      · .hero-brush sits in Tōge's .brush slot: big, ~.09, bled off the top-right corner.
      ⚠ .hero-brush must NOT reach into the copy column. .hero-copy tops out at 640px inside a
      ~1036px content box, and the brush is capped at 320px, so on a wide screen they never share
@@ -182,7 +183,6 @@
     width:clamp(180px, 24vw, 320px);height:auto;opacity:.09;
     pointer-events:none;user-select:none;z-index:0;
   }
-  .hero-glyph{display:block;width:62px;height:62px}
   .hero-copy{max-width:640px;position:relative;z-index:2}
   .hero h1{font-family:var(--sans);font-weight:600;font-size:42px;line-height:1.2;letter-spacing:.01em;color:var(--text);margin:22px 0 10px}
   .hero h1 em{font-style:normal;color:var(--toshi);font-weight:400}
@@ -502,7 +502,6 @@
     footer{padding-left:20px;padding-right:20px}
 
     .hero{padding-top:36px}
-    .hero-glyph{width:50px;height:50px}
     /* pinned to the corner and dropped to .06: on a phone the copy column IS the full width,
        so the watermark and the headline share space by necessity. At this weight it reads as
        ground rather than as a second object behind the type. */
@@ -641,7 +640,6 @@
 <section class="hero">
   <svg class="hero-brush" aria-hidden="true" viewBox="0 0 24 24"><defs><linearGradient id="thm-e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b47a8"/><stop offset="1" stop-color="#0c1836"/></linearGradient><linearGradient id="thm-ev" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05091a" stop-opacity=".62"/><stop offset="1" stop-color="#05091a" stop-opacity="0"/></linearGradient><radialGradient id="thm-ea" gradientUnits="userSpaceOnUse" cx="11.00" cy="12.55" r="7.4"><stop offset="0" stop-color="#8dafee" stop-opacity=".55"/><stop offset=".55" stop-color="#5b8def" stop-opacity=".22"/><stop offset="1" stop-color="#5b8def" stop-opacity="0"/></radialGradient></defs><clipPath id="thm-ec"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z"/></clipPath><clipPath id="thm-eh"><path d="M 2 12 s 3 -5.1 10 -5.1 s 10 5.1 10 5.1 s -3 7 -10 7 s -10 -7 -10 -7 z"/></clipPath><g transform="translate(12,12) scale(1.018) translate(-12,-12)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z" fill="url(#thm-e)"/><g clip-path="url(#thm-ec)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7" transform="translate(0,1.7)" fill="none" stroke="#132a63" stroke-width="3.4" stroke-linecap="round" opacity=".62"/></g><g clip-path="url(#thm-ec)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z" fill="url(#thm-ea)"/></g><g clip-path="url(#thm-eh)"><circle cx="11.00" cy="12.55" r="4.3" fill="#5b8def"/><circle cx="11.00" cy="12.55" r="2.2" fill="#132a63"/><circle cx="9.37" cy="10.74" r="1.29" fill="#eef3fb" opacity="0.58"/></g><g clip-path="url(#thm-ec)"><rect x="0" y="0" width="24" height="14" fill="url(#thm-ev)"/></g><g fill="none" stroke-linecap="round"><path d="M 22 12 s -3 7 -10 7 s -10 -7 -10 -7" stroke="#2563eb" stroke-width="2.5"/><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7" stroke="#8dafee" stroke-width="2.5"/></g></g></svg>
   <div class="hero-copy">
-    <svg class="hero-glyph" aria-hidden="true" viewBox="0 0 24 24"><defs><linearGradient id="thg-e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b47a8"/><stop offset="1" stop-color="#0c1836"/></linearGradient><linearGradient id="thg-ev" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05091a" stop-opacity=".62"/><stop offset="1" stop-color="#05091a" stop-opacity="0"/></linearGradient><radialGradient id="thg-ea" gradientUnits="userSpaceOnUse" cx="11.00" cy="12.55" r="7.4"><stop offset="0" stop-color="#8dafee" stop-opacity=".55"/><stop offset=".55" stop-color="#5b8def" stop-opacity=".22"/><stop offset="1" stop-color="#5b8def" stop-opacity="0"/></radialGradient></defs><clipPath id="thg-ec"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z"/></clipPath><clipPath id="thg-eh"><path d="M 2 12 s 3 -5.1 10 -5.1 s 10 5.1 10 5.1 s -3 7 -10 7 s -10 -7 -10 -7 z"/></clipPath><g transform="translate(12,12) scale(1.018) translate(-12,-12)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z" fill="url(#thg-e)"/><g clip-path="url(#thg-ec)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7" transform="translate(0,1.7)" fill="none" stroke="#132a63" stroke-width="3.4" stroke-linecap="round" opacity=".62"/></g><g clip-path="url(#thg-ec)"><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7 s -3 7 -10 7 s -10 -7 -10 -7 z" fill="url(#thg-ea)"/></g><g clip-path="url(#thg-eh)"><circle cx="11.00" cy="12.55" r="4.3" fill="#5b8def"/><circle cx="11.00" cy="12.55" r="2.2" fill="#132a63"/><circle cx="9.37" cy="10.74" r="1.29" fill="#eef3fb" opacity="0.58"/></g><g clip-path="url(#thg-ec)"><rect x="0" y="0" width="24" height="14" fill="url(#thg-ev)"/></g><g fill="none" stroke-linecap="round"><path d="M 22 12 s -3 7 -10 7 s -10 -7 -10 -7" stroke="#2563eb" stroke-width="2.5"/><path d="M 2 12 s 3 -7 10 -7 s 10 7 10 7" stroke="#8dafee" stroke-width="2.5"/></g></g></svg>
     <h1>The Seer. <em>Lift the veil.</em></h1>
     <div class="role">Chrome extension &middot; v0.4.90 &middot; WebCenter page inspector</div>
     <p class="lead">Open Tōshi on any <b>WebCenter</b> page and she names what it's built from: every dashboard, saved search and task, nested as it really is, each one a click from its editor. She reads every attribute label back as <b>the internal name your scripts have to use</b>, reads a workflow canvas into a legible <b>node-link map</b>, and turns a task whose workflow has errored into a <b>support-ready recap</b> in one press. <b>Stop hunting the system to find what's in front of you.</b></p>
