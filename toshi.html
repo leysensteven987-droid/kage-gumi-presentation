@@ -311,6 +311,8 @@
     box-shadow:inset 3px 0 0 var(--toshi);padding:8px 10px;background:rgba(91,141,239,.06);
   }
   .demo .c-task{color:var(--toshi);background:rgba(91,141,239,.08);border-color:rgba(91,141,239,.3)}
+  .demo .c-script{color:#b69cf2;background:rgba(182,156,242,.08);border-color:rgba(182,156,242,.3)}
+  .demo .c-name{color:#e7ebf2;background:rgba(141,175,238,.14);border:1px solid rgba(141,175,238,.34);border-radius:3px;padding:0 5px}
 
   .kbd{
     font-family:var(--mono);font-size:10.5px;color:var(--text-2);
@@ -962,6 +964,25 @@
     </div>
 
     <div class="fcard">
+      <h3><span class="fg">{ }</span> Scripts, pointed at what they drive</h3>
+      <p>Turn on <b>Scripts</b> and every dashboard script on the page is listed in violet, from all three places a dashboard keeps them: the layout blocks, the field configs and the dashboard's own <b>On Form Initialize</b>. Hover a row and Tōshi boxes <b>the exact thing it drives</b>: the field, the tab, the visualization block, or one column of a search. Pick a field and she answers the reverse: <b>which script is applied to this?</b> Where a script's block is not drawn on this page she says so in amber instead of guessing.</p>
+      <div class="demo">
+        <div class="row"><span class="chip c-script">script</span><span class="nm-d">hideTechnicalDataTab</span>&nbsp;<span class="ok">⊟ tab</span></div>
+        <div class="row"><span class="chip c-script">script</span><span class="nm-d">showMaterialStatus</span>&nbsp;<span class="ok">▣ block</span></div>
+        <div class="row"><span class="chip c-script">script</span><span class="nm-d">initProjectForm</span>&nbsp;<span class="nm-d">whole form</span></div>
+      </div>
+    </div>
+
+    <div class="fcard">
+      <h3><span class="fg">aA</span> Names: the one your code has to use</h3>
+      <p>A page says <b>Material level 2</b>; a dashboard script, a rule action and an SDK call all say <code>typeOfMaterialGroup</code>. Press <b>K</b> and every attribute label on a project dashboard, a task page or the classic Attributes tab is <b>covered by its internal name</b>. Hover a chip for the label, type and id underneath. A field that cannot be named is greyed, never left looking normal.</p>
+      <div class="demo">
+        <div class="row"><span class="nm-d" style="text-decoration:line-through;opacity:.5">Material level 2</span>&nbsp;→&nbsp;<span class="c-name">typeOfMaterialGroup</span></div>
+        <div class="row"><span class="nm-d" style="opacity:.4">Pack format</span>&nbsp;<span class="nm-d">greyed · not named</span></div>
+      </div>
+    </div>
+
+    <div class="fcard">
       <h3><span class="fg">▣</span> Task pages, named by type</h3>
       <p>On a task page Tōshi shows a single <b>pinned TASK row</b> at the top of the panel: it names the <b>task type</b> and links straight to its task type page, so you know at a glance what task page you're on. The type is resolved via <code>GetProjectTasks</code> (the same call the WCR Inspector used); the task itself isn't outlined on the page. Works on the modern task execution page (<code>wctaskexecutionpage.jsp</code>), where there is no task form: the id is read from the page URL, and, as a <b>last resort</b>, when a task opens as an in-page <b>popup</b> and carries none of those signals at all, from WebCenter's own Sahi test-automation instrumentation inside the modal.</p>
       <div class="demo">
@@ -1253,7 +1274,7 @@
     <span class="tag"><i>//</i> ROADMAP</span>
     <h2>Roadmap: where the eye is going</h2>
     <p class="sec-intro">Tōshi grows on her own track (I to XII), from "sees this page" to "reads any WebCenter and hands you the map nobody wrote down." What's live today, and what's next.</p>
-    <p class="road-upd">Last updated: 2026-08-17</p>
+    <p class="road-upd">Last updated: 2026-09-25</p>
   </div>
   <div class="rm">
 
@@ -1329,11 +1350,11 @@
     </div>
 
     <div class="phase done">
-      <div class="ph-when"><span class="ph-n">VIII</span><span class="ph-st">✓ field + block/tab + column shipped</span></div>
+      <div class="ph-when"><span class="ph-n">VIII</span><span class="ph-st">✓ shipped</span></div>
       <div class="ph-node"><span></span></div>
       <div class="ph-body">
         <h4>Pinpoint</h4>
-        <div class="pd">Highlight precision: a script bound to one attribute lands on <b>that exact field</b>, a script attached to a <b>layout block</b> lands on <b>that block</b> (so a <b>tab-visibility script</b> highlights just the <b>tab</b> it hides), and a <b>saved-search display-script</b> lands on the one <b>results column</b> it paints (header and every value cell), not the whole search. Found by reading what the script's config names (the attribute, the block id, or the column id/label) and matching it in the rendered DOM, mirroring the builder's Behavior panel. The eye, surgical.</div>
+        <div class="pd">Highlight precision: a script bound to one attribute lands on <b>that exact field</b>, a script attached to a <b>layout block</b> lands on <b>that block</b> (so a <b>tab-visibility script</b> highlights just the <b>tab</b> it hides), and a <b>saved-search display-script</b> lands on the one <b>results column</b> it paints (header and every value cell), not the whole search. Found by reading what the script's config names (the attribute, the block id, or the column id/label) and matching it in the rendered DOM, mirroring the builder's Behavior panel. Since v0.4.90 the rest of the family follows: a <b>display script</b> boxes the one <b>visualization block</b> it paints, a <b>visibility script</b> boxes its own <b>tab or block</b> (whole-section fallbacks on task pages went from 39 to zero), and <b>On Form Initialize</b>, the dashboard's third script home, is listed too. A block that is configured but <b>not rendered here</b> is tagged in amber and draws no box, because inside a task popup the fallback would be the entire modal, and a wrong box is worse than none. The eye, surgical.</div>
       </div>
     </div>
 
@@ -1369,7 +1390,7 @@
       <div class="ph-node"><span></span></div>
       <div class="ph-body">
         <h4>Diagnose &amp; Propose</h4>
-        <div class="pd">The support package stops being a hand-off. Tōshi <b>parses the exported logs</b> in place, ships the error signatures to the <b>KG AI server</b> (Cloudflare-tunnelled, per-customer token) and gets back a <b>diagnosis</b> plus a <b>concrete, reviewable fix</b>: the corrected script body or config change, not a hint. Surfaced as a one-click <b>"Apply fix"</b> that a human confirms and pushes through the existing sync tooling (drift guard and backup-before-clobber intact). Detect → diagnose → <b>propose</b>; never a silent write to a live customer system.</div>
+        <div class="pd">The support package stops being a hand-off. Tōshi <b>parses the exported logs</b> in place, ships the error signatures to the <b>KG AI server</b> (Cloudflare-tunnelled, per-customer token) and gets back a <b>diagnosis</b> plus a <b>concrete, reviewable fix</b>: the corrected script body or config change, not a hint. Surfaced as a one-click <b>"Apply fix"</b> that a human confirms and pushes through the existing sync tooling (drift guard and backup-before-clobber intact). Detect → diagnose → <b>propose</b>; never a silent write to a live customer system. The first half already ships: <b>⚠ Build recap</b> turns a task whose workflow errored into a paste-ready ticket (error, failed node, execution path, timeline) in one press.</div>
       </div>
     </div>
 
@@ -1379,7 +1400,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="q">"See what the page is built from, then go straight to it."</div>
-  <div class="meta">TŌSHI · THE SEER · <span class="kg">Kage-gumi (影組)</span> · Chrome extension v0.4.85</div>
+  <div class="meta">TŌSHI · THE SEER · <span class="kg">Kage-gumi (影組)</span> · Chrome extension v0.4.90</div>
   <div class="seals">
     <span class="seal seal--sm">透</span>
     <span class="seal seal--sm seal--mark" title="Kage-gumi"><svg viewBox="0 0 32 32" style="width:20px;height:20px;display:block"><g fill="none" stroke-linecap="round" stroke-width="3.625"><path d="M 20.125 6.875 L 12.375 10.4375" stroke="#8dafee"/><path d="M 21.875 12.75 L 10.75 17.9375" stroke="#5b8def"/><path d="M 23 18.25 L 9.125 25.125" stroke="#2563eb"/></g></svg></span>
