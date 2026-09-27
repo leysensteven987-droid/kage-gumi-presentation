@@ -52,6 +52,7 @@
     --btn: #2563eb; --btn-hover: #3a73ee; --btn-ink: #ffffff;
     --field: #121826;
     --warn: #d99a2b; --warn-wash: rgba(217,154,43,.10);
+    --seal-red: #e0644a;   /* the house seal: the 影 card seal only */
     --grid-minor: rgba(44,53,72,.55); --grid-major: rgba(63,74,97,.55);
     --shadow: 0 1px 2px rgba(0,0,0,.28), 0 12px 32px -16px rgba(0,0,0,.55);
   }
@@ -64,6 +65,7 @@
     --btn: #2563eb; --btn-hover: #1d4fd8; --btn-ink: #ffffff;
     --field: #ffffff;
     --warn: #9c6208; --warn-wash: rgba(156,98,8,.08);
+    --seal-red: #a8331f;   /* the house seal: the 影 card seal only */
     --grid-minor: rgba(203,213,225,.45); --grid-major: rgba(148,163,184,.30);
     --shadow: 0 1px 2px rgba(15,23,42,.05), 0 12px 32px -18px rgba(15,23,42,.16);
   }
@@ -166,14 +168,14 @@
   }
   .card:focus-within { border-color: color-mix(in srgb, var(--accent) 35%, var(--border-card)); }
   .card:focus-within::before { transform: scaleX(1); }
-  /* the kanji seal, stamped in the corner */
+  /* the kanji seal, stamped in the corner: the one seal-red moment on the gate */
   .card-seal {
     position: absolute; top: 26px; right: 26px;
     width: 34px; height: 34px;
     display: flex; align-items: center; justify-content: center;
     font-family: var(--serif); font-weight: 700; font-size: 17px; line-height: 1;
-    color: var(--accent-ink);
-    border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--border-strong));
+    color: var(--seal-red);
+    border: 1px solid color-mix(in srgb, var(--seal-red) 55%, var(--border-strong));
     border-radius: 5px 7px 4px 7px; transform: rotate(-2.5deg);
     user-select: none; pointer-events: none;
   }
